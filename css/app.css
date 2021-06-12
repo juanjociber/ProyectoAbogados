@@ -9,7 +9,8 @@
     --grey-primario2:#2D2F40;
     --white:#FFFFFF;
     --gold:#B89B5E;
-    --font-principal:sans-serif; 
+    --font-principal:sans-serif;
+    --font-logo: 'Orelega One', cursive; 
 }
 html{
     font-size: 62.5%;
@@ -41,34 +42,47 @@ img{
     padding: 0;
 }
 
-/* ================================================================== */
-.header{
+/* ==================================== 
+                HEADER 
+======================================= */
+.header, .header__nombre i{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--blackfirst);
     font-family: var(--font-principal);
+}
+.header{
+    background-color: var(--blackfirst);
+    padding: 10px 0;
 }
 .header__item:nth-child(1){
     width: 45%;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .header__item:nth-child(2){
     width: 55%;
     text-align: right;
 }
-.header__nombre i{
+.header__nombre{
+    cursor: pointer;
+}
+.header__nombre a i{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-end;
     text-align: center;
     font-size: 10vw;
     color: var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
 }
 .header__nombre span,.header__nombre small,.header__nombre p,.header__menu{
     color: var(--gold);
 }
 .header__nombre span{
     font-size: 7vw;
+    font-family: var(--font-logo);
 }
 .header__nombre small{
     font-size: 4vw;
@@ -76,14 +90,45 @@ img{
 .header__nombre p{
     font-size: 2.5vw;
     text-align: center;
+    padding-top: 0.5rem;
 }
 .header__menu{
-    font-size: 10vw;
+    font-size: 9vw;
     margin-right: 1vh;
+    display: inline-block;
+}
+.header__menu i{
+    border: 1px solid var(--gold);
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+}
+.header__menu:hover,.header__menu i:hover{
+    border: 1px solid #5e4c1ebb;
 }
 .header__contacto,.header__redes{
     display: none;
 }
 
+/* ==================================== 
+                NAV 
+======================================= */
+.navegacion{
+    display: none;
+    font-family: var(--font-principal);
+}
+.navegacion__item{
+    padding: 2.5vw;
+    background-color: var(--blackfirst);
+}
+.navegacion__item  a{
+    font-size: 4vw;
+    color: white;
+}
+.navegacion__item a:hover{
+    color: var(--gold);
+}
+.navegacion-mostrar{
+    display: block;
+}
 
 
