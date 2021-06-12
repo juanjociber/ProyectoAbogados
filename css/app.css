@@ -117,12 +117,17 @@ img{
     font-family: var(--font-principal);
 }
 .navegacion__item{
-    padding: 2.5vw;
     background-color: var(--blackfirst);
+    padding-bottom: 1rem;
 }
 .navegacion__item  a{
-    font-size: 4vw;
+    display:inline-block;
+    width: 95%;
+    font-size: 1.6rem;
+    padding: 1.2rem;
     color: white;
+    border: 1px solid #4d4d4d;
+    margin-left: 0.9rem;
 }
 .navegacion__item a:hover{
     color: var(--gold);
