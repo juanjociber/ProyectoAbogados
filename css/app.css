@@ -1,0 +1,101 @@
+/*==========================================================
+                        GLOBAL
+============================================================*/
+:root{
+    --blackfirst:#222222;
+    --blacklast:#2B2F40;
+    --blue-black:#1f3354;
+    --grey-primario1: #F3F3F3;
+    --grey-primario2:#2D2F40;
+    --white:#FFFFFF;
+    --gold:#B89B5E;
+    --font-principal:sans-serif; 
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth;  DESPLAZAMIENTO SUAVE */
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    --letraSecundaria:'Roboto', sans-serif;
+    margin-top: 1rem;
+}
+.container{
+    width: min(95%, 130rem);
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+/* ===== utilidades =====*/
+.no-padding{
+    padding: 0;
+}
+
+/* ================================================================== */
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blackfirst);
+    border: 2px solid red;
+}
+.header__item:nth-child(1){
+    width: 45%;
+    border:5px solid rosybrown;
+}
+.header__item:nth-child(2){
+    width: 55%;
+    text-align: right;
+    border: 5px solid blueviolet;
+}
+.header__nombre i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10vw;
+    color: var(--grey-primario1);
+    font-family: var(--font-principal);
+}
+.header__nombre span,.header__nombre small{
+    color: white;
+}
+.header__nombre span{
+    font-size: 7vw;
+}
+.header__nombre small{
+    font-size: 4vw;
+}
+.header__nombre p{
+    font-size: 2.5vw;
+    font-family: var(--font-principal);
+    text-align: center;
+    color: var(--white);
+    border: 2px solid blue;
+}
+
+
+
+.header__menu{
+    font-size: 10vw;
+    margin-right: 1vh;
+    color: var(--white);
+}
+.header__contacto{
+    display: none;
+}
+.header__redes{
+    display: none;
+}
+
+
