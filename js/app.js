@@ -15,8 +15,29 @@ menu.addEventListener('click',function(){
         navegacion.classList.remove('navegacion-mostrar')
     }
 });
-
 /**=======================================================
- *                  SCROLL
+ *                 REDES SOCIALES
+ =========================================================*/
+let red = document.getElementsByClassName("social");
+for(let i = 0 ; i < red.length ; i++){
+    red[i].onmouseover=function(){
+        this.style="background: white; color: #B89B5E; transition:.7s"
+    }
+    red[i].onmouseout=function(){
+        this.style="transition: ease out .5s";
+    }
+}
+/**=======================================================
+ *                 BANNER -SLIDER
  =========================================================*/
 
+let item=["./img/banner_01.jpg","./img/banner_02.jpg"];
+let i=0;
+function banner(){
+    $("#imgBanner").attr("src", item[i]);
+        i++;
+    if(i >= item.length)
+        i=0;
+    setTimeout(banner,3000);
+}
+banner();
