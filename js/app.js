@@ -30,7 +30,6 @@ for(let i = 0 ; i < red.length ; i++){
 /**=======================================================
  *                 BANNER -SLIDER
  =========================================================*/
-
 let item=["./img/banner_01.jpg","./img/banner_02.jpg"];
 let i=0;
 function banner(){
@@ -38,6 +37,11 @@ function banner(){
         i++;
     if(i >= item.length)
         i=0;
-    setTimeout(banner,3000);
+    setTimeout(banner,5000);
 }
 banner();
+
+/**=======================================================
+ *                      MAIN
+ =========================================================*/
+ 
