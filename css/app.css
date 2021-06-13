@@ -2,7 +2,8 @@
                         GLOBAL
 ============================================================*/
 :root{
-    --blackfirst:#222222;
+    --blackfirst:#000000;
+    --blackClaro:#222222;
     --blacklast:#2B2F40;
     --blue-black:#1f3354;
     --grey-primario1: #F3F3F3;
@@ -10,7 +11,8 @@
     --white:#FFFFFF;
     --gold:#B89B5E;
     --font-principal:sans-serif;
-    --font-logo: 'Orelega One', cursive; 
+    --font-logo: 'Orelega One', cursive;
+    --font-secundario: 'Oswald', sans-serif; 
 }
 html{
     font-size: 62.5%;
@@ -30,7 +32,7 @@ body{
     margin-top: 1rem;
 }
 .container{
-    width: min(95%, 130rem);
+    width: min(95%, 120rem);
     margin: 0 auto;
 }
 img{
@@ -41,7 +43,6 @@ img{
 .no-padding{
     padding: 0;
 }
-
 /* ==================================== 
                 HEADER 
 ======================================= */
@@ -102,13 +103,113 @@ img{
     padding: 0.5vw 1vw;
     cursor: pointer;
 }
-.header__menu:hover,.header__menu i:hover{
+.header__menu i:hover{
     border: 1px solid #5e4c1ebb;
 }
 .header__contacto,.header__redes{
     display: none;
 }
-
+@media(min-width:442px){
+    .header__nombre{
+        width: 75%;
+    }
+    .header__nombre a i{
+        font-size: 3.4rem;
+    }
+    .header__nombre span{
+        font-size: 2rem;
+    }
+    .header__nombre small{
+        font-size: 1.5rem;
+    }
+    .header__nombre p{
+        font-size: 1rem;
+    }
+    .header__menu{
+        font-size: 3rem;
+    }
+    .header__menu i{
+        border: 1px solid var(--gold);
+        padding: 0.5vw 1vw;
+    }
+}
+@media(min-width:768px){
+    .header__item:nth-child(1){
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .header__nombre{
+        width: 20%;
+    }
+    .header__nombre a i{
+        font-size: 3rem;
+    }
+    .header__nombre span{
+        font-size: 2rem;
+    }
+    .header__nombre small{
+        font-size: 1.5rem;
+    }
+    .header__nombre p{
+        font-size: 1rem;
+    }
+    .header__contacto{
+        width: 65%;
+        text-align: right;
+        padding-right: 1rem;
+    }
+    .header__redes{
+        width: 15%;
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .header__redes i{
+        width: 100%;
+        font-size: 2rem;
+        padding: 1.5rem 0.5rem ;
+        border: 1px solid #292828;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+    }
+    .header__redes i:nth-child(1){
+        border-right: none;
+    }
+    .header__contacto a{
+        font-family: var(--font-principal);
+        color: var(--gold);
+    }
+    .header__contacto p{
+        font-size: 1.2rem;
+        color:var(--white)
+    }
+    .header__item:nth-child(2){
+        display: none;
+    }
+    .header__redes,.header__contacto{
+        display: initial;
+    }
+}
+@media(min-width:992px){
+    .header__nombre{
+        width: 17%;
+    }
+    .header__nombre p{
+        font-size: 1.4rem;
+    }
+    .header__nombre a i{
+        font-size: 4rem;
+    }
+    .header__nombre span{
+        font-size: 3rem;
+    }
+    .header__nombre small{
+        font-size: 2rem;
+    }   
+}
 /* ==================================== 
                 NAV 
 ======================================= */
@@ -123,17 +224,244 @@ img{
 .navegacion__item  a{
     display:inline-block;
     width: 95%;
-    font-size: 1.6rem;
-    padding: 1.2rem;
+    font-size: 1.3rem;
+    padding: 1.3rem;
     color: white;
     border: 1px solid #4d4d4d;
     margin-left: 0.9rem;
 }
-.navegacion__item a:hover{
+.navegacion__item a:hover,.navegacion__item a:focus{
     color: var(--gold);
 }
 .navegacion-mostrar{
     display: block;
 }
+@media(min-width:442px){
+    .navegacion__item a{
+        font-size: 1.4rem;
+    }
+}
+@media(min-width:768px){
+    .navegacion{
+        display: flex;
+        align-items: center;
+        background-color: var(--blackClaro);
+    }
+    .navegacion__items{
+        display: flex;
+        width: 100%;
+    }
+    .navegacion__item{
+        padding: 0;
+    }
+    .navegacion__item a{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        background-color: var(--blackClaro);
+        border: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+}
+@media(min-width:992px){
+    .navegacion__item{
+        text-align: center;
+    }
+    .navegacion__item a{
+        font-size: 1.2rem;
+    }
+}
+
+/* ==================================== 
+                BANNER 
+======================================= */
+.banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-top: 0.1rem;
+}
+.contenido-banner,.section{
+    position: absolute;
+    width: 100%;
+    height: 96%;
+    top: 0;
+} 
+.contenido-banner{
+    background-color: rgba(0, 0, 0, 0.527);
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section__nombre, .section__mensaje{
+    color:var(--white);
+    font-family: var(--font-principal);
+    text-align: center;
+}
+.section__nombre{
+    font-size: 4.5vw;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px var(--gold);
+}
+.section__mensaje{
+    font-size: 3vw;
+    color: var(--blanco);
+    padding: 1rem;
+    color:white;
+    margin-bottom: 0.5rem;
+}
+.section__btn{
+    width: 50%;
+    font-family: var(--font-secundario);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 0.2rem;
+    padding: 1.3rem 1.8rem;
+    text-align: center;
+    background-color: var(--blackfirst);
+    transition: background-color ease 1s;
+}
+.section__btn:hover{
+    color: var(--blackfirst);
+    background-color: var(--gold);
+    text-shadow: 1px 1px 15px var(--blackClaro);
+    box-shadow: 1px 1px 10px lightslategray;
+    border: 1px solid #464646;
+    cursor: pointer;
+}
+@media(min-width:442px){
+    .section__btn{
+        padding: 1.8rem 1.5rem;
+    }   
+}
+@media (min-width:768px){
+    .section__nombre{
+        margin-top: 2.5rem;
+    }
+    .section__mensaje{
+        font-size: 2rem;
+        margin-top: 0.5rem;
+    }
+    .section__btn{
+        width: 30%;
+        font-size: 2.2rem;
+        padding: 2rem 1.2rem;
+    }
+    
+    .contenido-banner{
+        height: 99%;
+    }
+    .section{
+        height: 100%;
+    }
+}
+@media(min-width:992px){
+    .section__nombre{
+        font-size: 4rem;
+    }
+    .section__btn{
+        width: 20%;
+        font-size: 2.2rem;
+        padding: 2rem 1.2rem;
+    }
+}
 
 
+/* ==================================== 
+                FOOTER 
+======================================= */
+.titulo-footer{
+    color: white;
+    font-family: var(--letraSecundaria);
+    font-size: 4vw;
+    margin-top: 1rem;
+}
+.margin-negativo{
+    padding-top: 5rem;
+}
+.abreviatura-footer{
+    text-transform: uppercase;
+}
+.webp .footer-container{
+    background-image: url(../img/carsupplies_lubricantes_carreteras.webp);
+}
+.no-webp .footer-container{
+    background-image: url(../img/carsupplies_lubricantes_carreteras.jpg);
+}
+.footer-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 35rem;
+    position: relative;
+    margin-top: 2rem;
+}
+.box-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 82%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconos{
+    margin-top: 3rem;
+}
+.copyrigth{
+    width: 100%;
+    color: var(--white);
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: 2.5rem;
+    font-family: var(--letraSecundaria);
+}
+.copyrigth a{
+    color: var(--white);
+}
+@media(min-width:768px){
+    .copyrigth{
+        font-size: 1.5rem;
+    }
+    .enlace-footer{
+        font-size: 1.8rem !important;
+    }
+}
+.menu-secundario{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+.enlace-footer{
+    width: 15rem;
+    font-size: 4vw;
+    text-align:center;
+    text-decoration: none;
+    color: var(--white);
+    float: left;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1rem;
+    font-family: var(--letraSecundaria);
+}
+.enlace-footer:hover{
+    color: var(--gold);
+}
+.icon-tabler-brand-facebook:hover{
+    stroke: #1977F3;
+}
+.icon-tabler-brand-whatsapp:hover{
+    stroke: #64B161;
+}
+.icon-tabler-brand-twitter:hover{
+    stroke: #23a8f5;
+}
