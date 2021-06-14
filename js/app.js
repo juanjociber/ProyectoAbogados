@@ -42,6 +42,16 @@ function banner(){
 banner();
 
 /**=======================================================
- *                      MAIN
+ *                      FIGURE
  =========================================================*/
  
+var enlaces = document.getElementsByClassName('article')[0]
+
+
+enlaces.addEventListener('click',function (e) {
+    console.log(e)
+        
+})
+ 
+
+
