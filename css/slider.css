@@ -76,12 +76,14 @@ body{
 	margin-top: -5rem;
 	text-shadow: 3px 5px 15px #000000;
 	font-family: var(--font-secundario);
+	
 }
 .slider .caption p{
 	font-size: 3.5vw;
 	color: white;
 	text-shadow: 3px 8px 15px rgb(10, 10, 9);
 	font-family: var(--font-secundario);
+	
 }
 .btn-banner{
 	width: 70%;
@@ -94,6 +96,7 @@ body{
 	font-family: var(--font-secundario);
 	text-transform: uppercase;
 	cursor: pointer;
+	
 }
 
 .btn-banner:hover{
