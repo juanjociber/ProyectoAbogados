@@ -45,13 +45,27 @@ banner();
  *                      FIGURE
  =========================================================*/
  
-var enlaces = document.getElementsByClassName('article')[0]
-
+var enlaces = document.getElementsByClassName('article__imagen')[0]
 
 enlaces.addEventListener('click',function (e) {
     console.log(e)
         
 })
+
+
+
+
+// let ubicacionPrincipal = window.pageYOffset;
+// window.onscroll = function(){
+//     let desplazamiento_Actual = window.pageYOffset;
+//     if(ubicacionPrincipal >= desplazamiento_Actual){
+//         document.getElementsByClassName('navegacion').style.top='0';
+//     }
+//     else{
+//         document.getElementsByClassName('navegacion').style.top='-100px';
+//     }
+//     ubicacionPrincipal = desplazamiento_Actual;
+// }
  
 
 
