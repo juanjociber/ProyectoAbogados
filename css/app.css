@@ -249,10 +249,8 @@ img{
 }
 @media(min-width:768px){
     .navegacion{
-        width: 100%;
-        display: block;
+        display: initial;
         background-color: var(--blackClaro);
-        position: relative;
     }
     .navegacion__items{
         display: flex;
@@ -277,6 +275,16 @@ img{
     .navegacion__item a:hover,.navegacion__item a:focus{
         background-color: var(--blackfirst);
         border-bottom: 2px solid var(--gold);
+    }
+    .fijo{
+        position: fixed;
+        top: 0;
+        width: 95%;
+        box-shadow: 0 .3rem .4rem #808080;
+        background-color: rgba(0, 0, 0, 0.877);
+    }
+    .fijo .navegacion__item  {
+        background-color: rgba(0, 0, 0, 0.137);
     }
 }
 @media(min-width:992px){

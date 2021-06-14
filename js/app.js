@@ -44,28 +44,42 @@ banner();
 /**=======================================================
  *                      FIGURE
  =========================================================*/
+
+
+
+ /**=======================================================
+ *                     NAVEGACIÓN FIJA
+ =========================================================*/
  
-var enlaces = document.getElementsByClassName('article__imagen')[0]
+document.addEventListener('DOMContentLoaded', function() {
+    // scrollNav();
+    navegacionFija();
+});
 
-enlaces.addEventListener('click',function (e) {
-    console.log(e)
-        
-})
+function navegacionFija() {
+
+    const barra = document.querySelector('.navegacion');
+
+    // Registrar el Intersection Observer
+    const observer = new IntersectionObserver( function(entries) {
+        if(entries[0].isIntersecting) {
+            barra.classList.remove('fijo');
+        } else {
+            barra.classList.add('fijo');
+        }
+    });
+
+    // Elemento a observar
+    observer.observe(document.querySelector('.banner'));
+};
+
+
+function scrollNav() {
+     
+}
 
 
 
-
-// let ubicacionPrincipal = window.pageYOffset;
-// window.onscroll = function(){
-//     let desplazamiento_Actual = window.pageYOffset;
-//     if(ubicacionPrincipal >= desplazamiento_Actual){
-//         document.getElementsByClassName('navegacion').style.top='0';
-//     }
-//     else{
-//         document.getElementsByClassName('navegacion').style.top='-100px';
-//     }
-//     ubicacionPrincipal = desplazamiento_Actual;
-// }
  
 
 
