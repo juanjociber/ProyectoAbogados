@@ -1,8 +1,8 @@
 /**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
-let menu = document.querySelector('.header__menu');
-let navegacion = document.querySelector('.navegacion');
+let menu = document.querySelector('.menu');
+let navegacion = document.querySelector('.container-nav-responsive');
 let contador = 1;
 
 menu.addEventListener('click',function(){
@@ -15,6 +15,7 @@ menu.addEventListener('click',function(){
         navegacion.classList.remove('navegacion-mostrar')
     }
 });
+
 /**=======================================================
  *                 REDES SOCIALES
  =========================================================*/
@@ -47,19 +48,48 @@ banner();
 
 
 
- /**=======================================================
- *                     NAVEGACIÓN FIJA
+/**=======================================================
+ *                     NAVEGACIÓN FIJA 'nav'
  =========================================================*/
- 
+
+// function navegacionFijaResponsive() {
+//     const barra2 = document.querySelector('.header');
+//     // Registrar el Intersection Observer
+//     const observer2 = new IntersectionObserver( function(entries) {
+//         if(entries[0].isIntersecting) {
+//             barra2.classList.remove('estatico');
+//         } else {
+//             barra2.classList.add('estatico');
+//         }
+//     });
+//     // Elemento a observar
+//     observer2.observe(document.querySelector('.banner'));
+// };
+// navegacionFijaResponsive();
+
+// window.addEventListener('resize',res)
+// function res(){
+//     if(screen.width > 767){
+//         barra2.style.removeProperty('overflow');
+//         barra2.style.removeProperty('width');
+//     }
+// }
+
+
+
+
+
+
+
+/**=======================================================
+ *                     NAVEGACIÓN FIJA 'nav'
+ =========================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     // scrollNav();
     navegacionFija();
 });
-
 function navegacionFija() {
-
     const barra = document.querySelector('.navegacion');
-
     // Registrar el Intersection Observer
     const observer = new IntersectionObserver( function(entries) {
         if(entries[0].isIntersecting) {
@@ -68,12 +98,9 @@ function navegacionFija() {
             barra.classList.add('fijo');
         }
     });
-
     // Elemento a observar
     observer.observe(document.querySelector('.banner'));
 };
-
-
 function scrollNav() {
      
 }
@@ -81,5 +108,26 @@ function scrollNav() {
 
 
  
+//ACORDEON
 
+let btnItems = document.querySelectorAll(".item .btn-item");
+for(let i = 0 ; i < btnItems.length; i++ ){
+  console.log(i);
+  btnItems[i].addEventListener("click",function(e){
+    let btn = e.target;
+    if(btn.className == "btn-item active"){
+        removeClass()
+    }
+    else{
+        removeClass();
+        btn.classList.add("active");
+    }
+  })
+}
+//Funciones para que solo se muestre una selección y las demás se oculten 
+function removeClass(){
+    for(let i = 0 ; i < btnItems.length; i++){
+        btnItems[i].classList.remove("active");
+    }
+}
 

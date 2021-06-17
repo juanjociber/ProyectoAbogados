@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap" rel="stylesheet">
 
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -24,42 +25,51 @@
 <body>
     <div class="container">
 
-        <!-- =============== HEADER ============== -->
+    <!-- =============== HEADER ============== -->
+    <div class="container-header">
         <header class="header">
-            <div class="header__item">
-                <div class="header__nombre">
-                    <a href=""><i class='bx bxs-landmark'><span>L<small>&</small>H</span></i>
-                        <p>Consultores y Asesores Legales</p>
-                    </a>
-                </div>
-                <div class="header__contacto">
-                    <p><a class="header__contacto-telefono" href="tel:+"><i class='bx bxs-phone'></i>+51 956 295 944</a>
-                    </p>
-                    <p><a class="header__contacto-email" href="mailto:"><i
-                                class='bx bx-envelope-open'></i>huizaconsultores@gmail.com</a></p>
-                </div>
-                <div class="header__redes">
-                    <a class="header__redes-enlace" href=""><i class='bx bxl-facebook social'></i></a>
-                    <a class="header__redes-enlace" href=""><i class='bx bxl-linkedin social'></i></a>
-                    <a class="header__redes-enlace" href=""><i class='bx bxl-instagram social'></i></a>
-                </div>
+            <div class="header__nombre">
+                <a href="index.html"><img src="./img/logo3.jpg" alt="logo"></a>
             </div>
-            <div class="header__item">
-                <div class="header__menu"><i class='bx bx-menu'></i></div>
+                    
+            <!-- =============== NAVEGACION ============== -->
+            <div class="menu"><i class='bx bx-menu'></i></div>
+            
+        <div class="container-nav-responsive">   
+            <div class="navegacion">
+                <nav class="navegacion-contenido" id="navbar">
+                    <ul class="navegacion__items">
+                        <li class="navegacion__item navegacion__item--activo"><a href="#">Inicio</a></li>
+                        <li class="navegacion__item"><a href="#">Nosotros</a></li>
+                        <li class="navegacion__item item"><a class="btn-item active" href="#">Área de Práctica</a>
+                            <ul class="item-content">
+                                <li class="submenu__lista"><a href="#">Contrataciones con el Estado</a></li>
+                                <li class="submenu__lista"><a href="#">Contratos Civiles</a></li>
+                                <li class="submenu__lista"><a href="#">Derecho Laboral</a></li>
+                                <li class="submenu__lista"><a href="#">Derecho Penal</a></li>
+                                <li class="submenu__lista"><a href="#">Familia</a></li>
+                                <li class="submenu__lista"><a href="#">Recursos Humanos</a></li>
+                                <li class="submenu__lista"><a href="#">Procedimiento Administrativo Sancionador</a></li>
+                                <li class="submenu__lista"><a href="#">Procedimiento Administrativo Displinario</a></li>
+                            </ul></li>
+                        <li class="navegacion__item"><a href="#">Contáctenos</a></li>
+                    </ul>
+                </nav>
             </div>
-        </header>
 
-        <!-- =============== NAVEGACION ============== -->
-        <div class="navegacion">
-            <nav class="navegacion-contenido" id="navbar">
-                <ul class="navegacion__items">
-                    <li class="navegacion__item navegacion__item--activo"><a href="#">Inicio</a></li>
-                    <li class="navegacion__item"><a href="#">Nosotros</a></li>
-                    <li class="navegacion__item"><a href="#">Área de Práctica</a></li>
-                    <li class="navegacion__item"><a href="#">Contáctenos</a></li>
-                </ul>
-            </nav>
-        </div>
+            <div class="contacto">
+                <p class="contacto__item"><a href="tel:+"><i class='bx bxs-phone'></i>+51 956 295 944</a></p>
+                <p class="contacto__item"><a href="mailto:"><i class='bx bx-envelope-open'></i>huizaconsultores@gmail.com</a></p>
+            </div>
+            
+            <div class="redes">
+                <p class="redes__enlace"><a href=""><i class='bx bxl-facebook social'></i></a></p> 
+                <p class="redes__enlace"><a href=""><i class='bx bxl-linkedin social'></i></a></p> 
+                <p class="redes__enlace"><a href=""><i class='bx bxl-instagram social'></i></a></p> 
+            </div>
+        </div><!-- container-nav-responsive  -->
+        </header>
+    </div> <!-- container-header  -->
 
         <!-- =============== BANNER ============== -->
         <div class="slideshow banner">
