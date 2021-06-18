@@ -28,8 +28,9 @@ for(let i = 0 ; i < red.length ; i++){
         this.style="transition: ease out .5s";
     }
 }
+
 /**=======================================================
- *                 BANNER -SLIDER
+ *                 BANNER - SLIDER
  =========================================================*/
 let item=["./img/banner_01.jpg","./img/banner_02.jpg"];
 let i=0;
@@ -48,38 +49,6 @@ banner();
 
 
 
-/**=======================================================
- *                     NAVEGACIÓN FIJA 'nav'
- =========================================================*/
-
-// function navegacionFijaResponsive() {
-//     const barra2 = document.querySelector('.header');
-//     // Registrar el Intersection Observer
-//     const observer2 = new IntersectionObserver( function(entries) {
-//         if(entries[0].isIntersecting) {
-//             barra2.classList.remove('estatico');
-//         } else {
-//             barra2.classList.add('estatico');
-//         }
-//     });
-//     // Elemento a observar
-//     observer2.observe(document.querySelector('.banner'));
-// };
-// navegacionFijaResponsive();
-
-// window.addEventListener('resize',res)
-// function res(){
-//     if(screen.width > 767){
-//         barra2.style.removeProperty('overflow');
-//         barra2.style.removeProperty('width');
-//     }
-// }
-
-
-
-
-
-
 
 /**=======================================================
  *                     NAVEGACIÓN FIJA 'nav'
@@ -89,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navegacionFija();
 });
 function navegacionFija() {
-    const barra = document.querySelector('.navegacion');
+    const barra = document.querySelector('.container-header');
     // Registrar el Intersection Observer
     const observer = new IntersectionObserver( function(entries) {
         if(entries[0].isIntersecting) {
