@@ -50,7 +50,6 @@ img{
                 HEADER 
 ======================================= */
 .container-header{
-    border: 1px solid #e9e9eb;
     padding: 1rem;
 }
 .container-nav-responsive{
@@ -59,9 +58,11 @@ img{
     position: absolute;
     z-index: 999;
     background-color:var(--blackfirst);
-    /* width: 95%; */
-    border: 2px solid red;
-    margin-top: 1rem;
+    width: 95%;
+    margin-top: 1.1rem;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
 .contanier-logo-menu{
     display: flex;
@@ -71,12 +72,23 @@ img{
 }
 .navegacion__item,.contacto__item,.redes__enlace,
 .submenu__lista{
-    padding: 1.5rem 0 0 0.5rem;
+    padding: 0.7rem 0 0.7rem 0.5rem;
+}
+.navegacion__item{
+    padding-left: 0;
+}
+.navegacion__item i{
+    margin-right: 0.5rem;
 }
 .navegacion__items a,.contacto__item a,.redes__enlace a{
     color: white;
     font-size: 1.6rem;
     text-shadow:0 1px 4px 6px #808080;
+}
+.navegacion__items:hover,
+.contacto__item:hover,
+.redes__enlace:hover{
+    background-color: var(--blackClaro);
 }
 .navegacion__items a:hover,
 .contacto__item a:hover,
@@ -84,12 +96,17 @@ img{
     color:var(--gold);
 }
 .submenu__lista a{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
 }
 .submenu__lista a:before{
-    content: "\276F";
+    content: "\2771";
     margin-right: 0.8rem;
     font-size: 1.8rem;
+}
+.contacto__item{
+    display: flex;
+    margin-left: 1.5rem;
 }
 .contacto__item i{
     margin-right: 1rem;
@@ -105,7 +122,6 @@ img{
 .navegacion-mostrar{
     display: block;
 }
-
 /* ==================================== 
             ESTILO ACORDEÓN 
 ======================================= */
@@ -124,12 +140,12 @@ img{
     color: var(--gold);
 }
 .btn-item:after{
-    content:"\276F";    
+    content:"\2207";    
     float: right;
     margin-right: 1rem;
 }
 .btn-item.active:after{
-    content:"\2207";
+    content:"\2771";
     margin-right: 1rem;
 }
 
