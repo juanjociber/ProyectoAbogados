@@ -50,7 +50,8 @@ img{
                 HEADER 
 ======================================= */
 .container-header{
-    border: 1px solid blue;
+    border: 1px solid #e9e9eb;
+    padding: 1rem;
 }
 .container-nav-responsive{
     display: none;
@@ -58,7 +59,15 @@ img{
     position: absolute;
     z-index: 999;
     background-color:var(--blackfirst);
-    width: 95%;
+    /* width: 95%; */
+    border: 2px solid red;
+    margin-top: 1rem;
+}
+.contanier-logo-menu{
+    display: flex;
+}
+.header__nombre{
+    width: 60%;
 }
 .navegacion__item,.contacto__item,.redes__enlace,
 .submenu__lista{
@@ -198,13 +207,11 @@ img{
             BOTON MENÚ 
 ======================================= */
 .menu{
-    display: flex;
+    width: 40%;
+    display: grid;
+    justify-content:end;
+    place-self: center;
     font-size: 6vw;
-    position: absolute;
-    top: 1vh;
-    right: 1vh;   
-    z-index: 999;
-;
 }
 .menu i{
     border: 1px solid var(--gold);
@@ -213,7 +220,8 @@ img{
     color: var(--gold);
 }
 .menu i:hover{
-    border: 1px solid #5e4c1ebb;
+    color: #8d6604fd;
+    border: 1px solid #8d6604fd;
 }
 @media(min-width:442px){
     .menu{
