@@ -107,9 +107,9 @@ function scrollNav() {
 
 
 
- 
-//ACORDEON
-
+/**=======================================================
+ *                   ACORDEÓN
+ =========================================================*/
 let btnItems = document.querySelectorAll(".item .btn-item");
 for(let i = 0 ; i < btnItems.length; i++ ){
   console.log(i);
