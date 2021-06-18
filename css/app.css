@@ -146,6 +146,7 @@ img{
     content:"\2207";    
     float: right;
     margin-right: 1rem;
+    margin-top:1.1rem;
 }
 .btn-item.active:after{
     content:"\2771";
