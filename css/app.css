@@ -75,7 +75,7 @@ img{
     color:var(--gold);
 }
 .submenu__lista a{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 .submenu__lista a:before{
     content: "\276F";
