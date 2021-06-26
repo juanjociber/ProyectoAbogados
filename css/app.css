@@ -426,8 +426,8 @@ h2{
 .section-nosotros,.section-practica,.section-contactenos{
     margin-bottom: 3rem;
     border-bottom: 1px solid grey;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .section-nosotros__texto{
     font-family: var(--font-terciaria);
