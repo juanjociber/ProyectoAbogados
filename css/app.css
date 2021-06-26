@@ -45,7 +45,9 @@ img{
 .no-padding{
     padding: 0;
 }
-
+.no-margin{
+    margin: 0;
+}
 /* ===== Heading ======= */
 h2{
     font-family: var(--font-terciaria);
@@ -53,6 +55,7 @@ h2{
     text-transform: uppercase;
     text-align: center;
     font-weight: 800;
+    padding: 1.5rem 0;
 }
 /* ==================================== 
                 HEADER 
@@ -423,24 +426,22 @@ h2{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
-.section-nosotros,.section-practica,.section-contactenos{
-    margin-bottom: 3rem;
-    border-bottom: 1px solid grey;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.section-nosotros,.section-practica{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+    margin: 0 2rem 3rem 2rem;
+    padding-bottom: 2rem;
 }
+
 .section-nosotros__texto{
     font-family: var(--font-terciaria);
     font-weight: 400;
     font-size: 3.8vw;
     text-align: justify;
     line-height: 1.4;
-    padding: 0 2rem;
 }
 .article{
-    margin: 0 0 1.5rem 0;
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    overflow: hidden;
+    margin: 0 1rem 1.5rem 1rem;
+    box-shadow: 0px 10px 13px -7px #000000, 22px -17px 21px -6px rgba(0,0,0,0);    overflow: hidden;
     position: relative;
 }
 .article:hover{
