@@ -45,6 +45,15 @@ img{
 .no-padding{
     padding: 0;
 }
+
+/* ===== Heading ======= */
+h2{
+    font-family: var(--font-terciaria);
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+}
 /* ==================================== 
                 HEADER 
 ======================================= */
@@ -414,30 +423,22 @@ img{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
-h2{
-    font-size: 5vw;
+.section-nosotros,.section-practica,.section-contactenos{
+    margin-bottom: 3rem;
+    border-bottom: 1px solid grey;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
-.section-main{
-    font-family:var(--font-parrafo);
-}
-.section-main__titulo{
-    text-align: center;
-    text-transform: uppercase;
-    padding: 3rem 0 2rem 0; 
-}
-.section-main__texto{
+.section-nosotros__texto{
+    font-family: var(--font-terciaria);
+    font-weight: 400;
+    font-size: 3.8vw;
     text-align: justify;
     line-height: 1.4;
-    font-size: 4vw;
-    font-weight: 300;
-}
-.titulo-practica{
-    text-align: center;
-    text-transform: uppercase;
-    padding: 3rem 0 2rem 0;
+    padding: 0 2rem;
 }
 .article{
-    margin: 0 2.5rem 1.5rem 2.5rem;
+    margin: 0 0 1.5rem 0;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     overflow: hidden;
     position: relative;
@@ -459,7 +460,17 @@ h2{
     padding-left:1rem;
     padding-right: 1rem;
     font-size: 4.5vw;
+    font-family: var(--font-terciaria);
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden; */
 }
+/* .figure__texto:active{
+    display: block;
+} */
+
 .article:hover  .figure__texto{
     transform: translate(0%);
     height: 100%;
@@ -535,13 +546,6 @@ h2{
 @media(min-width:768px){
     h2{
         font-size: 2.5rem;
-    }
-    .section-main__titulo{
-        margin-top: 3rem;
-        padding: 3rem 0 2rem 0; 
-    }
-    .section-main__texto{
-        font-size: 1.5rem;
     }
     .cards{
         grid-template-columns: repeat(3,1fr);
