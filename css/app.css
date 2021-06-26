@@ -89,7 +89,7 @@ h2{
     display: flex;
     align-items: center;
     color:var(--white);
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     border: 1px solid yellow;
 }
 .navegacion__item i{
@@ -103,7 +103,7 @@ h2{
 .contacto__item{
     display: flex;
     border: 1px solid red;
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     
 }
 .contacto__item a{
