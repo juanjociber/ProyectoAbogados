@@ -89,7 +89,7 @@ h2{
     display: flex;
     align-items: center;
     color:var(--white);
-    padding: 0.6rem 0;
+    padding: 0.8rem 0;
 }
 .navegacion__item i{
     margin-right: 0.4rem;
@@ -101,7 +101,7 @@ h2{
 }
 .contacto__item{
     display: flex;
-    padding: 0.6rem 0;
+    padding: 0.8rem 0;
 }
 .contacto__item a{
     display: flex;
