@@ -357,12 +357,14 @@ img{
                 BANNER 
 ======================================= */
 .banner{
+    /* border: 2px solid red; */
+    height: 61.4vw;
     position: relative;
 }
 .banner-fondo{
     position: absolute;
     width: 100%;
-    height: 100%;
+    /* height: 60vw; */
     background-color: rgba(0, 0, 0, 0.342);
     top: 0;
 }
@@ -374,9 +376,9 @@ img{
     background-color: var(--white);
     text-shadow: 1px 4px 10px var(--blue-black);
     color: var(--granate);
-    width:90%;
+    width:80%;
     font-family: var(--font-terciaria);
-    padding: .980rem .450rem;
+    padding: 1.3rem .450rem;
     display: flex;
     justify-content: center;
     align-items: center;
