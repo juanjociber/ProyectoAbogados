@@ -85,54 +85,72 @@ h2{
 .contanier-logo-menu{
     display: flex;
 }
-.navegacion__item,.contacto__item,.redes__enlace,
-.submenu__lista{
-    padding: 1.3rem 0 1.3rem 0.5rem;
-}
-.navegacion__item{
-    padding-left: 0;
+.navegacion__item a{
+    display: flex;
+    align-items: center;
+    color:var(--white);
+    padding: 0.5rem 0;
+    border: 1px solid yellow;
 }
 .navegacion__item i{
-    margin-right: 0.5rem;
-    font-size: 2.5rem;
+    margin-right: 0.4rem;
+    font-size: 2rem;
 }
-.navegacion__items a,.contacto__item a,.redes__enlace a{
-    color: white;
-    font-size: 1.6rem;
-    text-shadow:0 1px 4px 6px #808080;
+.contacto{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.contacto__item{
+    display: flex;
+    border: 1px solid red;
+    padding: 0.5rem 0;
+    
+}
+.contacto__item a{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+.contacto__item i{
+    font-size: 2rem;
+    margin-right: 0.2rem;
+}
+.redes{
+    display: flex;
+    border: 1px solid greenyellow;
+    margin-bottom: 1rem;
+}
+.redes__enlace{
+    border: 1px solid var(--white);
+    margin-right: 0.2rem;
+}
+
+.redes__enlace i{
+    font-size: 2rem;
+    padding: 1.2rem;
+    color: var(--white);
 }
 .navegacion__items a:hover,
 .contacto__item a:hover,
 .redes__enlace a:hover{
-    color:var(--gold);
+    color:var(--blue-white);
 }
 .submenu__lista{
-    padding: 0.5rem 0 0.5rem 0;
+    /* padding: 0.5rem 0 0.5rem 0; */
+    border: 1px solid greenyellow;
 }
 .submenu__lista a{
     font-size: 1.4rem;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
+    border: 2px solid red;
 }
 .submenu__lista a:before{
     content: "\2771";
     margin-right: 0.8rem;
     font-size: 1.8rem;
 }
-.contacto__item{
-    display: flex;
-    margin-left: 2.5rem;
-}
-.contacto__item i{
-    margin-right: 1rem;
-}
-.redes{
-    display: flex;
-    margin-left: 2.5rem;
-}
-.redes__enlace i{
-    font-size: 2rem;
-    padding: 1.2rem;
-}
+
+
 .navegacion-mostrar{
     display: block;
 }
@@ -284,7 +302,6 @@ h2{
     overflow: hidden;
     max-height: 0rem;
     opacity: 0;
-    margin-left: -0.5rem;
 }
 .active + .item-content{
     max-height: 1000px;
