@@ -131,16 +131,15 @@ h2{
     color:var(--blue-white);
 }
 .submenu__lista{
-    /* padding: 0.5rem 0 0.5rem 0; */
-    border: 1px solid greenyellow;
+    margin-left: 2.1rem;
 }
 .submenu__lista a{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 .submenu__lista a:before{
-    content: "\2771";
+    content: "\27AD";
     margin-right: 0.8rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 .navegacion-mostrar{
     display: block;
@@ -293,24 +292,26 @@ h2{
     overflow: hidden;
     max-height: 0rem;
     opacity: 0;
+    /* margin-top: -1.5rem; */
 }
 .active + .item-content{
     max-height: 1000px;
     padding: 0;
     opacity: 1;
 }
-.btn-item.active{
+/* .btn-item.active{
     color: var(--gold);
-}
+} */
 .btn-item:after{
-    content:"\2771";
+    content:"\27AD";
     float: right;
-    margin-right: 2rem;
-    margin-top:1.1rem;
+    font-size: 2.2rem;
+    margin-left: 1rem;
+    margin-top: 0.1rem;
 }
 .btn-item.active:after{
-    content:"\2207";    
-    margin-right: 2rem;
+    content:"\261F";    
+    margin-top: 0.2rem;
 }
 @media(min-width:768px){
     .btn-item:after{
