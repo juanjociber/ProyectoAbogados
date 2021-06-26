@@ -15,20 +15,18 @@ menu.addEventListener('click',function(){
         navegacion.classList.remove('navegacion-mostrar')
     }
 });
-
 /**=======================================================
  *                 REDES SOCIALES
  =========================================================*/
 let red = document.getElementsByClassName("social");
 for(let i = 0 ; i < red.length ; i++){
     red[i].onmouseover=function(){
-        this.style="background: white; color: #B89B5E; transition:.7s"
+        this.style="background: white; color: #3C415E; transition:.7s"
     }
     red[i].onmouseout=function(){
         this.style="transition: ease out .5s";
     }
 }
-
 /**=======================================================
  *                 BANNER - SLIDER
  =========================================================*/
