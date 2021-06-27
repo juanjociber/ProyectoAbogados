@@ -77,7 +77,7 @@ h2{
     z-index: 999;
     background-color:var(--blue-black);
     width: 100%;
-    margin-top: 1.1rem;
+    margin-top: 1rem;
     margin-left: -1rem;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -85,10 +85,16 @@ h2{
 .contanier-logo-menu{
     display: flex;
 }
+.navegacion__items{
+    padding-bottom: 1.5rem;
+    width: 70%;
+    border-bottom: 2px double rgba(207, 207, 209, 0.281);
+}
 .navegacion__item a{
     display: flex;
     align-items: center;
     color:var(--white);
+    text-shadow: 0 3px 4px var(--blackfirst);
     padding: 0.8rem 0;
 }
 .navegacion__item i{
@@ -107,6 +113,7 @@ h2{
     display: flex;
     align-items: center;
     color: var(--white);
+    text-shadow: 0 3px 4px var(--blackfirst);
 }
 .contacto__item i{
     font-size: 2rem;
@@ -128,7 +135,8 @@ h2{
 .navegacion__items a:hover,
 .contacto__item a:hover,
 .redes__enlace a:hover{
-    color:var(--blue-white);
+    color:var(--white);
+    font-weight: bold;
 }
 .submenu__lista{
     margin-left: 2.1rem;
@@ -150,7 +158,7 @@ h2{
     }
     .header{
         display: grid;
-        grid-template-columns: 28% 72%;
+        grid-template-columns: auto auto;
         padding: 0;
     }
     .contanier-logo-menu{
@@ -170,13 +178,12 @@ h2{
         margin-left: 0;
         position: initial;
         margin-top: 0;
-        width: 100%;
+        /* width: 100%; */
         padding: 0;
     }
     .navegacion{
         grid-column: 1 / 3;
         grid-row: 2 / 3;
-        /* justify-self: flex-start; */
     }
     .navegacion-contenido i{
         display: none;
@@ -185,27 +192,30 @@ h2{
         display:flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 0;
+        width: auto;
+        border-bottom: unset;
     }
     .navegacion__item{
         display: block;
-        width: 16vw;
+        width: 18vw;
         text-align: center;
-        
         padding:0;
         position: relative;
         margin-bottom: 0.3rem;
     }
-    .navegacion__item:hover{
-        border-bottom: 2.5px solid #B2AB8C;
-    }
     .navegacion__item a{
         display: block;
-        font-size: 1.7vw;
+        font-size: 1.9vw;
         padding: 1rem;
+    }
+    .navegacion__item:hover{
+        border-bottom: 2px solid rgba(255, 254, 254, 0.37);
     }
     .item-content{
         position: absolute;
-        width: 25rem;
+        width: 28rem;
+        margin-top: 0.5rem;
         z-index: 999;
         visibility: hidden;
         opacity: 0;
@@ -213,6 +223,24 @@ h2{
     .navegacion__item:hover .item-content{
         visibility: visible;
         opacity: 1;
+    }
+    .contacto{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .contacto p:nth-child(odd){
+        border-right: 2px solid var(--white);
+    }
+    .contacto p{
+        font-size: 1.6vw;
+        padding-right: 1rem;
+        font-weight: bold;
     }
     .contacto__item{
         margin-left: 0;
@@ -223,27 +251,13 @@ h2{
     .redes__enlace:hover{
         background-color: transparent;
     }
-    .contacto{
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 1rem;
-    }
-    .contacto a{
-        font-size: 1.5vw;
-    }
-    .contacto a:hover{
-        color: var(--white);
-        font-weight: bold;
-    }
     .redes{
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         margin-left: 0;
+        margin-bottom: 0;
     }
     .redes__enlace{
         padding: 0;
@@ -258,9 +272,28 @@ h2{
     }
     .submenu__lista a{
         color:var(--blue-black);
-        border: 2px solid green;
         margin-left: 0;
         text-align: left;
+        text-shadow: none;
+    }
+    .submenu__lista a:hover{
+        color: var(--blue-black);
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+}
+@media(min-width:992px){
+    .navegacion__item a{
+        font-size: 1.5rem;
+    }
+    .contacto p{
+        font-size: 1.4rem;
+    }
+    .item-content{
+        width: 32rem;
+    }
+    .submenu__lista a:hover{
+        font-size: 1.5rem;
     }
 }
 @media(min-width:1200px){
@@ -270,10 +303,12 @@ h2{
     .navegacion{
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        width: 75%;
     }
     .contacto{
         grid-column: 1 / 3;
         grid-row: 1 / 2;
+        margin-bottom: 0.8rem;
     }
     .redes{
         grid-column: 2 / 3;
@@ -284,6 +319,19 @@ h2{
         padding-right: 1rem;
         grid-template-columns: 85% 15%;
     }
+    .navegacion__item{
+        margin-bottom: 0.3rem;
+    }
+    .navegacion__item a{
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+    .contacto p{
+        font-size: 1.5rem;
+    }
+    .item-content{
+        margin-top: 0.7rem;
+    }
 }
 /* ==================================== 
             ESTILO ACORDEÓN 
@@ -292,7 +340,6 @@ h2{
     overflow: hidden;
     max-height: 0rem;
     opacity: 0;
-    /* margin-top: -1.5rem; */
 }
 .active + .item-content{
     max-height: 1000px;
@@ -307,7 +354,7 @@ h2{
     float: right;
     font-size: 2.2rem;
     margin-left: 1rem;
-    margin-top: 0.1rem;
+    margin-top: 0.4rem;
 }
 .btn-item.active:after{
     content:"\261F";    
@@ -589,6 +636,9 @@ h2{
     }
 }
 @media(min-width:576px){
+    h2{
+        font-size: 2.2rem;
+    }
     .figure__texto{
         font-size: 1.5rem;
         padding-top: 14rem;
@@ -599,8 +649,14 @@ h2{
     .figcaption__titulo-btn{
         font-size: 1.5rem;
     }
+    .section-nosotros__texto{
+        font-size: 1.5rem;
+    }
 }
 @media(min-width:660px){
+    h2{
+        font-size: 2.3rem;
+    }
     .figure__texto{
         font-size: 1.7rem;
         padding-top: 17rem;
@@ -610,6 +666,9 @@ h2{
     }
     .article:hover  .figure__texto{
         bottom: 6.9rem;
+    }
+    .section-nosotros__texto{
+        font-size: 1.5rem;
     }
 }
 @media(min-width:768px){
@@ -621,7 +680,7 @@ h2{
     }
     .cards{
         grid-template-columns: repeat(3,1fr);
-        column-gap: 1rem;
+        column-gap: 2rem;
     }
     .figure__texto{
         font-size: 1.5rem;
@@ -662,14 +721,16 @@ h2{
     }
 }
 @media(min-width:992px){
-    
     .article:hover  .figure__texto{
         bottom: 5rem;
+    }
+    .section-nosotros{
+        margin-top: 5rem;
     }
 }
 @media(min-width:1200px){
     .figure__texto{
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-top: 17rem;
     }
     .article:hover  .figure__texto{
@@ -681,6 +742,10 @@ h2{
     }
     .figcaption__titulo-btn::before {
         background: var(--blue-black);
+    }
+    .cards{
+        column-gap: 3rem;
+        row-gap: 2rem;
     }
 }
 
