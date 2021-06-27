@@ -334,7 +334,7 @@ h2{
     }
 }
 /* ==================================== 
-            ESTILO ACORDEÓN 
+            ESTILO ACORDEÓN -MENÚ 
 ======================================= */
 .item-content{
     overflow: hidden;
@@ -346,9 +346,6 @@ h2{
     padding: 0;
     opacity: 1;
 }
-/* .btn-item.active{
-    color: var(--gold);
-} */
 .btn-item:after{
     content:"\27AD";
     float: right;
@@ -364,6 +361,65 @@ h2{
     .btn-item:after{
         display: none;
     }
+}
+/* ==================================== 
+            ESTILO ACORDEÓN - NOSOTROS 
+======================================= */
+.acordeon-content{
+    overflow: hidden;
+    max-height: 0rem;
+    opacity: 0;
+}
+.acordeon-content p{
+    text-align: justify;
+    line-height: 1.4;
+}
+.activo + .acordeon-content{
+    max-height: 1000px;
+    padding: 0;
+    opacity: 1;
+}
+.btn-acordeon{
+    background: var(--blue-black);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.btn-acordeon.activo{
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--granate);
+    text-shadow: 0px 2px 4px var(--blackClaro);
+}
+.btn-acordeon:after{
+    content:"\002b";
+    float: right;
+    margin-top: -0.7rem;
+    font-size: 3rem;
+}
+.btn-acordeon.activo:after{
+    content:"\02212";    
+    margin-top: -0.6rem;
+    font-weight: bold;
+}
+.section-acordeon{
+    margin-top: 2rem;
+}
+@media(min-width:768px){
+    .section-acordeon{
+        margin-top: 0;
+    }
+}
+@media(min-width:992px){
+    .section-acordeon{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.list-acordeon{
+    font-family: var(--font-terciaria);
+}
+.acordeon p{
+    padding: 1rem;
 }
 /* ==================================== 
             BOTON MENÚ 
@@ -674,6 +730,12 @@ h2{
 @media(min-width:768px){
     h2{
         font-size: 2.5rem;
+        grid-column: 1 / 3;
+    }
+    .section-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
     }
     .section-nosotros__texto{
         font-size: 1.6rem;
@@ -727,6 +789,10 @@ h2{
     }
     .section-nosotros{
         margin-top: 5rem;
+    }
+    .section-nosotros__texto{
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 }
 @media(min-width:1200px){
