@@ -681,6 +681,7 @@ h2{
     .cards{
         grid-template-columns: repeat(3,1fr);
         column-gap: 2rem;
+        row-gap: 2rem;
     }
     .figure__texto{
         font-size: 1.5rem;
