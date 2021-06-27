@@ -21,7 +21,7 @@ menu.addEventListener('click',function(){
 let red = document.getElementsByClassName("social");
 for(let i = 0 ; i < red.length ; i++){
     red[i].onmouseover=function(){
-        this.style="background: white; color: #3C415E; transition:.7s"
+        this.style="background: white; color: #3C415E; transition:.7s;font-weight: bold"
     }
     red[i].onmouseout=function(){
         this.style="transition: ease out .5s";
