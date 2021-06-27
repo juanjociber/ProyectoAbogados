@@ -72,7 +72,7 @@ function scrollNav() {
      
 }
 /**=======================================================
- *                   ACORDEÓN
+ *                   ACORDEÓN MENU
  =========================================================*/
 let btnItems = document.querySelectorAll(".item .btn-item");
 for(let i = 0 ; i < btnItems.length; i++ ){
@@ -93,4 +93,27 @@ function removeClass(){
         btnItems[i].classList.remove("active");
     }
 }
+
+/**=======================================================
+ *                   ACORDEÓN 'NOSOTROS'
+ =========================================================*/
+ let btnAcordeon = document.querySelectorAll(".acordeon .btn-acordeon");
+ for(let i = 0 ; i < btnAcordeon.length; i++ ){
+     btnAcordeon[i].addEventListener("click",function(e){
+     let btnA = e.target;
+     if(btnA.className == "btn-acordeon activo"){
+         removeClass()
+     }
+     else{
+         removeClass();
+         btnA.classList.add("activo");
+     }
+   })
+ }
+ //Funciones para que solo se muestre una selección y las demás se oculten 
+ function removeClass(){
+     for(let i = 0 ; i < btnAcordeon.length; i++){
+         btnAcordeon[i].classList.remove("activo");
+     }
+ }
 
