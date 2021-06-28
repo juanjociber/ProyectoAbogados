@@ -230,6 +230,7 @@ h2{
         z-index: 999;
         visibility: hidden;
         opacity: 0;
+        margin-top: 0.5rem;
     }
     .navegacion__item:hover .item-content{
         visibility: visible;
@@ -285,28 +286,40 @@ h2{
     }
     .submenu__lista a{
         color:var(--blue-black);
-        margin-left: 0;
+        margin-left: 0.5rem;
         text-align: left;
         text-shadow: none;
     }
     .submenu__lista a:hover{
         color: var(--blue-black);
         font-weight: 900;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+}
+@media(min-width:825px){
+    .navegacion__items{
+        margin-top: 3rem;
     }
 }
 @media(min-width:992px){
+    .navegacion__items{
+        margin-top: 4rem;
+    }
     .navegacion__item a{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .contacto p{
         font-size: 1.4rem;
     }
     .item-content{
-        width: 32rem;
+        width: 35rem;
+    }
+    .submenu__lista a{
+        font-size: 1.3rem;
+        padding: 1.2rem;
     }
     .submenu__lista a:hover{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 @media(min-width:1200px){
@@ -331,6 +344,9 @@ h2{
         padding-right: 1rem;
         grid-template-columns: 85% 15%;
     }
+    .navegacion__items{
+        margin-top: 1.5rem;
+    }
     .navegacion__item{
         margin-right: 2.5rem;
     }
@@ -341,7 +357,7 @@ h2{
         font-size: 1.5rem;
     }
     .item-content{
-        margin-top: 0.7rem;
+        margin-top: 0.1rem;
     }
     .redes__enlace i{
         margin-bottom: 0.5rem;
