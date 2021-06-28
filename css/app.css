@@ -270,12 +270,13 @@ h2{
         justify-content: flex-end;
         margin-left: 0;
         margin-bottom: 0;
+        margin-right: 0.6rem;
     }
     .redes__enlace{
         padding: 0;
     }
     .redes__enlace i{
-        margin-bottom: 0;
+        margin-top: 0.5rem;
     }
     .submenu__lista{
         background-color: var(--white);
@@ -341,6 +342,9 @@ h2{
     }
     .item-content{
         margin-top: 0.7rem;
+    }
+    .redes__enlace i{
+        margin-bottom: 0.5rem;
     }
 }
 /* ==================================== 
@@ -502,15 +506,18 @@ h2{
     .fijo .contacto p:nth-child(odd){
         border-right: 2px solid var(--blue-black);
     }
-
-    .fijo .redes__enlace{
-        border: 1px solid var(--granate);
-    }
     .fijo .redes__enlace i{
+        border: 1px solid var(--granate);
         color: var(--granate);
     }
-
-
+}
+@media(min-width:1200px){
+    .fijo .contacto{
+        margin-top: 0.5rem;
+    }
+    .fijo .redes__enlace i{
+        margin-bottom: 0.5rem;
+    }
 }
 /* ==================================== 
                 BANNER 
