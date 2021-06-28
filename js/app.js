@@ -44,7 +44,13 @@ banner();
 /**=======================================================
  *                      FIGURE
  =========================================================*/
-
+let btnFigcaption = document.querySelectorAll('.figcaption__titulo-btn');
+for(let i = 0 ; i < btnFigcaption.length; i++){
+    btnFigcaption[i].addEventListener('click',function(e){
+        console.log(e.target)
+        window.location.href='nosotros.html';
+    })
+}
 
 
 
@@ -75,25 +81,20 @@ function scrollNav() {
  *                   ACORDEÓN MENU
  =========================================================*/
 let btnItems = document.querySelectorAll(".item .btn-item");
+let conteo = 1;
 for(let i = 0 ; i < btnItems.length; i++ ){
     btnItems[i].addEventListener("click",function(e){
     let btn = e.target;
-    if(btn.className == "btn-item active"){
-        removeClass()
-    }
-    else{
-        removeClass();
-        btn.classList.add("active");
-    }
+        if(conteo == 1){
+            btn.classList.add('active')
+            conteo = 0;
+        }
+        else{
+            conteo = 1;
+            btn.classList.remove("active");
+        }
   })
 }
-//Funciones para que solo se muestre una selección y las demás se oculten 
-function removeClass(){
-    for(let i = 0 ; i < btnItems.length; i++){
-        btnItems[i].classList.remove("active");
-    }
-}
-
 /**=======================================================
  *                   ACORDEÓN 'NOSOTROS'
  =========================================================*/
