@@ -153,6 +153,16 @@ h2{
 .navegacion-mostrar{
     display: block;
 }
+@media(min-width:442px){
+    .header__nombre{
+        width: 50%;
+    }
+}
+@media(min-width:576px){
+    .header__nombre{
+        width: 40%;
+    }
+}
 @media(min-width:768px){
     .container-header{
         padding: 0;
@@ -461,6 +471,16 @@ h2{
     place-self: center;
     font-size: 6vw;
     margin-right: 1rem;
+}
+@media(min-width:442px){
+    .menu{
+        width: 50%;
+    }
+}
+@media(min-width:576px){
+    .menu{
+        width: 60%; 
+    }
 }
 .menu i{
     border: 1px solid var(--granate);
