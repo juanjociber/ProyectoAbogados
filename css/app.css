@@ -492,41 +492,21 @@ h2{
 .hamburger.is-active 
 .hamburger-inner:after,
 .hamburger.is-active .hamburger-inner:before{
-    background-color:var(--granate);
+    background-color:#8b2005f6;
 }
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before{
     width:3rem;
-    height:0.4rem;
-    background-color:var(--granate);
+    height:0.5rem;
+    background-color:#8b2005d3;
 }
 .menu{
-    width: 60%;
-    display: grid;
-    justify-content:end;
-    place-self: center;
-    margin-right: 1rem;
+    position: absolute;
+    right: 0;
 }
 .nav-activado{
     display: block;
-}
-@media(min-width:442px){
-    .menu{
-        width: 50%;
-        font-size: 3rem;
-        top: 2rem;
-    }
-    .menu i{
-        padding: 0.5vw 1vw;
-    }
-}
-@media(min-width:576px){
-    .menu{
-        width: 60%;
-        font-size: 3.2rem;
-        top: 2.8rem; 
-    }
 }
 @media(min-width:768px){
     .menu{
