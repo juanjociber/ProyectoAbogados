@@ -33,7 +33,9 @@ html{
 }
 body{
     font-size: 16px;
-    background: var(--background-primario);
+    background: #ADA996;  /* fallback for old browsers */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .container{
     width: min(95%, 120rem);
@@ -42,6 +44,9 @@ body{
 img{
     max-width: 100%;
     object-fit: cover;
+}
+main{
+    
 }
 /* ===== utilidades =====*/
 .no-padding{
@@ -174,15 +179,15 @@ h2{
         grid-template-columns: auto auto;
         padding: 0;
     }
-    .contanier-logo-menu{
-        grid-column: 1 / 2;
-    }
     .header__nombre{
         width: auto;
         display: grid;
         place-self: center;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    .contanier-logo-menu{
+        grid-column: 1 / 2;
     }
     .container-nav{
         grid-column: 2 / 3;
@@ -235,6 +240,10 @@ h2{
         font-weight: normal;
         width: 100%;
     }
+    .navegacion__item:hover .item-content{
+        visibility: visible;
+        opacity: 1;
+    }
     .item-content{
         position: absolute;
         background-color: var(--blue-black);
@@ -243,10 +252,6 @@ h2{
         visibility: hidden;
         opacity: 0;
         margin-top: 0.5rem;
-    }
-    .navegacion__item:hover .item-content{
-        visibility: visible;
-        opacity: 1;
     }
     .contacto{
         grid-column: 1 / 2;
@@ -314,6 +319,9 @@ h2{
     }
 }
 @media(min-width:992px){
+    /* .header__nombre{
+        border: 1px solid;
+    } */
     .navegacion__items{
         margin-top: 4rem;
     }
@@ -446,6 +454,12 @@ h2{
 .section-acordeon{
     margin-top: 2rem;
 }
+.list-acordeon{
+    font-family: var(--font-terciaria);
+}
+.acordeon p{
+    padding: 1rem;
+}
 @media(min-width:768px){
     .section-acordeon{
         margin-top: 0;
@@ -457,12 +471,6 @@ h2{
         padding-right: 2rem;
     }
 }
-.list-acordeon{
-    font-family: var(--font-terciaria);
-}
-.acordeon p{
-    padding: 1rem;
-}
 /* ==================================== 
             BOTON MENÚ 
 ======================================= */
@@ -473,16 +481,6 @@ h2{
     place-self: center;
     font-size: 6vw;
     margin-right: 1rem;
-}
-@media(min-width:442px){
-    .menu{
-        width: 50%;
-    }
-}
-@media(min-width:576px){
-    .menu{
-        width: 60%; 
-    }
 }
 .menu i{
     border: 1px solid var(--granate);
@@ -496,6 +494,7 @@ h2{
 }
 @media(min-width:442px){
     .menu{
+        width: 50%;
         font-size: 3rem;
         top: 2rem;
     }
@@ -505,8 +504,9 @@ h2{
 }
 @media(min-width:576px){
     .menu{
+        width: 60%;
         font-size: 3.2rem;
-        top: 2.8rem;
+        top: 2.8rem; 
     }
 }
 @media(min-width:768px){
@@ -550,6 +550,7 @@ h2{
     .fijo .redes__enlace i{
         border: 1px solid var(--granate);
         color: var(--granate);
+        margin-top: 1.2rem;
     }
     .fijo .submenu__lista{
         background-color: var(--blue-black);
