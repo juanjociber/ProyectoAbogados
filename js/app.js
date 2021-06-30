@@ -7,14 +7,17 @@ let contador = 1;
 
 menu.addEventListener('click',function(){
     if(contador == 1){
-        navegacion.classList.add('navegacion-mostrar')
+        navegacion.classList.add('nav-activado')
+        menu.classList.add('is-active');
         contador = 0;    
     }
     else{
         contador = 1;
-        navegacion.classList.remove('navegacion-mostrar')
+        navegacion.classList.remove('nav-activado')
+        menu.classList.remove('is-active');
     }
 });
+
 /**=======================================================
  *                 REDES SOCIALES
  =========================================================*/
