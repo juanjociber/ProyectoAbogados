@@ -47,6 +47,11 @@ banner();
 /**=======================================================
  *                      FIGURE
  =========================================================*/
+const enlaces ={
+    titulo:'Derecho Penal',
+    url:'',
+}
+
 let btnFigcaption = document.querySelectorAll('.figcaption__titulo-btn');
 for(let i = 0 ; i < btnFigcaption.length; i++){
     btnFigcaption[i].addEventListener('click',function(e){
@@ -54,6 +59,55 @@ for(let i = 0 ; i < btnFigcaption.length; i++){
         window.location.href='nosotros.html';
     })
 }
+
+
+/**=======================================================
+ *                      CREANDO ELEMENTO FIGURE
+ =========================================================*/
+//VARIABLES HIJOS: 
+const $article = document.createElement("article"),
+$figure = document.createElement("figure"),
+$img = document.createElement("img"),
+$p = document.createElement("p"),
+$figcaption = document.createElement("figcaption"),
+$figcaptionText = document.createTextNode("prueba"),
+
+//VARIABLE PADRE:
+$cards = document.querySelector(".cards")
+
+//GUARDANDO DATA EN VARIABLES:
+//ELEMENTO 'IMG'
+$img.setAttribute("src","./img/portfolio-1.jpg");
+$img.setAttribute("Alt","Imagen");
+
+//ELEMENTO 'FIGCAPTION'
+$figcaption.classList.add("figcaption__titulo");
+$figcaption.classList.add("figcaption__titulo-btn");
+$figcaption.appendChild($figcaptionText);
+
+//ELEMENTO 'P'
+$p.textContent="Especialistas";
+$p.classList.add("figure__texto");
+
+//ELEMENTO 'ARTICLE'
+$article.classList.add('article');
+$article.appendChild($figure);
+
+//ELEMENTO 'FIGURE'
+$figure.appendChild($img);
+$figure.appendChild($p);
+$figure.appendChild($figcaption)
+
+//ELEMENTO 'DIV'
+$cards.appendChild($article);
+
+
+
+
+
+
+
+
 
 
 
