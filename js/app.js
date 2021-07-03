@@ -45,69 +45,71 @@ function banner(){
 banner();
 
 /**=======================================================
- *                      FIGURE
- =========================================================*/
-const enlaces ={
-    titulo:'Derecho Penal',
-    url:'',
-}
-
-let btnFigcaption = document.querySelectorAll('.figcaption__titulo-btn');
-for(let i = 0 ; i < btnFigcaption.length; i++){
-    btnFigcaption[i].addEventListener('click',function(e){
-        console.log(e.target)
-        window.location.href='nosotros.html';
-    })
-}
-
-
-/**=======================================================
  *                      CREANDO ELEMENTO FIGURE
  =========================================================*/
-//VARIABLES HIJOS: 
-const $article = document.createElement("article"),
-$figure = document.createElement("figure"),
-$img = document.createElement("img"),
-$p = document.createElement("p"),
-$figcaption = document.createElement("figcaption"),
-$figcaptionText = document.createTextNode("prueba"),
+const especialidad = 
+[{
+    imagen: './img/portfolio-1.jpg',
+    comentario:'Especialistas en Derecho Penal',
+    nombre: 'Derecho Penal', 
+},
+{
+    imagen: './img/portfolio-2.jpg',
+    comentario:'Especialistas en Contratos Civiles',
+    nombre: 'Contratos Civiles', 
+},
+{
+    imagen: './img/portfolio-3.jpg',
+    comentario:'Especialistas en Recursos Humanos',
+    nombre: 'Recursos Humanos', 
+},
+{
+    imagen: './img/portfolio-4.jpg',
+    comentario:'Asesores en Contrataciones con el Estado',
+    nombre: 'Contratos con el Estado', 
+},
+{
+    imagen: './img/portfolio-5.jpg',
+    comentario:'Especialistas en Procedimiento Administrativo Sancionador y Procedimiento Administrativo Disciplinario',
+    nombre: 'Procedimiento Administrativo', 
+}
+];
+let especialidadArray = Object.entries(especialidad);
+const $fragment = document.createDocumentFragment();
 
-//VARIABLE PADRE:
-$cards = document.querySelector(".cards")
-
-//GUARDANDO DATA EN VARIABLES:
-//ELEMENTO 'IMG'
-$img.setAttribute("src","./img/portfolio-1.jpg");
-$img.setAttribute("Alt","Imagen");
-
-//ELEMENTO 'FIGCAPTION'
-$figcaption.classList.add("figcaption__titulo");
-$figcaption.classList.add("figcaption__titulo-btn");
-$figcaption.appendChild($figcaptionText);
-
-//ELEMENTO 'P'
-$p.textContent="Especialistas";
-$p.classList.add("figure__texto");
-
-//ELEMENTO 'ARTICLE'
-$article.classList.add('article');
-$article.appendChild($figure);
-
-//ELEMENTO 'FIGURE'
-$figure.appendChild($img);
-$figure.appendChild($p);
-$figure.appendChild($figcaption)
-
-//ELEMENTO 'DIV'
-$cards.appendChild($article);
-
-
-
-
-
-
-
-
+especialidadArray.forEach(function(e){
+    //console.log(e[1])
+    //VARIABLES HIJOS: 
+    const $article = document.createElement("article"),
+    $figure = document.createElement("figure"),
+    $img = document.createElement("img"),
+    $p = document.createElement("p"),
+    $figcaption = document.createElement("figcaption"),
+    $figcaptionText = document.createTextNode(e[1].nombre),
+    //VARIABLE PADRE:
+    $cards = document.querySelector(".cards")
+    //****** GUARDANDO DATA EN VARIABLES:******
+    //ELEMENTO 'ARTICLE'
+    $article.classList.add('article');
+    $article.appendChild($figure);
+    //ELEMENTO 'FIGURE'
+    $figure.appendChild($img);
+    $figure.appendChild($p);
+    $figure.appendChild($figcaption)
+    //ELEMENTO 'IMG'
+    $img.setAttribute("src",e[1].imagen);
+    $img.setAttribute("Alt","Imagen");
+    //ELEMENTO 'P'
+    $p.textContent=e[1].comentario;
+    $p.classList.add("figure__texto");
+    //ELEMENTO 'FIGCAPTION'
+    $figcaption.classList.add("figcaption__titulo");
+    $figcaption.classList.add("figcaption__titulo-btn");
+    $figcaption.appendChild($figcaptionText);
+    //ELEMENTO 'DIV'
+    $fragment.appendChild($article)
+    $cards.appendChild($fragment);
+});
 
 
 
