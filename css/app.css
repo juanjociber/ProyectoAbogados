@@ -905,3 +905,16 @@ h2{
     }
 }
 
+/*img-cuadros*/
+.parallax{
+    
+    height:450px; 
+    background-image: url(../img/pexels-karolina-grabowska-7875785.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+   
+    
+    border: 2px solid red;    
+}
+
