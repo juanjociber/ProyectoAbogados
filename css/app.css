@@ -521,8 +521,26 @@ h2{
     background-color: rgba(255, 255, 255, 0.822);
 } 
 @media(min-width: 768px){
+    .fijo .header{
+        margin-top: 0.01rem;
+        display: grid;
+        grid-template-columns: 25% auto;
+    }
     .fijo .container-nav{
         background-color: #1f24445b;
+        display: grid;
+        grid-template-columns: repeat (2,1fr);
+    }
+    .fijo .navegacion{
+        grid-column: 1 /2;
+        grid-row: 1 / 2;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fijo .navegacion__items{
+        margin: 0;
     }
     .fijo .navegacion__item a{
         color: var(--blue-black);
@@ -537,17 +555,21 @@ h2{
         font-weight: 300;
         text-shadow: none;
     }
-    .fijo .contacto p:nth-child(odd){
-        border-right: 2px solid var(--blue-black);
+    .fijo .contacto{
+        display: none;
+    }
+    .fijo .redes{
+        display: flex;
+        align-items: center;
+        margin: 0;
     }
     .fijo .redes__enlace i{
         border: 1px solid var(--granate);
         color: var(--granate);
-        margin-top: 1.2rem;
+        margin: 0;
     }
     .fijo .submenu__lista{
         background-color: var(--blue-black);
-       
     }
     .fijo .submenu__lista a{
         color: var(--white);
@@ -559,11 +581,15 @@ h2{
     }
 }
 @media(min-width:1200px){
-    .fijo .contacto{
-        margin-top: 0.5rem;
+    .fijo .container-nav{
+        display: flex;
+        justify-content: space-between;
     }
-    .fijo .redes__enlace i{
-        margin-bottom: 0.5rem;
+    .fijo .navegacion{
+        width: 100%;
+    }
+    .fijo .redes{
+        margin: 1rem;
     }
 }
 /* ==================================== 
@@ -904,7 +930,9 @@ h2{
         row-gap: 2rem;
     }
 }
-/*img-cuadros*/
+/*======================================= 
+            EFECTO PARALLAX 
+=========================================*/
 .parallax{
     width: 100%;
     height:42rem; 
@@ -913,14 +941,15 @@ h2{
     background-size: cover;
     background-position: center; 
 }
-/*====== EFECTO FLIP 0======*/
-.tarjeta-wrap{
+/*======================================== 
+                EFECTO FLIP 
+==========================================*/
+.card-flip{
     width: min(80%, 120rem);
     margin: 2rem auto 3rem auto;
-	-webkit-perspective: 800;
-	perspective: 800;
+	perspective: 100rem;
 }
-.tarjeta{
+.card-flip__item{
     margin: 0 auto;
 	width: 100%;
 	height: 90vw;
@@ -928,12 +957,11 @@ h2{
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	-webkit-transition: .4s ease;
-	transition: .4s ease;
+	transition: transform 1s;
 	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 }
-.adelante, .atras{
+.front, .back{
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -942,30 +970,21 @@ h2{
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.adelante{
+.front{
 	width: 100%;
 }
-.atras{
+.back{
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 	padding: 1.5rem;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
 	color: #fff;
 	font-family: "open sans";
 }
-.tarjeta-wrap:hover .tarjeta{
+.card-flip:hover .card-flip__item{
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
@@ -978,45 +997,45 @@ h2{
 	background-size: cover;
 }
 @media(min-width:576px){
-    .wrap{
+    .flip-container{
         display: grid;
         grid-template-columns: auto auto;
         column-gap: 2rem;
     }
-    .tarjeta-wrap{
+    .card-flip{
         width: 100%;
     }
-    .tarjeta{
+    .card-flip__item{
         height: 55vw;
     }
 }
 @media(min-width:768px){
-    .wrap{
+    .flip-container{
         width: 80%;
         margin: 0 auto;
     }
-    .tarjeta{
+    .card-flip__item{
         height: 35rem;
     }
 }
 @media(min-width:820px){
-    .wrap{
+    .flip-container{
         width: 75%;
     }
-    .tarjeta{
+    .card-flip__item{
         height: 40rem;
     }
 }
 @media(min-width:992px){
-    .wrap{
+    .flip-container{
         width: 60%;
     }
-    .tarjeta{
+    .card-flip__item{
         height: 37rem;
     }
 }
-@media(min-width:992px){
-    .tarjeta{
+@media(min-width:1200px){
+    .card-flip__item{
         height: 40rem;
     }
 }
