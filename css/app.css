@@ -907,8 +907,8 @@ h2{
 
 /*img-cuadros*/
 .parallax{
-    
-    height:450px; 
+    /* width: 100px; */
+    height:300px; 
     background-image: url(../img/pexels-karolina-grabowska-7875785.jpg);
     background-attachment: fixed;
     background-size: cover;
