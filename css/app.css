@@ -904,14 +904,119 @@ h2{
         row-gap: 2rem;
     }
 }
-
 /*img-cuadros*/
 .parallax{
     width: 100%;
     height:42rem; 
-    background-image: url(../img/l&h_consultores_asesores.jpg);
+    background-image: url(../img/l&h_consultores_asesores_1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center; 
 }
-
+/*====== EFECTO FLIP 0======*/
+.tarjeta-wrap{
+    width: min(80%, 120rem);
+    margin: 2rem auto 3rem auto;
+	-webkit-perspective: 800;
+	perspective: 800;
+}
+.tarjeta{
+    margin: 0 auto;
+	width: 100%;
+	height: 90vw;
+    background: #F29720;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: .4s ease;
+	transition: .4s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+}
+.adelante, .atras{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.adelante{
+	width: 100%;
+}
+.atras{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	padding: 1.5rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	font-family: "open sans";
+}
+.tarjeta-wrap:hover .tarjeta{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.card1{
+	background-image: url(../img/1.jpg);
+	background-size: cover;
+}
+.card2{
+	background-image: url(../img/3.jpg);
+	background-size: cover;
+}
+@media(min-width:576px){
+    .wrap{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 2rem;
+    }
+    .tarjeta-wrap{
+        width: 100%;
+    }
+    .tarjeta{
+        height: 55vw;
+    }
+}
+@media(min-width:768px){
+    .wrap{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .tarjeta{
+        height: 35rem;
+    }
+}
+@media(min-width:820px){
+    .wrap{
+        width: 75%;
+    }
+    .tarjeta{
+        height: 40rem;
+    }
+}
+@media(min-width:992px){
+    .wrap{
+        width: 60%;
+    }
+    .tarjeta{
+        height: 37rem;
+    }
+}
+@media(min-width:992px){
+    .tarjeta{
+        height: 40rem;
+    }
+}
