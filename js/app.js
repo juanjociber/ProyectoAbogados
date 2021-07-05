@@ -97,8 +97,9 @@ especialidadArray.forEach(function(e){
     $figure.appendChild($p);
     $figure.appendChild($figcaption)
     //ELEMENTO 'IMG'
-    $img.setAttribute("src",e[1].imagen);
+    $img.setAttribute("data-src",e[1].imagen);
     $img.setAttribute("Alt","Imagen");
+    $img.classList.add("imagenes");
     //ELEMENTO 'P'
     $p.textContent=e[1].comentario;
     $p.classList.add("figure__texto");
@@ -110,11 +111,85 @@ especialidadArray.forEach(function(e){
     $fragment.appendChild($article)
     $cards.appendChild($fragment);
 });
+//API: 'Intersection Observer' que carga imagenes conforme haces scroll.
+const img = document.querySelectorAll('img'); 
+
+function intersection(entries,observer){
+    entries.forEach(entry =>{
+        console.log('intersection',entry.target);
+        if(entry.isIntersecting){
+            if(entry.target.classList.contains('imagenes')){
+               entry.target.src = entry.target.dataset.src; 
+            }
+            observer.unobserve(entry.target);
+        }
+    });
+}
+const options ={
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+};
+
+const observer = new IntersectionObserver(intersection,options);
+
+img.forEach(i =>{
+    observer.observe(i);
+})
+
+
 
 
 /**=======================================================
  *                CREANDO FLIP
  =========================================================*/
+//  const cardsFlip = 
+//  [{
+//      imagenCard: './img/1.jpg',
+//      contenidoTexto:'Primer contenido',
+//  },
+//  {
+//      imagenCard: './img/2.jpg',
+//      contenidoTexto:'Segundo contenido', 
+//  }];
+
+//  let cardsFlipArray = Object.entries(cardsFlip);
+//  console.table(cardsFlipArray)
+
+//  cardsFlipArrayArray.forEach(function(e){
+//     console.log(e[1]);
+//     // //VARIABLES HIJOS: 
+//     // const $article = document.createElement("article"),
+//     // $figure = document.createElement("figure"),
+//     // $img = document.createElement("img"),
+//     // $p = document.createElement("p"),
+//     // $figcaption = document.createElement("figcaption"),
+//     // $figcaptionText = document.createTextNode(e[1].nombre),
+//     // //VARIABLE PADRE:
+//     // $cards = document.querySelector(".cards")
+//     // //****** GUARDANDO DATA EN VARIABLES:******
+//     // //ELEMENTO 'ARTICLE'
+//     // $article.classList.add('article');
+//     // $article.appendChild($figure);
+//     // //ELEMENTO 'FIGURE'
+//     // $figure.appendChild($img);
+//     // $figure.appendChild($p);
+//     // $figure.appendChild($figcaption)
+//     // //ELEMENTO 'IMG'
+//     // $img.setAttribute("src",e[1].imagen);
+//     // $img.setAttribute("Alt","Imagen");
+//     // //ELEMENTO 'P'
+//     // $p.textContent=e[1].comentario;
+//     // $p.classList.add("figure__texto");
+//     // //ELEMENTO 'FIGCAPTION'
+//     // $figcaption.classList.add("figcaption__titulo");
+//     // $figcaption.classList.add("figcaption__titulo-btn");
+//     // $figcaption.appendChild($figcaptionText);
+//     // //ELEMENTO 'DIV'
+//     // $fragment.appendChild($article)
+//     // $cards.appendChild($fragment);
+// });
+
 
 
 

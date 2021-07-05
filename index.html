@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
     <title>L&H | Consultores y Asesores Legales</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+
+    <!--preload-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/app.css" as="style">
+    <link rel="stylesheet" href="css/app.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -14,12 +25,11 @@
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="preload" href="css/slider.css" as="style">
     <link rel="stylesheet" href="css/slider.css">
 
-    </script>
+    <link rel="preload" href="./img/banner_01.jpg" as="image">
+    <link rel="preload" href="./img/banner_02.jpg" as="image">
 </head>
 
 <body>
@@ -28,7 +38,7 @@
         <header class="header">
             <div class="contanier-logo-menu">
                 <div class="header__nombre">
-                    <a href="index.html"><img src="./img/logo5-transparente.png" alt="logo"></a>
+                    <a href="index.html"><img loading="lazy" src="./img/logo5-transparente.png" alt="logo"></a>
                 </div>
                 <!-- =============== NAVEGACION ============== -->
                 <button class="menu hamburger hamburger--stand" type="button">
@@ -77,9 +87,10 @@
 
     <!-- =============== BANNER ============== -->
     <div class="slideshow banner">
+        <!--SLIDER-->
         <ul class="slider">
             <li>
-                <img src="./img/banner_01.jpg" alt="">
+                <img loading="lazy" src="./img/banner_01.jpg" alt="">
                 <section class="caption">
                     <h1>Abogados Civiles</h1>
                     <p>Nos preparamos para oponernos por tí.</p>
@@ -89,7 +100,7 @@
                 </section>
             </li>
             <li>
-                <img src="./img/banner_02.jpg" alt="">
+                <img loading="lazy" src="./img/banner_02.jpg" alt="">
                 <section class="caption">
                     <h1>Abogados Penales</h1>
                     <p>Nosostros luchamos por tu justicia.</p>
@@ -99,7 +110,6 @@
                 </section>
             </li>
         </ul>
-        <!--clase slider-->
         <!--CÍRCULOS PARA CAMBIAR SLIDER-->
         <ol class="pagination"></ol>
         <div class="left">
@@ -120,37 +130,53 @@
         <!--section-nosotros-->
         <section class="section-nosotros">
             <h2>Nuestro Estudio de Abogados</h2>
-            <p class="section-nosotros__texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut,
-                voluptates! In, quis numquam quidem ipsum reprehenderit nulla accusamus aut, vero perspiciatis optio
-                a vel accusantium nam, vitae earum voluptatem repellat. Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Aut,
-                voluptates! In, quis numquam quidem ipsum reprehenderit nulla accusamus aut, vero perspiciatis optio
-                a vel accusantium nam, vitae earum voluptatem repellat.
-            </p>
+            <div class="nosotros-container">
+                <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores Legales</strong>,
+                    es un grupo de
+                    profesionales del derecho, con distintas especialidades, poniendo particular atención en el nivel de
+                    conocimiento de sus miembros, alentando la capacitación continua para asegurarle al cliente el acceso a
+                    la mejor asistencia posible y brindarle soluciones a la altura de sus necesidades.Para demostrar nuestro liderazgo priorizamos la calidad de nuestros servicios, la
+                    observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
+                    llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
+                    los costos.
+                </p>
+                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
+            </div>
             <div class="section-acordeon">
                 <div class="list-acordeon">
                     <div class="acordeon">
-                        <p class="btn-acordeon activo">Misión</p>
+                        <p class="btn-acordeon activo">Visión</p>
                         <div class="acordeon-content">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fugit culpa libero
-                                doloremque asperiores? Repellat sed omnis deserunt qui autem! Maxime nisi culpa
-                                omnis vitae perferendis voluptates. Officia, magni possimus.</p>
+                            <p>Nuestra visión se basa en el liderazgo respaldado por la profesionalidad, el más estricto
+                                y cuidadoso análisis del marco regulatorio, y la más calificada doctrina a la que
+                                contribuimos con nuestra opinión legal. Nuestro asesoramiento es y debe tomar como
+                                objetivo central prevenir conflictos, minimizar contingencias, y resolver problemas
+                                complejos.</p>
+                            <p>Pensamos que la competitividad y eficiencia de las empresas debe compatibilizarse con la protección
+                                de la dignidad del trabajador, y el respeto por el derecho de las partes.</p>
                         </div>
                     </div>
                     <div class="acordeon">
-                        <p class="btn-acordeon">Visión</p>
+                        <p class="btn-acordeon">Misión</p>
                         <div class="acordeon-content">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fugit culpa libero
-                                doloremque asperiores? Repellat sed omnis deserunt qui autem! Maxime nisi culpa
-                                omnis vitae perferendis voluptates. Officia, magni possimus.</p>
+                            <p>Diagnosticar correctamente los problemas, conflictos y consultas de
+                                nuestros clientes, alineando las alternativas de solución con la defensa de sus
+                                intereses. Nuestro foco está orientado a encontrar y lograr la solución más eficiente a
+                                cada uno de los desafíos planteados. Todo ello se logra con especialización, alta
+                                responsabilidad profesional, trabajo en equipo y máxima laboriosidad, dentro de la ley y
+                                cumpliendo con las reglas impuestas por la moral, las buenas costumbres y las mejores
+                                prácticas.</p>
                         </div>
                     </div>
                     <div class="acordeon">
-                        <p class="btn-acordeon">Objetivo</p>
+                        <p class="btn-acordeon">Valores</p>
                         <div class="acordeon-content">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fugit culpa libero
-                                doloremque asperiores? Repellat sed omnis deserunt qui autem! Maxime nisi culpa
-                                omnis vitae perferendis voluptates. Officia, magni possimus.</p>
+                            <p>Los valores son esenciales en cualquier organización. Es por ello que ratificamos nuestro
+                                compromiso con el cumplimiento de la legislación vigente, y con el mandato de las reglas
+                                éticas y morales. Todo ello aplicando las mejores prácticas locales e internacionales.</p>
+                            <p>Nuestro compromiso está contenido en nuestro propio código de conducta y reglas éticas,
+                                y en la adhesión que el Estudio renueva en forma permanente de las normas establecidas
+                                en el mismo plano por nuestros Clientes.</p>
                         </div>
                     </div>
                 </div>
@@ -173,89 +199,31 @@
 
         <!--PARALLAX-->
         <div class="parallax"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quam officia inventore. Quas accusamus ipsam
-            qui omnis dolores natus id ut exercitationem cupiditate praesentium accusantium officia, consectetur
-            excepturi sunt unde?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi consectetur delectus excepturi aspernatur
-            expedita temporibus qui, quos aliquam, tempora, est eligendi ea sequi culpa voluptas voluptates velit quam
-            ab? Illum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro quos dolore sequi, nostrum dolorem, modi
-            cupiditate placeat maiores sapiente praesentium repudiandae aspernatur debitis veritatis impedit dignissimos
-            corporis similique! Itaque.</p>
-
+        
         <!-- TARJETAS 3D - EFECTO FLIP-->
-        <div class="flip-container">
-            <div class="card-flip">
+        <section class="flip-container">
+            <article class="card-flip">
                 <div class="card-flip__item">
                     <div class="front card1"></div>
                     <div class="back">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum,
+                            suscipit, aspernatur!</p>
                     </div>
                 </div>
-            </div>
-            <div class="card-flip">
+            </article>
+            <article class="card-flip">
                 <div class="card-flip__item">
                     <div class="front card2"></div>
                     <div class="back">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum,
+                            suscipit, aspernatur!</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
+
+
+
 
     </main>
 
@@ -265,6 +233,7 @@
     <!-- </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/modernizr.js"></script>
     <script src="js/slider.js"></script>
 </body>
 

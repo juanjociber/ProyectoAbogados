@@ -177,6 +177,14 @@ body{
 		right: 10px;
 	}
 }
+@media(min-width:900px){
+	.slider{
+		height: 100vh;
+	}
+	.slider img{
+		width: 100%;
+	}
+}
 @media(min-width:992px){
 	.btn-banner{
 		width: 20%;
@@ -190,6 +198,11 @@ body{
 	}
 	.slider .caption p{
 		font-size:3rem;
-		
 	}
+	.slider img{
+		/* height: 100vh; */
+	}
+}
+@media(min-width:1200px){
+	
 }
