@@ -1186,7 +1186,7 @@ h3{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 45.5vh;
+    height: 100vh;
     position: relative;
 }
 .contenedor-fondo{
@@ -1225,9 +1225,7 @@ h3{
     }   
 }
 @media(min-width:768px){
-    .contenedores{
-        height: 50rem;
-    }
+
     .grid-2-col{
         display: grid;
         grid-template-columns: repeat(2,1fr);
