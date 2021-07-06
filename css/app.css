@@ -429,6 +429,12 @@ h2{
     line-height: 1.4;
     font-size: 1.5rem;
 }
+.acordeon-content p:nth-child(odd){
+    padding-bottom: 0;
+}
+.acordeon-content p:nth-child(even){
+    padding-top: 0;
+}
 .activo + .acordeon-content{
     max-height: 1000px;
     padding: 0;
