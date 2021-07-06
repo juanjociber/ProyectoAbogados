@@ -62,7 +62,7 @@ h2{
     text-transform: uppercase;
     text-align: center;
     font-weight: 800;
-    padding: 1.5rem 0;
+    /* padding: 0 0 1.5rem 0; */
     color: var(--blue-black);
 }
 /* ==================================== 
@@ -72,8 +72,6 @@ h2{
     margin-top: -1rem;
     padding: 1rem 0 1rem 1rem;
     background-color: var(--white);
-    scroll-snap-align: center;
-    scroll-snap-stop:always;
 }
 .header__nombre{
     width: 60%;
@@ -694,13 +692,9 @@ h2{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
-.section-nosotros,.section-practica{
-    border-bottom: 1px solid rgba(128, 128, 128, 0.288);
-    margin: 0 2rem 3rem 2rem;
-    padding-bottom: 2rem;
-}
-.section-nosotros{
-    margin-top: 2rem;
+.section-nosotros,.section-practica,.section-contactenos{
+    padding-top: 2rem;
+    border: 2px solid blue;
 }
 .section-nosotros__texto{
     font-family: var(--font-terciaria);
@@ -708,6 +702,9 @@ h2{
     font-size: 1.5rem;
     text-align: justify;
     line-height: 1.4;
+}
+.section-nosotros__texto:nth-child(odd){
+    margin-top: 2rem;
 }
 .section-nosotros__texto:nth-child(even){
     margin-bottom: 2rem;
@@ -729,9 +726,10 @@ h2{
     transform: rotateY(10deg);
 }
 .article{
-    margin: 0 1rem 2.5rem 1rem;
+    margin: 0 auto 2.5rem auto;
     box-shadow: 0px 10px 13px -7px #000000, 22px -17px 21px -6px rgba(0,0,0,0);    overflow: hidden;
     position: relative;
+    border: 2px solid red;
 }
 .article:hover{
     border: 1px solid rgba(173, 173, 173, 0.425);
@@ -747,8 +745,6 @@ h2{
     text-align: center;
     width: 100%;
     padding-top: 16.5rem;
-    padding-left:1rem;
-    padding-right: 1rem;
     font-size: 4.5vw;
     font-family: var(--font-terciaria);
     /* display: -webkit-box;
@@ -847,15 +843,14 @@ h2{
     .figcaption__titulo-btn{
         font-size: 1.5rem;
     }
+    .section-nosotros{
+        padding-top: 4rem;
+    }
     .section-nosotros__texto{
         font-size: 1.5rem;
     }
 }
-@media(min-width:600px){
-    .section-nosotros{
-        margin-top: 3rem;
-    }
-}
+
 @media(min-width:660px){
     h2{
         font-size: 2.3rem;
@@ -883,6 +878,11 @@ h2{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         column-gap: 2rem;
+        border: 2px solid red;
+    }
+    .section-nosotros__texto:nth-child(odd){
+        padding-top: 1rem;
+        border: 2px solid blue;
     }
     .nosotros-container{
         grid-column: 1 / 3;
@@ -953,15 +953,22 @@ h2{
     }
 }
 @media(min-width:992px){
+    .article:hover  .figure__texto{
+        bottom: 5rem;
+    }
+    .section-acordeon{
+        padding: 0;
+    }
     .figure__texto{
         padding-top: 14rem;
     }
     .nosotros-container{
+        margin-top: 2rem;
         row-gap: unset;
     }
-    .section-nosotros{
-        margin-top: 5rem;
-    }
+    /* .section-nosotros{
+        margin-top: 8rem;
+    } */
     .section-nosotros__texto:nth-child(1){
         grid-column: 2 / 3;
         grid-row: 1 / 2;
@@ -974,14 +981,6 @@ h2{
     .nosotros__imagen{
         grid-column: 1 / 2;
         grid-row: 1 / 3;
-    }
-}
-@media(min-width:992px){
-    .article:hover  .figure__texto{
-        bottom: 5rem;
-    }
-    .section-acordeon{
-        padding: 0;
     }
 }
 @media(min-width:1200px){
@@ -1002,6 +1001,15 @@ h2{
     .cards{
         column-gap: 3rem;
         row-gap: 2rem;
+    }
+    .section-nosotros{
+        padding-top: 6rem;
+        border: 2px solid tomato;
+    }
+    .nosotros-container{
+        margin-top: 3rem;
+        border: 2px solid yellow;
+        
     }
     .nosotros__imagen{
         clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
@@ -1142,29 +1150,36 @@ h2{
 /*======================================== 
                 FOOTER 
 ==========================================*/
-.contenedores{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 30vw;
-    position: relative;
-    color: var(--white);
-    
-}
-.contenedor-fondo{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.582);
-    top: 0;
-}
-h3{
-    text-align: center;
-    color: var(--white);
-}
 .contenedor{
-    border: 2px solid yellow;
+    border: 2px solid red;
+    padding: 2rem;
 }
+@media(min-width:768px){
+    .contenedores{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vw;
+        position: relative;
+        color: var(--white);
+        
+    }
+    .contenedor-fondo{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.582);
+        top: 0;
+    }
+    h3{
+        text-align: center;
+        color: var(--white);
+    }
+    .contenedor{
+        border: 2px solid yellow;
+    }
+}
+
