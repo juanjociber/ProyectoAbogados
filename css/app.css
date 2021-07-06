@@ -65,6 +65,13 @@ h2{
     /* padding: 0 0 1.5rem 0; */
     color: var(--blue-black);
 }
+h3{
+    text-align: center;
+    font-family: var(--font-terciaria);
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+
+}
 /* ==================================== 
                 HEADER 
 ======================================= */
@@ -1150,36 +1157,50 @@ h2{
 /*======================================== 
                 FOOTER 
 ==========================================*/
+.contenedores{
+    background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55rem;
+    position: relative;
+}
+.contenedor-fondo{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.726);
+    top: 0;
+}
 .contenedor{
     border: 2px solid red;
-    padding: 2rem;
+    font-family: var(--font-parrafo);
+    font-size: 1.4rem;
+    color: var(--white); 
 }
+.footer-nosotros__titulo{
+   
+    border: 1px solid red;
+    
+}
+.footer-nosotros__titulo span{
+    text-shadow:0 2px 6px var(--gold);
+}
+.footer-nosotros__texto{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+
 @media(min-width:768px){
     .contenedores{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 30vw;
-        position: relative;
-        color: var(--white);
+        
         
     }
-    .contenedor-fondo{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.582);
-        top: 0;
-    }
-    h3{
-        text-align: center;
-        color: var(--white);
-    }
-    .contenedor{
-        border: 2px solid yellow;
-    }
+
+    
+    
 }
 
