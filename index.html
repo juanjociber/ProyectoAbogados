@@ -18,6 +18,9 @@
     <link rel="preload" href="css/app.css" as="style">
     <link rel="stylesheet" href="css/app.css">
 
+    <link rel="preload" href="css/slider.css" as="style">
+    <link rel="stylesheet" href="css/slider.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -25,8 +28,6 @@
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="preload" href="css/slider.css" as="style">
-    <link rel="stylesheet" href="css/slider.css">
 
     <link rel="preload" href="./img/banner_01.jpg" as="image">
     <link rel="preload" href="./img/banner_02.jpg" as="image">
@@ -131,17 +132,21 @@
         <section class="section-nosotros">
             <h2>Nuestro Estudio de Abogados</h2>
             <div class="nosotros-container container">
-                <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores Legales</strong>,
+                <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores
+                        Legales</strong>,
                     es un grupo de
                     profesionales del derecho, con distintas especialidades, poniendo particular atención en el nivel de
-                    conocimiento de sus miembros, alentando la capacitación continua para asegurarle al cliente el acceso a
-                    la mejor asistencia posible y brindarle soluciones a la altura de sus necesidades. 
+                    conocimiento de sus miembros, alentando la capacitación continua para asegurarle al cliente el
+                    acceso a
+                    la mejor asistencia posible y brindarle soluciones a la altura de sus necesidades.
                 </p>
-                <p class="section-nosotros__texto">Para demostrar nuestro liderazgo priorizamos la calidad de nuestros servicios, la
+                <p class="section-nosotros__texto">Para demostrar nuestro liderazgo priorizamos la calidad de nuestros
+                    servicios, la
                     observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
                     llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
-                    los costos.</p> 
-                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
+                    los costos.</p>
+                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
+                    alt="imagen__nosotros">
             </div>
             <div class="section-acordeon container">
                 <div class="list-acordeon">
@@ -153,7 +158,8 @@
                                 contribuimos con nuestra opinión legal. Nuestro asesoramiento es y debe tomar como
                                 objetivo central prevenir conflictos, minimizar contingencias, y resolver problemas
                                 complejos.</p>
-                            <p>Pensamos que la competitividad y eficiencia de las empresas debe compatibilizarse con la protección
+                            <p>Pensamos que la competitividad y eficiencia de las empresas debe compatibilizarse con la
+                                protección
                                 de la dignidad del trabajador, y el respeto por el derecho de las partes.</p>
                         </div>
                     </div>
@@ -174,7 +180,8 @@
                         <div class="acordeon-content">
                             <p>Los valores son esenciales en cualquier organización. Es por ello que ratificamos nuestro
                                 compromiso con el cumplimiento de la legislación vigente, y con el mandato de las reglas
-                                éticas y morales. Todo ello aplicando las mejores prácticas locales e internacionales.</p>
+                                éticas y morales. Todo ello aplicando las mejores prácticas locales e internacionales.
+                            </p>
                             <p>Nuestro compromiso está contenido en nuestro propio código de conducta y reglas éticas,
                                 y en la adhesión que el Estudio renueva en forma permanente de las normas establecidas
                                 en el mismo plano por nuestros Clientes.</p>
@@ -200,7 +207,7 @@
 
         <!--PARALLAX-->
         <div class="parallax"></div>
-        
+
         <!-- TARJETAS 3D - EFECTO FLIP-->
         <section class="flip-container">
             <article class="card-flip">
@@ -222,14 +229,62 @@
                 </div>
             </article>
         </section>
-
-
-
-
     </main>
 
     <footer class="footer">
-
+        <div class="contenedores">
+            <div class="contenedor">
+                <section class="footer-nosotros">
+                    <h3>l&h Consultores y Asesores Legales</h3>
+                    <p>Somos un Estudio jurídico, que trabajamos con ética y responsabilidad en favor de nuestros
+                        clientes. Cualquier consulta no dude en comunicarse con
+                        nosotros, tenemos los mejores profesionales en derecho a su servicio.</p>
+                </section>
+                <div class="boton-footer">
+                    <button type="submit">+Mas Info</button>
+                </div>
+            </div>
+            <div class="contenedor">
+                <section class="footer-contacto">
+                    <h3>Contacto</h3>
+                    <p><i class='bx bx-map'></i><span>Dirección:</span></p>
+                    <p><i class='bx bx-phone'></i><span>Celular:</span></p>
+                    <p><i class='bx bx-phone'></i><span>Teléfono:</span></p>
+                    <p><i class='bx bx-mail-send'></i><span>Email:</span></p>
+                    <p><i class='bx bx-alarm'></i><span>Lunes - Sábado:</span></p>
+                </section>
+            </div>
+            <div class="contenedor">
+                <section class="footer-consulta">
+                    <h3>Consultas</h3>
+                    <form class="formulario" name="contact" method="POST" data-netlify="true">
+                        
+                            <div class="contenedor-campos">
+                                <div class="campo">
+                                    <label>Nombre</label>
+                                    <input class="input-text" name="name" type="text" placeholder="Nombre" required>
+                                </div>
+                                                                
+                                <div class="campo">
+                                    <label>Email</label>
+                                    <input class="input-text" type="email" name="email" placeholder="Email" required>
+                                </div>
+                
+                                <div class="campo">
+                                    <label>Consulta</label>
+                                    <textarea class="input-text" required></textarea>
+                                </div>
+                            </div><!--.contenedor-campos-->
+                            
+                            <div class="alinear-derecha flex">
+                                <input class="boton w-sm-100" type="submit" name="message" value="Enviar">
+                            </div>
+                    </form>
+                </section>
+            </div>
+            <div class="contenedor-fondo"></div>
+        </div>
+        
     </footer>
     <!-- </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

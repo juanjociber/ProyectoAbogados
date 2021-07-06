@@ -111,8 +111,9 @@ especialidadArray.forEach(function(e){
     $fragment.appendChild($article)
     $cards.appendChild($fragment);
 });
-
-//API: 'Intersection Observer' que carga imagenes conforme haces scroll.
+/**===================================================================
+ *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
+ =====================================================================*/
 const img = document.querySelectorAll('img'); 
 
 function intersection(entries,observer){
@@ -131,13 +132,11 @@ const options ={
     rootMargin: '0px',
     threshold: 0
 };
-
 const observer = new IntersectionObserver(intersection,options);
 
 img.forEach(i =>{
     observer.observe(i);
 })
-
 
 /**=======================================================
  *                     NAVEGACIÓN FIJA 'nav'
@@ -196,7 +195,7 @@ for(let i = 0 ; i < btnItems.length; i++ ){
      }
    })
  }
- //Funciones para que solo se muestre una selección y las demás se oculten 
+ //Función para que solo se muestre una selección y las demás se oculten 
  function removeClass(){
      for(let i = 0 ; i < btnAcordeon.length; i++){
          btnAcordeon[i].classList.remove("activo");
@@ -204,7 +203,7 @@ for(let i = 0 ; i < btnItems.length; i++ ){
  }
 
  /**=======================================================
- *                   ELEMENT 'NOSOTROS-IMG'
+ *      EVENTO 'MOUSEOVER' EN ELEMENT 'NOSOTROS-IMG'
  =========================================================*/
 let imgNosotros = document.querySelector('.nosotros__imagen');
 
