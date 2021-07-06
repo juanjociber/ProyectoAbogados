@@ -1186,7 +1186,7 @@ h3{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 68rem;
     position: relative;
 }
 .contenedor-fondo{
@@ -1200,7 +1200,8 @@ h3{
     border: 2px solid red;
     font-family: var(--font-parrafo);
     font-size: 1.4rem;
-    color: var(--white); 
+    color: var(--white);
+    /* height: 20%;  */
 }
 .footer-nosotros,.footer-contacto,.footer-consulta,.footer-copyrigth{
     border: 2px solid yellow;
