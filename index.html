@@ -233,10 +233,11 @@
 
     <footer class="footer">
         <div class="contenedores">
+            <div class="contenedor-fondo">
             <div class="contenedor">
-                <section class="footer-nosotros">
-                    <h3>l&h Consultores y Asesores Legales</h3>
-                    <p>Somos un Estudio jurídico, que trabajamos con ética y responsabilidad en favor de nuestros
+                <section class="footer-nosotros container">
+                    <h3 class="footer-nosotros__titulo"><span>l&h</span> Consultores y Asesores Legales</h3>
+                    <p class="footer-nosotros__texto">Somos un Estudio jurídico, que trabajamos con ética y responsabilidad en favor de nuestros
                         clientes. Cualquier consulta no dude en comunicarse con
                         nosotros, tenemos los mejores profesionales en derecho a su servicio.</p>
                 </section>
@@ -245,44 +246,49 @@
                 </div>
             </div>
             <div class="contenedor">
-                <section class="footer-contacto">
-                    <h3>Contacto</h3>
-                    <p><i class='bx bx-map'></i><span>Dirección:</span></p>
-                    <p><i class='bx bx-phone'></i><span>Celular:</span></p>
-                    <p><i class='bx bx-phone'></i><span>Teléfono:</span></p>
-                    <p><i class='bx bx-mail-send'></i><span>Email:</span></p>
-                    <p><i class='bx bx-alarm'></i><span>Lunes - Sábado:</span></p>
+                <section class="footer-contacto container">
+                    <h3 class="footer-contacto__titulo">Contacto</h3>
+                    <p class="footer-contacto__enlace"><i class='bx bx-map'></i><span>Dirección:</span></p>
+                    <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Celular:</span></p>
+                    <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Teléfono:</span></p>
+                    <p class="footer-contacto__enlace"><i class='bx bx-mail-send'></i><span>Email:</span></p>
+                    <p class="footer-contacto__enlace"><i class='bx bx-alarm'></i><span>Lunes - Sábado:</span></p>
                 </section>
             </div>
             <div class="contenedor">
-                <section class="footer-consulta">
+                <section class="footer-consulta container">
                     <h3>Consultas</h3>
                     <form class="formulario" name="contact" method="POST" data-netlify="true">
                         
                             <div class="contenedor-campos">
                                 <div class="campo">
-                                    <label>Nombre</label>
+                                    <div class="input-icon"><i class='bx bxs-user'></i></div>
                                     <input class="input-text" name="name" type="text" placeholder="Nombre" required>
                                 </div>
                                                                 
                                 <div class="campo">
-                                    <label>Email</label>
+                                    <div class="input-icon"><i class='bx bx-mail-send'></i></i></div>
                                     <input class="input-text" type="email" name="email" placeholder="Email" required>
                                 </div>
                 
                                 <div class="campo">
-                                    <label>Consulta</label>
+                                    <div class="input-icon"><i class='bx bxs-edit'></i></div>
                                     <textarea class="input-text" required></textarea>
                                 </div>
                             </div><!--.contenedor-campos-->
                             
-                            <div class="alinear-derecha flex">
-                                <input class="boton w-sm-100" type="submit" name="message" value="Enviar">
+                            <div class="boton-footer">
+                                <input type="submit" name="message" value="Enviar">
                             </div>
                     </form>
                 </section>
             </div>
-            <div class="contenedor-fondo"></div>
+            <div class="contenedor">
+                <section class="footer-copyrigth container">
+                    <span class="footer-copyrigth__texto">Copyrigth &copy; 2021 L&H Consultores y Asesores Legales | Diseñado y Desarrollado por: <a href="tel:+953659803">Juan J. Huiza</a></span>
+                </section>
+            </div>
+            </div>
         </div>
         
     </footer>
