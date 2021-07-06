@@ -1157,19 +1157,43 @@ h3{
 /*======================================== 
                 FOOTER 
 ==========================================*/
+.boton-footer{
+    border: 2px solid blue;
+    text-align: center;
+    margin-top: 2rem; 
+}
+.boton-footer input{
+    width: 40%;
+    padding: 1.3rem 2rem;
+    outline: unset;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(179, 70, 51);
+    color:white;
+    cursor: pointer;
+    text-shadow: rgb(0 0 0) 1px 1px 6px;
+    transition: background-color .4s ease;
+    transform: scale(1.01);
+    box-shadow: 0px 10px 13px -7px #494848, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.boton-footer input:hover{
+    background-color: rgba(255, 99, 71, 0.842);
+    font-weight: bold;
+    transform: scale(0.97);
+}
 .contenedores{
     background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 55rem;
+    height: 45.5vh;
     position: relative;
 }
 .contenedor-fondo{
     position: absolute;
     width: 100%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.726);
+    height: 100%;
+    background-color: #1e1f20e0;
     top: 0;
 }
 .contenedor{
@@ -1178,29 +1202,60 @@ h3{
     font-size: 1.4rem;
     color: var(--white); 
 }
-.footer-nosotros__titulo{
-   
-    border: 1px solid red;
-    
+.footer-nosotros,.footer-contacto,.footer-consulta,.footer-copyrigth{
+    border: 2px solid yellow;
+    padding: 0 2rem;
 }
 .footer-nosotros__titulo span{
     text-shadow:0 2px 6px var(--gold);
 }
 .footer-nosotros__texto{
     text-align: justify;
-    font-size: 1.3rem;
+    color: #bdc5cc;
 }
-
-
+.footer-copyrigth{
+    text-align: center;
+}
+.footer-copyrigth__texto{
+    font-size: 2.6vw;
+}
+@media(min-width:576px){
+    .footer-copyrigth__texto{
+        font-size: 2vw;
+    }   
+}
 @media(min-width:768px){
     .contenedores{
+        height: 50rem;
+    }
+    .grid-2-col{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+    .contenedor:nth-child(1){
+        grid-column: 1 / 3;
+    }
+    .contenedor:nth-child(4){
+        grid-column: 1 / 3;
+    }
+    .footer-copyrigth__texto{
+        font-size: 1.6vw;
+    }
+}
+@media(min-width:992px){
+    .grid-3-col{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        
-        
     }
-
-    
-    
+    .contenedor:nth-child(1){
+        grid-column: 1 / 2;
+    }
+    .contenedor:nth-child(4){
+        grid-column: 1 / 4;
+    }
+    .footer-copyrigth__texto{
+        font-size: 1.3rem;
+    }
 }
 
