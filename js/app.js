@@ -203,3 +203,14 @@ for(let i = 0 ; i < btnItems.length; i++ ){
      }
  }
 
+ /**=======================================================
+ *                   ELEMENT 'NOSOTROS-IMG'
+ =========================================================*/
+let imgNosotros = document.querySelector('.nosotros__imagen');
+
+imgNosotros.addEventListener('mouseover',function(){
+    imgNosotros.src = '../img/l&h_consultores_asesores_nosotros2.jpg';
+});
+imgNosotros.addEventListener('mouseout',function(){
+    imgNosotros.src = '../img/l&h_consultores_asesores_nosotros.jpg';
+});
