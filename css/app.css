@@ -1255,6 +1255,8 @@ h3{
 }
 .input-icon{
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .input-icon i{
     position: absolute;
