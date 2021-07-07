@@ -762,7 +762,7 @@ h3{
     padding: 2rem 0;
     font-size: 4.5vw;
     font-weight: bold;
-    font-family: var(--font-secundario);
+    font-family: var(--font-parrafo);
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
@@ -772,8 +772,8 @@ h3{
     color: var(--granate);
     text-shadow: 
     1px 0 0 #474747,
-    -1px 0 0 #474747,
-    0 0.5px 0 #474747,
+    -0.5px 0 0 #474747,
+    0 0.5px 0 #8f8f8f,
     0 -1px 0 #474747;
 }
 .figcaption__titulo-btn::before {
@@ -1149,7 +1149,8 @@ h3{
     outline: unset;
     border: none;
     border-radius: 0.2rem;
-    background-color: #fa6a51;
+    background-color: var(--granate);
+    /* background-color: #fa6a51; */
     color:white;
     cursor: pointer;
     font-weight: 700;
@@ -1205,7 +1206,7 @@ h3{
     color: #bdc5cc;
 }
 .footer-contacto__enlace--mod{
-    color: #f3826f;
+    color: var(--granate);
     font-weight: 700;
     font-size: 1.3rem;
 }
