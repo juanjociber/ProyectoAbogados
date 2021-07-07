@@ -448,6 +448,11 @@ h3{
     color: var(--white);
     font-weight: bold;
     border: 1px solid var(--blue-black);
+    transform: scale(1.01);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.btn-acordeon:hover{
+    transform: scale(1.001);
 }
 .btn-acordeon.activo{
     color: var(--white);
@@ -455,6 +460,7 @@ h3{
     background-color: var(--granate);
     border: 1px solid var(--granate);
     text-shadow: 0px 2px 4px var(--blackClaro);
+    box-shadow: none;
 }
 .btn-acordeon:after{
     content:"\002b";
@@ -1147,10 +1153,9 @@ h3{
     width: 40%;
     padding: 1.3rem 2rem;
     outline: unset;
-    border: none;
+    border: 1px solid var(--white);
     border-radius: 0.2rem;
     background-color: var(--granate);
-    /* background-color: #fa6a51; */
     color:white;
     cursor: pointer;
     font-weight: 700;
@@ -1160,9 +1165,11 @@ h3{
 }
 .boton-footer input:hover{
     background-color: #ff6347d7;
+    border: 2px solid var(--white);
     font-weight: bold;
     transform: scale(0.97);
     text-shadow: rgb(0 0 0) 1px 1px 6px;
+    text-transform: uppercase;
 }
 .contenedores{
     background-image: url(../img/pexels-sora-shimazaki-5668473.jpg);
@@ -1231,7 +1238,8 @@ h3{
 .contenedor-campos{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    column-gap: 1rem;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
 }
 .campo:nth-child(1){
     grid-column: 1 / 3;
@@ -1242,34 +1250,26 @@ h3{
 .campo:nth-child(3){
     grid-column: 1 / 3;
 }
+.input-icon{
+    color: #bdc5cc;
+    background-color: #5970918f;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
 .input-text,.input-textArea{
     width: 100%;
     background-color: #3a4b638f;
     outline: none;
     border: none;
-    border-radius: .2rem;
-    padding: 1rem 0 1rem 2rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
 }
-.input-text:hover,.input-textArea:hover{
+.input-icon:hover, .input-text:hover{
     background-color: #eceef1;
-} 
-.campo{
-    margin-top: 1rem;
-    position: relative;
-    display: flex;
-}
-.input-icon{
-    position: absolute;
-    color: #bdc5cc;
-    left: 0;
-    top:3rem;
-}
-.campo:hover .input-icon{
     color: rgb(44, 49, 54);
-}
-.input-icon:last-of-type{
-    top:0.5rem;
-}
+} 
 ::placeholder{
     color: #bdc5cc;
 }
@@ -1298,12 +1298,6 @@ h3{
     .footer-contacto__enlace span{
         width: 25%;
     }
-    .input-icon{
-        top:0.8rem !important;
-    }
-    .input-icon--mod{
-        top:0.6rem !important;
-    }    
 }
 @media(min-width:768px){
     h3{
@@ -1418,6 +1412,9 @@ h3{
     }
 }
 @media(min-width:1200px){
+    h3{
+        text-decoration: none;
+    }
     .contenedores{
         height: 40rem;
     }
