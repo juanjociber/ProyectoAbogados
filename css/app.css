@@ -10,7 +10,8 @@
     --blue-transparente:#3c415eda;
     --blue-claro:#47597E;
     --blue-white: #DBE6FD;
-    --granate:#fa6a51;
+    /* --granate:#fa6a51; */
+    --granate:#A64942;
     --gold:#B2AB8C;
     --white:#FFFFFF;
     --font-principal:sans-serif;
@@ -760,7 +761,7 @@ h3{
     padding: 2rem 0;
     font-size: 4.5vw;
     font-weight: bold;
-    font-family: var(--font-secundario);
+    font-family: var(--font-principal);
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
