@@ -11,7 +11,8 @@
     --blue-claro:#47597E;
     --blue-white: #DBE6FD;
     /* --granate:#fa6a51; */
-    --granate:#A64942;
+    /* --granate:#A64942; */
+    --granate:#CD3F3E;
     --gold:#B2AB8C;
     --white:#FFFFFF;
     --font-principal:sans-serif;
@@ -761,15 +762,19 @@ h3{
     padding: 2rem 0;
     font-size: 4.5vw;
     font-weight: bold;
-    font-family: var(--font-principal);
+    font-family: var(--font-secundario);
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
+
 }
 .figcaption__titulo-btn {
     color: var(--granate);
-    text-shadow: 1px 0 0 var(--blackfirst),-1px 0 0 var(--blackfirst),
-     0 1px 0 var(--blackfirst),0 -1px 0 var(--blackfirst);
+    text-shadow: 
+    1px 0 0 #474747,
+    -1px 0 0 #474747,
+    0 0.5px 0 #474747,
+    0 -1px 0 #474747;
 }
 .figcaption__titulo-btn::before {
     content: "";
