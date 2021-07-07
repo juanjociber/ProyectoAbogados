@@ -1190,7 +1190,7 @@ h3{
     font-family: var(--font-parrafo);
     font-size: 1.4rem;
     color: var(--white);
-    border-bottom: 1px solid #7c322598;
+    border-bottom: 1px solid #c08f8648;
     margin-right: 3rem;
     margin-left: 3rem;
     padding-bottom: 2rem;
@@ -1255,17 +1255,16 @@ h3{
 }
 .input-icon{
     position: relative;
-    display: flex;
-    align-items: center;
 }
 .input-icon i{
     position: absolute;
     left: 0;
-    top: 0.2rem;
+    top: 0.5rem;
     padding: 0.9rem 0.5rem;
     font-size: 1.5rem;
     color: #bdc5cc;
 }
+
 .input-icon:hover i{
     color:#323b3f;
 }
