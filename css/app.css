@@ -616,7 +616,7 @@ h3{
                 BANNER 
 ======================================= */
 .banner{
-    height: 59vw;
+    height: 70vw;
     position: relative;
 }
 .banner-fondo{
@@ -627,7 +627,7 @@ h3{
     top: 0;
 }
 .slider img{
-    height: 59vw;
+    height: 70vw;
 }
 .caption h1{
     margin-top: 3rem !important;
