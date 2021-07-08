@@ -446,11 +446,7 @@ h3{
     color: var(--white);
     font-weight: bold;
     border: 1px solid var(--blue-black);
-    transform: scale(1.01);
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-}
-.btn-acordeon:hover{
-    transform: scale(1.001);
 }
 .btn-acordeon.activo{
     color: var(--white);
@@ -1251,7 +1247,6 @@ h3{
 {
     grid-column: 1 / 3;
 }
-
 .input-icon input[type="text"],input[type="email"] {
     padding: 1.3rem 0 1.3rem 2.5rem;
 }
@@ -1273,14 +1268,14 @@ h3{
 .input-text:hover{
     color: #434546;
     background-color: #f5f5f5;
-    border-radius: 0.2rem;
+    border-radius: 2rem;
 }
 .input-text,.input-textArea{
     width: 100%;
     background-color: #3a4b634b;
     outline: none;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 2rem;
     padding: 1rem 0 1rem 1rem;
 }
 .input-text::placeholder{
