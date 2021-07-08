@@ -752,6 +752,7 @@ h3{
     transition: filter .6s ease;
     transform-style: preserve-3d;
 	transition: transform 1s;
+    border-radius: 2rem;
 }
 .nosotros__imagen:hover{
     filter: unset;
