@@ -1,18 +1,21 @@
 <?php
-//Llamando a los campos
-$nombre= $_POST['name'];
-$email= $_POST['email'];
-$email= $_POST['comentarios'];
+
 
 //Datos para el correo
 $destinatario = "juanjohuiza@gmail.com";
-$asunto = "Contacto desde nuestra web";
 
-$contenido  = "De: $nombre \n";
-$contenido .= "Correo: $email \n";
-$contenido .= "Mensaje: $comentario";
+//Llamando a los campos
+$nombre= $_POST['name'];
+$email= $_POST['email'];
+$comentario= $_POST['comentarios'];
+
+
+$header = "Enviando desde la página L&H Consultores";
+$mensajeCompleto = $comentario. "\nAtentamente: ".$nombre;
 
 //Enviando mensaje
-mail($destinatario,$asunto,$contenido);
-header('Location:mensaje_Envio.html');
+mail($destinatario, $comentario, $mensajeCompleto, $header);
+echo "<script>alert('Correo enviado exitosamente')</script>";
+echo "<script>setTimeout(\"location.href='index.html'\",1000)</script>";
+//header('Location:mensaje_Envio.html');
 ?>
