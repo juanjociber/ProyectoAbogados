@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
     <!--preload-->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -256,8 +257,34 @@
                 <div class="fondo-formulario">
                     <section class="footer-consulta">
                         <h3>Consultas</h3>
-                            <form class="formulario" name="contacto" netlify>
-                                <!-- <fieldset class="container"> -->
+                            <!-- <form class="formulario" name="contacto" netlify> -->
+                                    <!-- <div class="contenedor-campos container">
+                                        <div class="campo">
+                                            <div class="input-icon">
+                                                <input class="input-text" name="name" type="text" placeholder="Nombre" required aria-hidden="true">
+                                                <i class='bx bxs-user'></i>        
+                                            </div>
+                                        </div>
+                                                                    
+                                        <div class="campo">
+                                            <div class="input-icon">
+                                                <input class="input-text" type="email" name="email" placeholder="Email" required aria-hidden="true">
+                                                <i class='bx bx-mail-send'></i>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="campo">
+                                            <div class="input-icon input-icon--mod">
+                                                <textarea class="input-text input-textArea" name="comentarios" rows="8" placeholder="Consulta" required></textarea>
+                                                <i class='bx bxs-edit'></i></div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="boton-footer boton-footer--mod">
+                                        <input class="boton-footer__dos" type="submit" name="message" value="Enviar" title="Click para Enviar Consulta">
+                                    </div>
+                            </form> -->
+                            <form action="enviar.php" class="formulario" method="POST">
                                     <div class="contenedor-campos container">
                                         <div class="campo">
                                             <div class="input-icon">

@@ -943,7 +943,7 @@ h3{
     }
     .figure__texto{
         font-size: 1.5rem;
-        padding-top: 12rem;
+        padding-top: 14rem;
     }
     .article:hover  .figure__texto{
         bottom: 6rem;
@@ -976,7 +976,7 @@ h3{
 }
 @media(min-width:992px){
     .article:hover  .figure__texto{
-        bottom: 5rem;
+        bottom: 6rem;
     }
     .section-acordeon{
         padding: 0;
