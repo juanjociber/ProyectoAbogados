@@ -106,11 +106,15 @@ especialidadArray.forEach(function(e){
     //ELEMENTO 'FIGCAPTION'
     $figcaption.classList.add("figcaption__titulo");
     $figcaption.classList.add("figcaption__titulo-btn");
+    
     $figcaption.appendChild($figcaptionText);
+
+    $fragment.appendChild($article);    
     //ELEMENTO 'DIV'
-    $fragment.appendChild($article)
     $cards.appendChild($fragment);
 });
+
+
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/

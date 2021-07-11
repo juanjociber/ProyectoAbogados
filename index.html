@@ -8,25 +8,28 @@
     <!-- <rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
     <title>L&H | Consultores y Asesores Legales</title>
+    <meta name="descripción" content="Especialistas en derecho">
+    <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
-    <!--preload-->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
-
-    <link rel="preload" href="css/app.css" as="style">
-    <link rel="stylesheet" href="css/app.css">
-
-    <link rel="preload" href="css/slider.css" as="style">
-    <link rel="stylesheet" href="css/slider.css">
-
+    
+    
+    <!--preload-->
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/app.css" as="style">
+    <link rel="stylesheet" href="css/app.css">   
     
+    <link rel="preload" href="css/slider.css" as="style">
+    <link rel="stylesheet" href="css/slider.css">
+    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   
 </head>
 
 <body>
@@ -85,7 +88,10 @@
         <!--SLIDER-->
         <ul class="slider">
             <li>
-                <img loading="lazy" src="./img/banner_01.jpg" alt="">
+                <picture>
+                    <source loading="lazy" srcset="./img/banner_01.webp" type="image/webp">
+                    <img loading="lazy" src="./img/banner_01.jpg" alt="Imagen banner1">
+                </picture>
                 <section class="caption">
                     <h1>Abogados Civiles</h1>
                     <p>Nos preparamos para oponernos por tí.</p>
@@ -95,7 +101,10 @@
                 </section>
             </li>
             <li>
-                <img loading="lazy" src="./img/banner_02.jpg" alt="">
+                <picture>
+                    <source loading="lazy" srcset="./img/banner_02.webp" type="image/webp">
+                    <img loading="lazy" src="./img/banner_02.jpg" alt="Imagen banner2">
+                </picture>
                 <section class="caption">
                     <h1>Abogados Penales</h1>
                     <p>Nosostros luchamos por tu justicia.</p>
@@ -139,9 +148,9 @@
                     observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
                     llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
                     los costos.</p>
-                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
-                    alt="imagen__nosotros">
+                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
             </div>
+            
             <div class="section-acordeon">
                 <div class="list-acordeon">
                     <div class="acordeon">
@@ -284,6 +293,7 @@
                                         <input class="boton-footer__dos" type="submit" name="message" value="Enviar" title="Click para Enviar Consulta">
                                     </div>
                             </form>
+                            
                     </section>
                 </div>
             </div>
@@ -295,11 +305,22 @@
         </div>
     </div>
     </footer>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/modernizr.js"></script>
+
     <script src="js/slider.js"></script>
+    
+    
+    <script src="js/modernizr.js"></script>
+    <script type="text/javascript">
+		var lazyLoadInstance = new LazyLoad({
+			elements_selector: ".lazy",
+			callback_loaded: function(img) {
+				img.removeAttribute('data-src');
+			}
+		});
+	</script>
+    
 </body>
 
 </html>
