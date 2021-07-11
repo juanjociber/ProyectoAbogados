@@ -752,6 +752,7 @@ h3{
     transition: filter .6s ease;
     transform-style: preserve-3d;
 	transition: transform 1s;
+    border-radius: 2rem;
 }
 .nosotros__imagen:hover{
     filter: unset;
@@ -942,7 +943,7 @@ h3{
     }
     .figure__texto{
         font-size: 1.5rem;
-        padding-top: 12rem;
+        padding-top: 14rem;
     }
     .article:hover  .figure__texto{
         bottom: 6rem;
@@ -975,7 +976,7 @@ h3{
 }
 @media(min-width:992px){
     .article:hover  .figure__texto{
-        bottom: 5rem;
+        bottom: 6rem;
     }
     .section-acordeon{
         padding: 0;
