@@ -5,34 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>L&H | Consultores y Asesores Legales</title>
     <meta name="descripción" content="Especialistas en derecho">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
-
+    <!--ANIMATE_CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--SLIDEJS_CARRUSEL-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
-   
     <!--preload-->
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap"
+        rel="stylesheet">
 
     <link rel="preload" href="css/app.css" as="style">
-    <link rel="stylesheet" href="css/app.css">   
-    
+    <link rel="stylesheet" href="css/app.css">
+
     <link rel="preload" href="css/slider.css" as="style">
     <link rel="stylesheet" href="css/slider.css">
-
 </head>
 
-<body>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <!-- =============== HEADER ============== -->
     <div class="container-header">
         <header class="header">
@@ -70,8 +81,10 @@
                 </div>
 
                 <div class="contacto">
-                    <p class="contacto__item"><a href="tel:+51 956 295 944"><i class='bx bxs-phone'></i>+51 956 295 944</a></p>
-                    <p class="contacto__item"><a href="mailto:huizaconsultores@gmail.com"><i class='bx bx-mail-send'></i>huizaconsultores@gmail.com</a></p>
+                    <p class="contacto__item"><a href="tel:+51 956 295 944"><i class='bx bxs-phone'></i>+51 956 295
+                            944</a></p>
+                    <p class="contacto__item"><a href="mailto:huizaconsultores@gmail.com"><i
+                                class='bx bx-mail-send'></i>huizaconsultores@gmail.com</a></p>
                 </div>
 
                 <div class="redes">
@@ -85,7 +98,7 @@
 
     <!-- ESTILOS DEL MAIN-->
 
-    <div id="image-slider" class="splide">
+    <div id="image-slider" class="splide animate__animated animate__bounce">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
@@ -94,7 +107,10 @@
                         <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="slider-boton">
-                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+
+                        <a class="boton-slider animate__animated animate__backInUp"
+                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
+                            title="Click para contáctarnos">
                             <i class='bx bxs-right-arrow-square'></i>Contáctenos
                         </a>
                     </div>
@@ -105,7 +121,9 @@
                         <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="slider-boton">
-                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+                        <a class="boton-slider"
+                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
+                            title="Click para contáctarnos">
                             <i class='bx bxs-right-arrow-square'></i>Contáctenos
                         </a>
                     </div>
@@ -116,13 +134,20 @@
                         <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="slider-boton">
-                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+                        <a class="boton-slider"
+                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
+                            title="Click para contáctarnos">
                             <i class='bx bxs-right-arrow-square'></i>Contáctenos
                         </a>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-8.84,96.88 C186.42,155.09 370.39,59.38 513.73,117.59 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #efeff0;"></path>
+            </svg></div>
     </div>
     <main>
         <aside>
@@ -146,9 +171,10 @@
                     observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
                     llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
                     los costos.</p>
-                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
+                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
+                    alt="imagen__nosotros">
             </div>
-            
+
             <div class="section-acordeon">
                 <div class="list-acordeon">
                     <div class="acordeon">
@@ -233,83 +259,93 @@
     </main>
 
     <footer class="footer">
-    <div class="contenedores">
-        <div class="contenedor-fondo grid-2-col grid-3-col">
-            <div class="contenedor">
-                <section class="footer-nosotros">
-                    <h3 class="footer-nosotros__titulo"><span>l&h</span> Consultores y Asesores Legales</h3>
-                    <p class="footer-nosotros__texto">Somos un Estudio jurídico, que trabajamos con ética y responsabilidad en favor de nuestros
-                        clientes. Cualquier consulta no dude en comunicarse con
-                        nosotros, tenemos los mejores profesionales en derecho a su servicio.</p>
-                </section>
-                <div class="boton-footer">
-                    <form action="">
-                        <input class="boton-footer__uno" type="submit" value="+Información" title="Click para mayor información"></input>
-                    </form>
-                </div>
-            </div>
-            <div class="contenedor">
-                <section class="footer-contacto">
-                    <h3 class="footer-contacto__titulo">Contacto</h3>
-                    <div class="enlaces">
-                        <p class="footer-contacto__enlace"><i class='bx bx-map'></i><span>Dirección</span>&ratio; </p>
-                        <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Celular</span>&ratio; 956 295 944</p>
-                        <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Teléfono</span>&ratio; 522 4054</p>
-                        <p class="footer-contacto__enlace footer-contacto__enlace--mod"><i class='bx bx-mail-send'></i><span>Email</span>&ratio; huizaconsultores@gmail.com</p>
-                        <p class="footer-contacto__enlace"><i class='bx bx-alarm'></i><span>Lunes - Sábado</span>&ratio; 9am a 6pm</p>
+        <div class="contenedores">
+            <div class="contenedor-fondo grid-2-col grid-3-col">
+                <div class="contenedor">
+                    <section class="footer-nosotros">
+                        <h3 class="footer-nosotros__titulo"><span>l&h</span> Consultores y Asesores Legales</h3>
+                        <p class="footer-nosotros__texto">Somos un Estudio jurídico, que trabajamos con ética y
+                            responsabilidad en favor de nuestros
+                            clientes. Cualquier consulta no dude en comunicarse con
+                            nosotros, tenemos los mejores profesionales en derecho a su servicio.</p>
+                    </section>
+                    <div class="boton-footer">
+                        <form action="">
+                            <input class="boton-footer__uno" type="submit" value="+Información"
+                                title="Click para mayor información"></input>
+                        </form>
                     </div>
-                </section>
-            </div>
-            <div class="contenedor">
-                <div class="fondo-formulario">
-                    <section class="footer-consulta">
-                        <h3>Consultas</h3>
-                            <form class="formulario" name="contacto" netlify> 
-                                    <div class="contenedor-campos container">
-                                        <div class="campo">
-                                            <div class="input-icon">
-                                                <input class="input-text" name="name" type="text" placeholder="Nombre" required aria-hidden="true">
-                                                <i class='bx bxs-user'></i>        
-                                            </div>
-                                        </div>
-                                                                    
-                                        <div class="campo">
-                                            <div class="input-icon">
-                                                <input class="input-text" type="email" name="email" placeholder="Email" required aria-hidden="true">
-                                                <i class='bx bx-mail-send'></i>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="campo">
-                                            <div class="input-icon input-icon--mod">
-                                                <textarea class="input-text input-textArea" name="comentarios" rows="8" placeholder="Consulta" required></textarea>
-                                                <i class='bx bxs-edit'></i></div>
+                </div>
+                <div class="contenedor">
+                    <section class="footer-contacto">
+                        <h3 class="footer-contacto__titulo">Contacto</h3>
+                        <div class="enlaces">
+                            <p class="footer-contacto__enlace"><i class='bx bx-map'></i><span>Dirección</span>&ratio;
+                            </p>
+                            <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Celular</span>&ratio;
+                                956 295 944</p>
+                            <p class="footer-contacto__enlace"><i class='bx bx-phone'></i><span>Teléfono</span>&ratio;
+                                522 4054</p>
+                            <p class="footer-contacto__enlace footer-contacto__enlace--mod"><i
+                                    class='bx bx-mail-send'></i><span>Email</span>&ratio; huizaconsultores@gmail.com</p>
+                            <p class="footer-contacto__enlace"><i class='bx bx-alarm'></i><span>Lunes -
+                                    Sábado</span>&ratio; 9am a 6pm</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="contenedor">
+                    <div class="fondo-formulario">
+                        <section class="footer-consulta">
+                            <h3>Consultas</h3>
+                            <form class="formulario" name="contacto" netlify>
+                                <div class="contenedor-campos container">
+                                    <div class="campo">
+                                        <div class="input-icon">
+                                            <input class="input-text" name="name" type="text" placeholder="Nombre"
+                                                required aria-hidden="true">
+                                            <i class='bx bxs-user'></i>
                                         </div>
                                     </div>
-                                
-                                    <div class="boton-footer boton-footer--mod">
-                                        <input class="boton-footer__dos" type="submit" name="message" value="Enviar" title="Click para Enviar Consulta">
+
+                                    <div class="campo">
+                                        <div class="input-icon">
+                                            <input class="input-text" type="email" name="email" placeholder="Email"
+                                                required aria-hidden="true">
+                                            <i class='bx bx-mail-send'></i>
+                                        </div>
                                     </div>
+
+                                    <div class="campo">
+                                        <div class="input-icon input-icon--mod">
+                                            <textarea class="input-text input-textArea" name="comentarios" rows="8"
+                                                placeholder="Consulta" required></textarea>
+                                            <i class='bx bxs-edit'></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boton-footer boton-footer--mod">
+                                    <input class="boton-footer__dos" type="submit" name="message" value="Enviar"
+                                        title="Click para Enviar Consulta">
+                                </div>
                             </form>
-                            
+
+                        </section>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <section class="footer-copyrigth footer-copyrigth--mod container">
+                        <span class="footer-copyrigth__texto">Copyrigth &copy; 2021 L&H Consultores y Asesores Legales |
+                            Diseñado y Desarrollado por: <a class="autor" href="tel:+953659803">Juan J. Huiza</a></span>
                     </section>
                 </div>
             </div>
-            <div class="contenedor">
-                <section class="footer-copyrigth footer-copyrigth--mod container">
-                    <span class="footer-copyrigth__texto">Copyrigth &copy; 2021 L&H Consultores y Asesores Legales | Diseñado y Desarrollado por: <a class="autor" href="tel:+953659803">Juan J. Huiza</a></span>
-                </section>
-            </div>
         </div>
-    </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/modernizr.js"></script>
-    
-    
 </body>
 
 </html>
