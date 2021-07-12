@@ -31,18 +31,14 @@ for(let i = 0 ; i < red.length ; i++){
     }
 }
 /**=======================================================
- *                 BANNER - SLIDER
+ *                     SLIDER
  =========================================================*/
-let item=["./img/banner_01.jpg","./img/banner_02.jpg"];
-let i=0;
-function banner(){
-    $("#imgBanner").attr("src", item[i]);
-        i++;
-    if(i >= item.length)
-        i=0;
-    setTimeout(banner,5000);
-}
-banner();
+document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#image-slider' ).mount();
+} );
+
+
+
 
 /**=======================================================
  *                      CREANDO ELEMENTO FIGURE
