@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
     <title>L&H | Consultores y Asesores Legales</title>
     <meta name="descripción" content="Especialistas en derecho">
-    <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
-    
-    
+   
     <!--preload-->
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
@@ -27,9 +29,7 @@
     
     <link rel="preload" href="css/slider.css" as="style">
     <link rel="stylesheet" href="css/slider.css">
-    
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-   
+
 </head>
 
 <body>
@@ -83,49 +83,47 @@
         </header>
     </div> <!-- container-header  -->
 
-    <!-- =============== BANNER ============== -->
-    <div class="slideshow banner">
-        <!--SLIDER-->
-        <ul class="slider">
-            <li>
-                <picture>
-                    <source loading="lazy" srcset="./img/banner_03.webp" type="image/webp">
-                    <img loading="lazy" src="./img/banner_03.jpg" alt="Imagen banner1">
-                </picture>
-                <section class="caption">
-                    <h1>Abogados Civiles</h1>
-                    <p>Nos preparamos para oponernos por tí.</p>
-                    <a class="boton-banner"
-                        href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos"><i
-                            class='bx bxs-right-arrow-square'></i>Contáctenos</a>
-                </section>
-            </li>
-            <li>
-                <picture>
-                    <source loading="lazy" srcset="./img/banner_04.webp" type="image/webp">
-                    <img loading="lazy" src="./img/banner_04.jpg" alt="Imagen banner2">
-                </picture>
-                <section class="caption">
-                    <h1>Abogados Penales</h1>
-                    <p>Nosostros luchamos por tu justicia.</p>
-                    <a class="boton-banner"
-                        href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos"><i
-                            class='bx bxs-right-arrow-square'></i>Contáctenos</a>
-                </section>
-            </li>
-        </ul>
-        <!--CÍRCULOS PARA CAMBIAR SLIDER-->
-        <ol class="pagination"></ol>
-        <div class="left">
-            <span class="bx bx-chevron-left-circle"></span>
-        </div>
-        <div class="right">
-            <span class="bx bx-chevron-right-circle"></span>
-        </div>
-        <div class="banner-fondo"></div>
-    </div>
-
     <!-- ESTILOS DEL MAIN-->
+
+    <div id="image-slider" class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="slider-items">
+                        <h2 class="slider-item">Derecho Penal</h2>
+                        <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="slider-boton">
+                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
+                        </a>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="slider-items">
+                        <h2 class="slider-item">Derecho Civil</h2>
+                        <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="slider-boton">
+                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
+                        </a>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="slider-items">
+                        <h2 class="slider-item">Derecho Administrativo</h2>
+                        <p class="slider-item no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="slider-boton">
+                        <a class="boton-slider" href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)." title="Click para contáctarnos">
+                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <main>
         <aside>
 
@@ -305,21 +303,12 @@
         </div>
     </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
-
-    <script src="js/slider.js"></script>
-    
-    
     <script src="js/modernizr.js"></script>
-    <script type="text/javascript">
-		var lazyLoadInstance = new LazyLoad({
-			elements_selector: ".lazy",
-			callback_loaded: function(img) {
-				img.removeAttribute('data-src');
-			}
-		});
-	</script>
+    
     
 </body>
 
