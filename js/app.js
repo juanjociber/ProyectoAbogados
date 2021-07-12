@@ -1,4 +1,12 @@
 /**=======================================================
+ *                     LOADER
+ =========================================================*/
+window.onload = function(){
+    $('#onload').fadeOut();
+    $('body').removeClass('hidden')
+}
+
+/**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
 let menu = document.querySelector('.menu');
@@ -36,9 +44,6 @@ for(let i = 0 ; i < red.length ; i++){
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#image-slider' ).mount();
 } );
-
-
-
 
 /**=======================================================
  *                      CREANDO ELEMENTO FIGURE
