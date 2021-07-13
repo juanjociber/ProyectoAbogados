@@ -39,7 +39,7 @@ body{
 .centrado{
     height: 100vh;
     background: #536976;  
-    background: linear-gradient(to right, rgba(41, 46, 73, 0.89), rgba(83, 105, 118, 0.925)),url(../img/l&h_consultores_asesores.jpg);
+    background: linear-gradient(to right, rgba(41, 46, 73, 0.63), rgba(83, 105, 118, 0.712)),url(../img/l&h_consultores_asesores.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -580,7 +580,7 @@ h3{
     margin-top: -0.6rem;
     font-weight: bold;
 }
-.section-acordeon{
+.nosotros-acordeon{
     margin-top: 2rem;
 }
 .list-acordeon{
@@ -590,12 +590,12 @@ h3{
     padding: 1rem;
 }
 @media(min-width:768px){
-    .section-acordeon{
+    .nosotros-acordeon{
         margin-top: 0;
     }
 }
 @media(min-width:992px){
-    .section-acordeon{
+    .nosotros-acordeon{
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -745,6 +745,22 @@ h3{
 /* ==================================== 
                 SLIDER 
 ======================================= */
+.splide__arrow{
+    border: 1px solid rgba(216, 216, 216, 0.068);
+    background: rgba(255, 255, 255, 0.205);
+    color: var(--white);
+}
+.splide__arrow:hover{
+    background: #FFFFFF;
+    transition: 1s;
+}
+button svg {
+    opacity: 0.2;
+    transition: opacity 1s;
+}
+button svg:hover{
+    opacity: 0.7;
+}
 .splide{
     position: relative;
 }
@@ -789,6 +805,14 @@ h3{
     width: 100%;
     bottom: 0;
 }
+.footer{
+    position: relative;
+}
+.wave2{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
 /*===============================*/
 .slider-boton{
     display: flex;
@@ -803,17 +827,27 @@ h3{
     color: white;
     text-shadow:0 2px 4px black;
 }
+.estilo{
+    animation-name: animar !important;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes animar{
+    0% {left: 0; top: 0;}
+    10% {left: 5rem; top: 0rem;}
+    30% {top: 5rem; left: 5rem; color: white;}
+    60%{top: 5rem; left: 0;}
+    100% {top: 0; left: 0;}
+}
 .slider-item:nth-child(1){
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     animation: backInDown;
     animation-duration: 4s;
 }
 .slider-item:nth-child(2){
     font-size: 2rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 1rem 2rem 0 2rem;
     text-align: center;
     animation: fadeInLeft;
     animation-duration: 3s;
@@ -852,6 +886,9 @@ h3{
     .slider-item:nth-child(1){
         font-size: 3.5rem;
     }
+    .slider-item:nth-child(2){
+        margin: 1rem 4rem 0 4rem;
+   }
     .boton-slider{
         width: 50%;
         padding: 1.5rem 0;
@@ -867,6 +904,9 @@ h3{
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .slider-item:nth-child(2){
+        margin: 1rem 8rem 0 8rem;
+   }
     .boton-slider{
         width: 35%;
     }
@@ -879,7 +919,7 @@ h3{
         font-size: 4.5rem;
     }
     .slider-item:nth-child(2){
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .boton-slider{
         width: 25%;
@@ -949,22 +989,30 @@ h2:nth-child(2){
 .section-nosotros__texto:nth-child(even){
     margin-bottom: 2rem;
 }
-.nosotros-container{
+.nosotros-texto{
     margin-bottom: 3rem !important;
 }
-.nosotros__imagen{
-    filter: grayscale(1);
-    box-shadow: 0px 10px 13px -7px #000000, 22px -17px 21px -6px rgba(0,0,0,0);    
-    overflow: hidden;
-    transition: filter .6s ease;
-    transform-style: preserve-3d;
-	transition: transform 1s;
-    border-radius: 2rem;
+.nosotros-imagen2{
+    margin: 0 auto;
+    width: 40%;
+    opacity: 0.5;
+    transition: opacity .7s;
 }
-.nosotros__imagen:hover{
-    filter: unset;
-    clip-path: unset;
-    transform: rotateY(10deg);
+.nosotros-imagen2:hover{
+    opacity: 1;
+}
+.nosotros-imagen1{
+    animation:backInLeft;
+    animation-duration: 4s;
+}
+.nosotros-imagen1 img{
+    border: 0.4rem ridge rgba(168, 168, 168, 0.28);
+    border-radius: 0 10rem 0 10rem;
+    box-shadow: 5px 5px 15px 5px #949494;
+    transition: box-shadow 1s;
+}
+.nosotros-imagen1 img:hover{
+    box-shadow: none;
 }
 .cards{
     margin-top: 2rem !important;
@@ -1109,42 +1157,33 @@ h2:nth-child(2){
         grid-column: 1 / 3;
     }
     .section-nosotros{
+        padding: 0;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         column-gap: 2rem;
+        border: 1px solid blue;
+        margin-bottom: 2rem;
     }
-    .section-nosotros__texto:nth-child(odd){
-        padding-top: 1rem;
+    .nosotros-titulo{
+        border: 1px solid red;
+        padding: 2rem 0;
+        grid-column: 1 / 4;
     }
-    .nosotros-container{
+    .nosotros-texto{
         grid-column: 1 / 3;
-        display: grid;
-        grid-template-columns: 1.5fr 3fr;
-        column-gap: 4rem;
-        row-gap: 1.5rem;
-        margin-bottom: 2rem !important;
     }
-    .section-nosotros__texto:nth-child(1){
-        font-size: 1.5rem;
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
-        margin: 0;
-    }
-    .section-nosotros__texto:nth-child(2){
-        font-size: 1.5rem;
-        grid-column: 2 / 3;
-        margin: 0;
+    .nosotros-imagen1{
+        grid-column: 3 / 4;
         place-self: center;
     }
-    .nosotros__imagen{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
+    .nosotros-acordeon{
+        grid-column: 2 / 4;
     }
-    .nosotros__imagen:hover{
-        border-radius: 2%;
+    .nosotros-imagen2{
+        grid-row: 3 / 4;
     }
-    .section-acordeon{
-        grid-column: 1 / 3;
+    .section-nosotros__texto{
+        margin: 0 !important;
     }
     .cards{
         grid-template-columns: repeat(3,1fr);
@@ -1188,28 +1227,40 @@ h2:nth-child(2){
     .article:hover  .figure__texto{
         bottom: 6rem;
     }
-    .section-acordeon{
-        padding: 0;
-    }
     .figure__texto{
         padding-top: 14rem;
     }
-    .nosotros-container{
-        margin-top: 2rem;
-        row-gap: unset;
+    .section-nosotros{
+       grid-template-columns: repeat(4,1fr);
     }
-    .section-nosotros__texto:nth-child(1){
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+    .nosotros-titulo{
+        grid-column: 1 / 5;
+        padding-bottom: 0;
+    }
+    .nosotros-texto{
+        grid-column: 1 / 4;
         place-self: center;
     }
-    .section-nosotros__texto:nth-child(2){
-        grid-column: 2 / 3;
-        place-self: unset;
+    .nosotros-imagen1{
+        grid-column: 1 /3;
+        grid-row: 3 /4;
     }
-    .nosotros__imagen{
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
+    .nosotros-imagen1 img{
+        border-radius: 20rem 0 20rem 0;
+        box-shadow: 5px 5px 15px 5px #949494;
+        transition: box-shadow 1s;
+    }
+    .nosotros-imagen1 img:hover{
+        box-shadow: none;
+    }
+    .nosotros-imagen2{
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+    .nosotros-acordeon{
+        padding: 0;
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
     }
 }
 @media(min-width:1200px){
@@ -1227,23 +1278,24 @@ h2:nth-child(2){
     .figcaption__titulo-btn::before {
         background: var(--blue-black);
     }
+    .section-nosotros{
+        column-gap: 8rem;
+    }
+    .nosotros-titulo{
+        padding-bottom: 2rem;
+    }
+    .nosotros-texto{
+        border: 2px solid grey;
+    }
+    .nosotros-imagen2{
+        width: 15rem;
+        height: 15rem;
+        border: 2px solid red;
+        padding-bottom: 0;
+    }
     .cards{
         column-gap: 3rem;
         row-gap: 2rem;
-    }
-    .section-nosotros{
-        padding-top: 6rem;
-    }
-    .nosotros-container{
-        margin-top: 3rem;
-    }
-    .nosotros__imagen{
-        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-        filter: grayscale(1);
-        transition: filter .6s ease;
-    }
-    .nosotros__imagen:hover{
-        filter: unset;
     }
 }
 /*======================================= 
@@ -1260,7 +1312,8 @@ h2:nth-child(2){
     height:42rem; 
     background-attachment: fixed;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
+     
 }
 /*======================================== 
                 EFECTO FLIP 
@@ -1274,7 +1327,7 @@ h2:nth-child(2){
     margin: 0 auto;
 	width: 100%;
 	height: 90vw;
-    background: #a53c22a9;
+    background: #121f33ec;
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -1408,7 +1461,7 @@ h2:nth-child(2){
     background-color: transparent;
 }
 .webp .contenedores{
-    background-image: url(https://s4.aconvert.com/convert/p3r68-cdx67/anwld-p8112.webp);
+    background-image: url(../img/l_h_consultores_asesores_footer.webp);
 }
 .no-webp .contenedores{
     background-image: url(../img/l_h_consultores_asesores_footer.jpg);
