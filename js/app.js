@@ -161,11 +161,34 @@ function navegacionFija() {
         }
     });
     // Elemento a observar
-    observer.observe(document.querySelector('.banner'));
+    observer.observe(document.querySelector('.splide'));
 };
-function scrollNav() {
-     
-}
+// function scrollNav() {
+    
+// }
+
+/**=======================================================
+ *                EVENTO TITULO 
+ =========================================================*/
+document.addEventListener('DOMContentLoaded',function(){
+    navegacionSlider();
+})
+function navegacionSlider(){
+    const slide = document.querySelector('.slider-item');
+    const observando = new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting){
+            slide.classList.add('estilo');
+            setTimeout(() => {
+                slide.classList.remove('estilo');     
+            }, 2000);
+        }
+        else{
+            slide.classList.remove('estilo');
+        }
+    });
+    observando.observe(document.querySelector('.splide'));
+};
+
 /**=======================================================
  *                   ACORDEÓN MENU
  =========================================================*/
@@ -210,7 +233,7 @@ for(let i = 0 ; i < btnItems.length; i++ ){
  /**=======================================================
  *      EVENTO 'MOUSEOVER' EN ELEMENT 'NOSOTROS-IMG'
  =========================================================*/
-let imgNosotros = document.querySelector('.nosotros__imagen');
+let imgNosotros = document.querySelector('.nosotros-imagen1__img');
 
 imgNosotros.addEventListener('mouseover',function(){
     imgNosotros.src = '../img/l&h_consultores_asesores_nosotros2.jpg';

@@ -26,9 +26,6 @@
 
     <link rel="preload" href="css/app.css" as="style">
     <link rel="stylesheet" href="css/app.css">
-
-    <link rel="preload" href="css/slider.css" as="style">
-    <link rel="stylesheet" href="css/slider.css">
 </head>
 
 <body class="hidden">
@@ -104,10 +101,10 @@
                 <li class="splide__slide">
                     <div class="slider-items">
                         <h2 class="slider-item animate__animated animate__backInDown">Derecho Penal</h2>
-                        <p class="slider-item no-margin animate__animated animate__fadeInLeft">Brindamos una asesoría personalizada</p>
+                        <p class="slider-item no-margin animate__animated animate__fadeInLeft">Ordenamiento jurídico que
+                            comprende las normas prohibitivas que señalan los delitos y establecen las penas</p>
                     </div>
                     <div class="slider-boton">
-
                         <a class="boton-slider animate__animated animate__backInUp"
                             href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
                             title="Click para contáctarnos">
@@ -117,8 +114,9 @@
                 </li>
                 <li class="splide__slide">
                     <div class="slider-items">
-                        <h2 class="slider-item animate__animated animate__backInDown">Derecho Civil</h2>
-                        <p class="slider-item no-margin animate__animated animate__fadeInLeft">La razón y la ley son sinónimos</p>
+                        <h2 class="slider-item">Derecho Civil</h2>
+                        <p class="slider-item no-margin">Es la rama del derecho privado que regula las principales
+                            relaciones civiles de las personas</p>
                     </div>
                     <div class="slider-boton">
                         <a class="boton-slider"
@@ -130,8 +128,9 @@
                 </li>
                 <li class="splide__slide">
                     <div class="slider-items">
-                        <h2 class="slider-item animate__animated animate__backInDown">Derecho Administrativo</h2>
-                        <p class="slider-item no-margin animate__animated animate__fadeInLeft">Donde hay una voluntad ahí estamos nosotros</p>
+                        <h2 class="slider-item">Derecho laboral</h2>
+                        <p class="slider-item no-margin">Es un conjunto de reglas que se encarga de regular las
+                            relaciones entre trabajadores y empleador</p>
                     </div>
                     <div class="slider-boton">
                         <a class="boton-slider"
@@ -143,21 +142,22 @@
                 </li>
             </ul>
         </div>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M-8.84,96.88 C186.42,155.09 370.39,59.38 513.73,117.59 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #f0efed;"></path>
-            </svg></div>
+            </svg>
+        </div>
     </div>
+
     <main>
         <aside>
-
         </aside>
 
         <!--section-nosotros-->
         <section class="section-nosotros container">
-            <h2>Nuestro Estudio de Abogados</h2>
-            <div class="nosotros-container">
+            <h2 class="nosotros-titulo">Nuestro Estudio de Abogados</h2>
+            <div class="nosotros-texto">
                 <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores
                         Legales</strong>,
                     es un grupo de
@@ -171,11 +171,13 @@
                     observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
                     llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
                     los costos.</p>
-                <img class="nosotros__imagen" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
+            </div>
+            <div class="nosotros-imagen1">
+                <img class="nosotros-imagen1__img animate__animated animate__backInLeft" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
                     alt="imagen__nosotros">
             </div>
 
-            <div class="section-acordeon">
+            <div class="nosotros-acordeon">
                 <div class="list-acordeon">
                     <div class="acordeon">
                         <p class="btn-acordeon activo">Visión</p>
@@ -216,7 +218,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="nosotros-imagen2 animate__animated animate__rotateIn">
+                <img loading="lazy" src="./img/balanza-justicia.png"
+                    alt="imagen__nosotros">
+            </div>
         </section>
+
+        <!--PARALLAX-->
+        <div class="parallax"></div>
 
         <!--SECTION - PRÁCTICA: desarrollado en js con los elements(Article-Figure-img-p-figcaption)-->
         <section class="section-practica container">
@@ -231,9 +241,6 @@
 
             </form>
         </section>
-
-        <!--PARALLAX-->
-        <div class="parallax"></div>
 
         <!-- TARJETAS 3D - EFECTO FLIP-->
         <section class="flip-container">
@@ -340,6 +347,12 @@
                     </section>
                 </div>
             </div>
+        </div>
+        <div class="wave2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-11.09,-2.79 C186.98,31.74 266.55,-31.41 601.20,30.75 L500.00,0.00 L-16.74,-42.26 Z"
+                    style="stroke: none; fill: #f5f4f4;"></path>
+            </svg>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
