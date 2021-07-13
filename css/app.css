@@ -997,6 +997,8 @@ h2:nth-child(2){
     width: 40%;
     opacity: 0.5;
     transition: opacity .7s;
+    animation: rotateIn;
+    animation-duration: 4s;
 }
 .nosotros-imagen2:hover{
     opacity: 1;
