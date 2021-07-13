@@ -159,7 +159,6 @@ h2{
     text-transform: uppercase;
     text-align: center;
     font-weight: 800;
-    /* padding: 0 0 1.5rem 0; */
     color: var(--blue-black);
 }
 h3{
@@ -418,6 +417,11 @@ h3{
         font-size: 1.2rem;
     }
 }
+@media(min-width:770px){
+    .header{
+        margin-top: 0.1rem;
+    }
+}
 @media(min-width:825px){
     .navegacion__items{
         margin-top: 3rem;
@@ -463,6 +467,9 @@ h3{
     }
 }
 @media(min-width:1200px){
+    .header{
+        margin-top: 0;
+    }
     .contanier-logo-menu{
         width: 25%;
     }
@@ -739,13 +746,18 @@ h3{
                 SLIDER 
 ======================================= */
 .splide{
-    border: 2px solid red;
+    position: relative;
 }
 .splide__slide{
     width: 100%;
     height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .splide__slide:nth-child(1){
+    width: 100%;
     background: #0e1014;
     background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider1.jpg); 
     position: relative;
@@ -754,6 +766,7 @@ h3{
     background-size: cover;
 }
 .splide__slide:nth-child(2){
+    width: 100%;
     background: #0e1014;
     background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider2.jpg);
     position: relative;
@@ -762,6 +775,7 @@ h3{
     background-size: cover;
 }
 .splide__slide:nth-child(3){
+    width: 100%;
     background: #0e1014;
     background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider3.jpg);
     position: relative;
@@ -769,27 +783,47 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.splide{
-    position: relative;
-}
+/*===== CLASE PARA ANIMACIÓN ====*/
 .wave{
     position: absolute;
     width: 100%;
     bottom: 0;
 }
+/*===============================*/
 .slider-boton{
     display: flex;
     justify-content: center;
 }
 .slider-items{
     position: absolute;
-    top: 0;
+    top: 28%;
+}
+.slider-item{
+    font-family: var(--font-secundario);
+    color: white;
+    text-shadow:0 2px 4px black;
+}
+.slider-item:nth-child(1){
+    font-size: 3rem;
+    text-align: center;
+    animation: backInDown;
+    animation-duration: 4s;
+}
+.slider-item:nth-child(2){
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    animation: fadeInLeft;
+    animation-duration: 3s;
 }
 .boton-slider{
     position: absolute;
     color: white;
     background-color: var(--granate);
     border: 2px solid var(--white);
+    border-radius: 3rem;
     width:80%;
     font-weight: 750;
     font-size: 4vw;
@@ -799,17 +833,69 @@ h3{
     justify-content: center;
     align-items: center;
     transition: background-color .9s;
-    border-radius: 3rem;
     margin-top: 1rem;
-    top: 0;
+    bottom: 30%;
     animation: backInUp; 
     animation-duration: 2s; 
 }
 .boton-slider:hover{
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.356);
     color: var(--granate);
-    border: 1px solid var(--granate);
+    border: 2px solid var(--granate);
+    font-weight: 800;
+
 }
+@media(min-width:576px){
+    .splide__slide{
+        height: 75rem;
+    }
+    .slider-item:nth-child(1){
+        font-size: 3.5rem;
+    }
+    .boton-slider{
+        width: 50%;
+        padding: 1.5rem 0;
+        font-size: 2rem;
+    }
+}
+@media(min-width:768px){
+    .splide__slide:nth-child(1){
+        background: #0e1014;
+        background: linear-gradient(to left, rgba(26, 34, 43, 0.582), rgba(22, 29, 43, 0.788)),url(../img/slider4.jpg); 
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+@media(min-width:992px){
+    .slider-item:nth-child(1){
+        font-size: 4.5rem;
+    }
+    .slider-item:nth-child(2){
+        font-size: 3rem;
+    }
+    .boton-slider{
+        width: 25%;
+    }
+    .splide__slide:nth-child(2){
+        background: #0e1014;
+        background: linear-gradient(to left, rgba(26, 34, 43, 0.582), rgba(22, 29, 43, 0.788)),url(../img/slider5.jpg); 
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .splide__slide:nth-child(3){
+        background: #0e1014;
+        background: linear-gradient(to left, rgba(26, 34, 43, 0.582), rgba(22, 29, 43, 0.788)),url(../img/slider5.jpg); 
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 /*===================================
          SELECTOR DE IMAGEN 
 =====================================*/
