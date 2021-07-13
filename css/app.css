@@ -867,6 +867,9 @@ h3{
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .boton-slider{
+        width: 35%;
+    }
 }
 @media(min-width:992px){
     .slider-item:nth-child(1){
@@ -893,6 +896,11 @@ h3{
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+}
+@media(min-width:1200px){
+    .boton-slider{
+        width: 20%;
     }
 }
 
