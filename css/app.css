@@ -872,6 +872,9 @@ h3{
     }
 }
 @media(min-width:992px){
+    .splide__slide{
+        height: 65rem;
+    }
     .slider-item:nth-child(1){
         font-size: 4.5rem;
     }
