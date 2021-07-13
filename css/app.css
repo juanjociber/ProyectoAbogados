@@ -160,6 +160,7 @@ h2{
     text-align: center;
     font-weight: 800;
     color: var(--blue-black);
+    padding: 2rem 0;
 }
 h3{
     text-align: center;
@@ -847,7 +848,7 @@ button svg:hover{
 }
 .slider-item:nth-child(2){
     font-size: 2rem;
-    margin-top: 1rem 2rem 0 2rem;
+    margin: 1rem 2rem 0 2rem;
     text-align: center;
     animation: fadeInLeft;
     animation-duration: 3s;
@@ -888,7 +889,7 @@ button svg:hover{
     }
     .slider-item:nth-child(2){
         margin: 1rem 4rem 0 4rem;
-   }
+    }
     .boton-slider{
         width: 50%;
         padding: 1.5rem 0;
@@ -919,7 +920,7 @@ button svg:hover{
         font-size: 4.5rem;
     }
     .slider-item:nth-child(2){
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .boton-slider{
         width: 25%;
@@ -970,9 +971,6 @@ button svg:hover{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
-h2:nth-child(2){
-    border: 2px solid red;
-}
 .section-nosotros,.section-practica,.section-contactenos{
     padding-top: 2rem;
 }
@@ -1163,12 +1161,9 @@ h2:nth-child(2){
         display: grid;
         grid-template-columns: repeat(3,1fr);
         column-gap: 2rem;
-        border: 1px solid blue;
         margin-bottom: 2rem;
     }
     .nosotros-titulo{
-        border: 1px solid red;
-        padding: 2rem 0;
         grid-column: 1 / 4;
     }
     .nosotros-texto{
@@ -1286,13 +1281,9 @@ h2:nth-child(2){
     .nosotros-titulo{
         padding-bottom: 2rem;
     }
-    .nosotros-texto{
-        border: 2px solid grey;
-    }
     .nosotros-imagen2{
         width: 15rem;
         height: 15rem;
-        border: 2px solid red;
         padding-bottom: 0;
     }
     .cards{
@@ -1670,12 +1661,9 @@ h2:nth-child(2){
     }
     .contenedor:nth-child(4){
         grid-column: 1 / 3;
-        margin-top: 2rem;
+        margin: 2rem 2rem 2rem 0;
         padding-top: 1rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
         border-top: 1px solid #c08f8648;
-        
     }
     .campo:nth-child(1){
         grid-column: 1 / 3;
