@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&H | Consultores y Asesores Legales</title>
+    
     <meta name="descripción" content="Especialistas en derecho">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
+
+    <title>L&H | Consultores y Asesores Legales</title>
+    
     <!--ANIMATE_CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--SLIDEJS_CARRUSEL-->
@@ -173,8 +177,8 @@
                     los costos.</p>
             </div>
             <div class="nosotros-imagen1">
-                <img class="nosotros-imagen1__img animate__animated animate__backInLeft" loading="lazy" src="./img/l&h_consultores_asesores_nosotros.jpg"
-                    alt="imagen__nosotros">
+                <img class="nosotros-imagen1__img animate__animated animate__backInLeft" loading="lazy"
+                    src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
             </div>
 
             <div class="nosotros-acordeon">
@@ -220,8 +224,7 @@
             </div>
 
             <div class="nosotros-imagen2 animate__animated animate__rotateIn">
-                <img loading="lazy" src="./img/balanza-justicia.png"
-                    alt="imagen__nosotros">
+                <img loading="lazy" src="./img/balanza-justicia.png" alt="imagen__nosotros">
             </div>
         </section>
 
@@ -235,11 +238,40 @@
         </section>
 
         <!--SECTION - CONTACTENOS-->
-        <section class="section-contactenos container">
+        <section class="section-contactenos">
             <h2>Contáctenos</h2>
-            <form action="">
+            <div class="contactenos-formulario">
+                <form class="form" name="contactos" netlify>
+                    <div class="grupo">
+                        <label class="campo__label" for="nombre">Su nombre (obligatorio)</label>
+                        <input class="campo__field" name="nombre" type="text" placeholder="Tu Nombre" id="nombre">
+                    </div>
+        
+                    <div class="grupo">
+                        <label class="campo__label" for="correo">Su correo electrónico (obligatorio)</label>
+                        <input class="campo__field" name="correo" type="email" id="correo">
+                    </div>
+                    
+                    <div class="grupo">
+                        <label class="campo__label" for="phone">Su teléfono (obligatorio)</label>
+                        <input class="campo__field" name="phone" type="tel" id="phone">
+                    </div>
 
-            </form>
+                    <div class="grupo">
+                        <label class="campo__label" for="mensaje">Mensaje</label>
+                        <textarea class="campo__field" name="mensaje" id="mensaje" rows="8"></textarea>
+                    </div>
+                    <div class="grupo">
+                        <input type="submit" value="Enviar" class="btn-form">
+                    </div>
+                </form>
+            </div>
+
+            <div class="contactenos-ubicacion">
+                <p class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.9276339718272!2d-77.08276749351349!3d-11.99049311918702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce66fc7683ef%3A0x4ae773abc3605150!2sAv.%20Universitaria%203815%2C%20Los%20Olivos%2015109!5e0!3m2!1ses-419!2spe!4v1626224398625!5m2!1ses-419!2spe" class="mapa" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </p>
+            </div>
         </section>
 
         <!-- TARJETAS 3D - EFECTO FLIP-->
@@ -264,6 +296,9 @@
             </article>
         </section>
     </main>
+
+    <!--PARALLAX-->
+    <div class="parallax" style="margin-bottom: 10rem;"></div>
 
     <footer class="footer">
         <div class="contenedores">
@@ -348,8 +383,8 @@
                 </div>
             </div>
         </div>
-        <div class="wave2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
+        <div class="wave2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M-11.09,-2.79 C186.98,31.74 266.55,-31.41 601.20,30.75 L500.00,0.00 L-16.74,-42.26 Z"
                     style="stroke: none; fill: #f5f4f4;"></path>
             </svg>
