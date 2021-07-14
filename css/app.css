@@ -971,7 +971,7 @@ button svg:hover{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
-.section-nosotros,.section-practica,.section-contactenos{
+.section-nosotros,.section-practica{
     padding-top: 2rem;
 }
 .section-nosotros__texto{
@@ -1308,6 +1308,84 @@ button svg:hover{
     background-position: center;
      
 }
+
+/*======================================== 
+           FORMULARIO - CONTÁCTENOS 
+==========================================*/
+.section-contactenos{
+    margin: 1rem;
+    overflow: hidden;
+}
+.contactenos-formulario{
+    border: 1px solid rgb(144, 144, 151);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.grupo:nth-child(1),
+.grupo:nth-child(2),
+.grupo:nth-child(3),
+.grupo:nth-child(4),
+.grupo:nth-child(5){
+    grid-column: 1 / 3;
+}
+.grupo:nth-child(5){
+    padding: 1rem 0;
+    text-align: center;
+}
+.campo__label{
+    display: block;
+    padding-bottom: 0.5rem
+}
+.campo__field{
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 0 !important;
+    margin-bottom: 1rem;
+}
+.campo__field:nth-child(1),
+.campo__field:nth-child(2),
+.campo__field:nth-child(3){
+    padding: 0.5rem 0 !important;
+}
+.btn-form{
+    padding: 0.8rem 0;
+    width: 60%;
+    cursor: pointer;
+}
+.mapa{
+    width: 100%;
+    height: 25vh;
+}
+@media(min-width:768px){
+    .section-contactenos{
+        padding: 1rem;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+    .contactenos-formulario{
+        grid-column: 1 / 2;
+    }
+    .contactenos-ubicacion{
+        grid-column: 2 / 3;
+    }
+}
+@media(min-width:1200px){
+    .mapa{
+        
+        height: 30vw;
+    }
+}
+
+
+
 /*======================================== 
                 EFECTO FLIP 
 ==========================================*/

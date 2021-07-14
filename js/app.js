@@ -115,7 +115,6 @@ especialidadArray.forEach(function(e){
     $cards.appendChild($fragment);
 });
 
-
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/
@@ -241,3 +240,9 @@ imgNosotros.addEventListener('mouseover',function(){
 imgNosotros.addEventListener('mouseout',function(){
     imgNosotros.src = '../img/l&h_consultores_asesores_nosotros.jpg';
 });
+
+
+/**=======================================================
+ *                  FORMULARIO GENERAL
+ =========================================================*/
+
