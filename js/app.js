@@ -7,140 +7,165 @@ window.onload = function(){
 }
 
 /**=======================================================
+ *                     MAPA
+ =========================================================*/
+document.addEventListener('DOMContentLoaded',function(){
+    var map = L.map('mapa').setView([-11.990477, -77.082744], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([-11.990477, -77.082744]).addTo(map)
+        .bindPopup('Mi dirección.')
+        .openPopup()
+        .bindTooltip('Un Tooltip')
+        .openTooltip()
+});
+
+/**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
-let menu = document.querySelector('.menu');
-let navegacion = document.querySelector('.container-nav-responsive');
-let contador = 1;
+// document.addEventListener('DOMContentLoaded',function(){
+    let menu = document.querySelector('.menu');
+    let navegacion = document.querySelector('.container-nav-responsive');
+    let contador = 1;
 
-menu.addEventListener('click',function(){
-    if(contador == 1){
-        navegacion.classList.add('nav-activado')
-        menu.classList.add('is-active');
-        contador = 0;    
-    }
-    else{
-        contador = 1;
-        navegacion.classList.remove('nav-activado')
-        menu.classList.remove('is-active');
-    }
-});
+    menu.addEventListener('click',function(){
+        if(contador == 1){
+            navegacion.classList.add('nav-activado')
+            menu.classList.add('is-active');
+            contador = 0;    
+        }
+        else{
+            contador = 1;
+            navegacion.classList.remove('nav-activado')
+            menu.classList.remove('is-active');
+        }
+    });
+// })
+/**=======================================================
+ *          MENÚ HORIZONTAL CON INDICADOR DE SCROLL
+ =========================================================*/
 
 /**=======================================================
  *                 REDES SOCIALES
  =========================================================*/
-let red = document.getElementsByClassName("social");
-for(let i = 0 ; i < red.length ; i++){
-    red[i].onmouseover=function(){
-        this.style="background: white; color: #3C415E; transition:.7s;font-weight: bold; border-radius: 50%"
+// document.addEventListener('DOMContentLoaded',function(){
+    let red = document.getElementsByClassName("social");
+    for(let i = 0 ; i < red.length ; i++){
+        red[i].onmouseover=function(){
+            this.style="background: white; color: #3C415E; transition:.7s;font-weight: bold; border-radius: 50%"
+        }
+        red[i].onmouseout=function(){
+            this.style="transition: ease out .5s";
+        }
     }
-    red[i].onmouseout=function(){
-        this.style="transition: ease out .5s";
-    }
-}
+// });
 /**=======================================================
  *                     SLIDER
  =========================================================*/
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#image-slider' ).mount();
-} );
+});
 
 /**=======================================================
  *                      CREANDO ELEMENTO FIGURE
  =========================================================*/
-const especialidad = 
-[{
-    imagen: './img/portfolio-1.jpg',
-    comentario:'Especialistas en Derecho Penal',
-    nombre: 'Derecho Penal', 
-},
-{
-    imagen: './img/portfolio-2.jpg',
-    comentario:'Especialistas en Contratos Civiles',
-    nombre: 'Contratos Civiles', 
-},
-{
-    imagen: './img/portfolio-3.jpg',
-    comentario:'Especialistas en Recursos Humanos',
-    nombre: 'Recursos Humanos', 
-},
-{
-    imagen: './img/portfolio-4.jpg',
-    comentario:'Asesores en Contrataciones con el Estado',
-    nombre: 'Contratos con el Estado', 
-},
-{
-    imagen: './img/portfolio-5.jpg',
-    comentario:'Especialistas en Procedimiento Administrativo Sancionador y Procedimiento Administrativo Disciplinario',
-    nombre: 'Procedimiento Administrativo', 
-}
-];
-let especialidadArray = Object.entries(especialidad);
-const $fragment = document.createDocumentFragment();
+// document.addEventListener('DOMContentLoaded',function(){
+    const especialidad = 
+    [{
+        imagen: './img/portfolio-1.jpg',
+        comentario:'Especialistas en Derecho Penal',
+        nombre: 'Derecho Penal', 
+    },
+    {
+        imagen: './img/portfolio-2.jpg',
+        comentario:'Especialistas en Contratos Civiles',
+        nombre: 'Contratos Civiles', 
+    },
+    {
+        imagen: './img/portfolio-3.jpg',
+        comentario:'Especialistas en Recursos Humanos',
+        nombre: 'Recursos Humanos', 
+    },  
+    {
+        imagen: './img/portfolio-4.jpg',
+        comentario:'Asesores en Contrataciones con el Estado',
+        nombre: 'Contratos con el Estado', 
+    },
+    {
+        imagen: './img/portfolio-5.jpg',
+        comentario:'Especialistas en Procedimiento Administrativo Sancionador y Procedimiento Administrativo Disciplinario',
+        nombre: 'Procedimiento Administrativo', 
+    }
+    ];
+    
+    let especialidadArray = Object.entries(especialidad);
+    const $fragment = document.createDocumentFragment();
 
-especialidadArray.forEach(function(e){
-    //console.log(e[1])
+    especialidadArray.forEach(function(e){
     //VARIABLES HIJOS: 
-    const $article = document.createElement("article"),
-    $figure = document.createElement("figure"),
-    $img = document.createElement("img"),
-    $p = document.createElement("p"),
-    $figcaption = document.createElement("figcaption"),
-    $figcaptionText = document.createTextNode(e[1].nombre),
+    const $article = document.createElement("article")
+    const $figure = document.createElement("figure")
+    const $img = document.createElement("img")
+    const $p = document.createElement("p")
+    const $figcaption = document.createElement("figcaption")
+    const $figcaptionText = document.createTextNode(e[1].nombre)
     //VARIABLE PADRE:
-    $cards = document.querySelector(".cards")
-    //****** GUARDANDO DATA EN VARIABLES:******
+    const $cards = document.querySelector(".cards")
+    /*====== GUARDANDO DATA EN VARIABLES:=====*/
     //ELEMENTO 'ARTICLE'
     $article.classList.add('article');
     $article.appendChild($figure);
     //ELEMENTO 'FIGURE'
     $figure.appendChild($img);
+        //ELEMENTO 'IMG'
+        $img.setAttribute("data-src",e[1].imagen);
+        $img.setAttribute("Alt","Imagen");
+        $img.classList.add("imagenes");
     $figure.appendChild($p);
+        //ELEMENTO 'P'
+        $p.textContent=e[1].comentario;
+        $p.classList.add("figure__texto");
     $figure.appendChild($figcaption)
-    //ELEMENTO 'IMG'
-    $img.setAttribute("data-src",e[1].imagen);
-    $img.setAttribute("Alt","Imagen");
-    $img.classList.add("imagenes");
-    //ELEMENTO 'P'
-    $p.textContent=e[1].comentario;
-    $p.classList.add("figure__texto");
-    //ELEMENTO 'FIGCAPTION'
-    $figcaption.classList.add("figcaption__titulo");
-    $figcaption.classList.add("figcaption__titulo-btn");
-    
+        //ELEMENTO 'FIGCAPTION'
+        $figcaption.classList.add("figcaption__titulo");
+        $figcaption.classList.add("figcaption__titulo-btn");
+    //AGREGANDO AL DOM: 
     $figcaption.appendChild($figcaptionText);
-
-    $fragment.appendChild($article);    
-    //ELEMENTO 'DIV'
+    $fragment.appendChild($article);
     $cards.appendChild($fragment);
-});
+    });
+// }); 
+
 
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/
-const img = document.querySelectorAll('img'); 
+// document.addEventListener('DOMContentLoaded',function(){
+    const img = document.querySelectorAll('img'); 
 
-function intersection(entries,observer){
-    entries.forEach(entry =>{
+    function intersection(entries,observer){
+        entries.forEach(entry =>{
         // console.log('intersection',entry.target);
-        if(entry.isIntersecting){
-            if(entry.target.classList.contains('imagenes')){
-               entry.target.src = entry.target.dataset.src; 
+            if(entry.isIntersecting){
+                if(entry.target.classList.contains('imagenes')){
+                    entry.target.src = entry.target.dataset.src; 
+                }
+                observer.unobserve(entry.target);
             }
-            observer.unobserve(entry.target);
-        }
-    });
-}
-const options ={
-    root: null,
-    rootMargin: '0px',
-    threshold: 0
-};
-const observer = new IntersectionObserver(intersection,options);
-
-img.forEach(i =>{
-    observer.observe(i);
-})
+        });
+    }
+    const options ={
+        root: null,
+        rootMargin: '0px',
+        threshold: 0
+    };
+    const observer = new IntersectionObserver(intersection,options);
+        img.forEach(i =>{
+            observer.observe(i);
+        })
+// });
 
 /**=======================================================
  *                     NAVEGACIÓN FIJA 'nav'
@@ -167,82 +192,149 @@ function navegacionFija() {
 // }
 
 /**=======================================================
- *                EVENTO TITULO 
+ *           EVENTO TITULO - DESCRIPCIÓN SLIDER
  =========================================================*/
 document.addEventListener('DOMContentLoaded',function(){
-    navegacionSlider();
+    navegacionSlider1();
 })
-function navegacionSlider(){
+function navegacionSlider1(){
     const slide = document.querySelector('.slider-item');
-    const observando = new IntersectionObserver(function(entries){
+    const observando1 = new IntersectionObserver(function(entries){
         if(entries[0].isIntersecting){
-            slide.classList.add('estilo');
-            setTimeout(() => {
-                slide.classList.remove('estilo');     
-            }, 2000);
+            slide.classList.add('animate__animated','animate__backInDown');
         }
         else{
-            slide.classList.remove('estilo');
+            slide.classList.remove('animate__animated','animate__backInDown');
         }
     });
-    observando.observe(document.querySelector('.splide'));
+    observando1.observe(document.querySelector('.splide'));
 };
+
+document.addEventListener('DOMContentLoaded',function(){
+    navegacionSlider2();
+})
+function navegacionSlider2(){
+    const slide1 = document.querySelector('.slider-item--mod')
+    const observando2 = new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){
+            slide1.classList.add('animate__animated','animate__fadeInLeft');
+        }
+        else{
+            slide1.classList.add('animate__animated','animate__fadeInLeft');
+        }
+    });
+    observando2.observe(document.querySelector('.splide'));
+};
+
 
 /**=======================================================
  *                   ACORDEÓN MENU
  =========================================================*/
-let btnItems = document.querySelectorAll(".item .btn-item");
-let conteo = 1;
-for(let i = 0 ; i < btnItems.length; i++ ){
-    btnItems[i].addEventListener("click",function(e){
-    let btn = e.target;
-        if(conteo == 1){
-            btn.classList.add('active')
-            conteo = 0;
-        }
-        else{
-            conteo = 1;
-            btn.classList.remove("active");
-        }
-  })
-}
+// document.addEventListener('DOMContentLoaded',function(){
+    let btnItems = document.querySelectorAll(".item .btn-item");
+    let conteo = 1;
+    for(let i = 0 ; i < btnItems.length; i++ ){
+        btnItems[i].addEventListener("click",function(e){
+        let btn = e.target;
+            if(conteo == 1){
+                btn.classList.add('active')
+                conteo = 0;
+            }
+            else{
+                conteo = 1;
+                btn.classList.remove("active");
+            }
+        })
+    }
+// });
 /**=======================================================
  *                   ACORDEÓN 'NOSOTROS'
  =========================================================*/
- let btnAcordeon = document.querySelectorAll(".acordeon .btn-acordeon");
- for(let i = 0 ; i < btnAcordeon.length; i++ ){
-     btnAcordeon[i].addEventListener("click",function(e){
-     let btnA = e.target;
-     if(btnA.className == "btn-acordeon activo"){
-         removeClass()
-     }
-     else{
-         removeClass();
-         btnA.classList.add("activo");
-     }
-   })
- }
- //Función para que solo se muestre una selección y las demás se oculten 
- function removeClass(){
-     for(let i = 0 ; i < btnAcordeon.length; i++){
-         btnAcordeon[i].classList.remove("activo");
-     }
- }
+// document.addEventListener('DOMContentLoaded',function(){
+    let btnAcordeon = document.querySelectorAll(".acordeon .btn-acordeon");
+    for(let i = 0 ; i < btnAcordeon.length; i++ ){
+    btnAcordeon[i].addEventListener("click",function(e){
+        let btnA = e.target;
+            if(btnA.className == "btn-acordeon activo"){
+                removeClass()
+            }
+            else{
+                removeClass();
+                btnA.classList.add("activo");
+            }
+        })
+    }
+    //Función para que solo se muestre una selección y las demás se oculten 
+    function removeClass(){
+        for(let i = 0 ; i < btnAcordeon.length; i++){
+            btnAcordeon[i].classList.remove("activo");
+        }
+    }
+// });
 
  /**=======================================================
  *      EVENTO 'MOUSEOVER' EN ELEMENT 'NOSOTROS-IMG'
  =========================================================*/
-let imgNosotros = document.querySelector('.nosotros-imagen1__img');
+// document.addEventListener('DOMContentLoaded',function(){
+    let imgNosotros = document.querySelector('.nosotros-imagen1__img');
+        imgNosotros.addEventListener('mouseover',function(){
+        imgNosotros.src = '../img/l&h_consultores_asesores_nosotros2.jpg';
+    });
+        imgNosotros.addEventListener('mouseout',function(){
+        imgNosotros.src = '../img/l&h_consultores_asesores_nosotros.jpg';
+    });
+// }); 
 
-imgNosotros.addEventListener('mouseover',function(){
-    imgNosotros.src = '../img/l&h_consultores_asesores_nosotros2.jpg';
-});
-imgNosotros.addEventListener('mouseout',function(){
-    imgNosotros.src = '../img/l&h_consultores_asesores_nosotros.jpg';
-});
+/**=======================================================
+ *                 FORMULARIO GENERAL
+ =========================================================*/
+
 
 
 /**=======================================================
- *                  FORMULARIO GENERAL
+ *     TEXTO PARALLAX (ESCRIBE CARACTER POR CARACTER)
  =========================================================*/
+//  document.addEventListener('DOMContentLoaded',function(){
+    let escritura = str =>{
+    let arrayStr = str.split('');
+    let i = 0;
+    let printStr = setInterval(function () {
+        let texto = document.getElementById('idparallax-texto');
+            if(arrayStr[i] === ''){
+                texto.innerHTML += arrayStr[i];
+                texto.innerHTML += arrayStr[i + 1];
+                i +=2;                        
+            }else{
+                texto.innerHTML += arrayStr[i];
+                i++
+            }
+            if(i=== arrayStr.length){
+                clearInterval(printStr);
+            }
+        },200);
+    }
+escritura('Estamos disponibles para dar la asesoría a sus requerimientos.');
+// });
 
+let escritura2 = cadena =>{
+    let arrayCadena = cadena.split('');
+    let z = 0;
+    let printCadena = setInterval(function () {
+        let texto2 = document.getElementById('idparallax-texto--mod')
+            if(arrayCadena[z] === ''){
+                texto2.innerHTML += arrayCadena[z];
+                texto2.innerHTML += arrayCadena[z + 1];
+                z +=2;                        
+            }else{
+                texto2.innerHTML += arrayCadena[z];
+                z++
+            }
+            if(z=== arrayCadena.length){
+                clearInterval(printCadena);
+            }
+        },200);
+    }
+escritura2('El Derecho es un asunto complicado. Puede causarle un gran problema si lo ignora. ¡Déjanos ayudarte!');
+// });
+
+  

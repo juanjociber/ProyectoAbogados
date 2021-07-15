@@ -178,6 +178,7 @@ h3{
     margin-top: -1rem;
     padding: 1rem 0 1rem 1rem;
     background-color: var(--white);
+    
 }
 .header__nombre{
     width: 60%;
@@ -634,7 +635,7 @@ h3{
     }
 }
 /* ==================================== 
-                SCROLL ESTÁTICO 
+                SCROLL ESTATICO 
 ======================================= */
 .fijo{
     position: fixed;
@@ -764,6 +765,8 @@ button svg:hover{
 }
 .splide{
     position: relative;
+    animation-name: bounce;
+    animation-duration: 3s;
 }
 .splide__slide{
     width: 100%;
@@ -812,6 +815,7 @@ button svg:hover{
 .wave2{
     position: absolute;
     width: 100%;
+    height: 5rem !important;
     top: 0;
 }
 /*===============================*/
@@ -822,36 +826,21 @@ button svg:hover{
 .slider-items{
     position: absolute;
     top: 28%;
+    margin-top: -3rem;
 }
 .slider-item{
     font-family: var(--font-secundario);
     color: white;
     text-shadow:0 2px 4px black;
 }
-.estilo{
-    animation-name: animar !important;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-@keyframes animar{
-    0% {left: 0; top: 0;}
-    10% {left: 5rem; top: 0rem;}
-    30% {top: 5rem; left: 5rem; color: white;}
-    60%{top: 5rem; left: 0;}
-    100% {top: 0; left: 0;}
-}
 .slider-item:nth-child(1){
     font-size: 3.5rem;
     text-align: center;
-    animation: backInDown;
-    animation-duration: 4s;
 }
 .slider-item:nth-child(2){
     font-size: 2rem;
     margin: 1rem 2rem 0 2rem;
     text-align: center;
-    animation: fadeInLeft;
-    animation-duration: 3s;
 }
 .boton-slider{
     position: absolute;
@@ -861,9 +850,9 @@ button svg:hover{
     border-radius: 3rem;
     width:80%;
     font-weight: 750;
-    font-size: 4vw;
+    font-size: 4.2vw;
     font-family: var(--font-terciaria);
-    padding: 1.3rem .450rem;
+    padding: 1.5rem .450rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -971,6 +960,7 @@ button svg:hover{
 /* ==================================== 
             MAIN - SECTION 
 ======================================= */
+
 .section-nosotros,.section-practica{
     padding-top: 2rem;
 }
@@ -1302,21 +1292,102 @@ button svg:hover{
 }
 .parallax{
     width: 100%;
-    height:30rem; 
+    height:20rem; 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+.parallax--mod{
+    margin-bottom: 10rem;
+}
+.fondo-parallax{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 18, 18, 0.493);
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fondo-parallax__texto{
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font-parrafo);
+    font-weight:700;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin: 0 2rem 2rem 2rem;
+    text-shadow: 3px -1px 10px #b6b6b6;
+}
+.fondo-parallax img{
+    width: 23rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+    opacity: 0.4;
+    margin-top: 1rem;
+    box-shadow: 0px 10px 13px -7px #1b1b1b, 5px 5px 15px 5px rgba(31, 31, 31, 0);
+    transform: scale(1.01);
+    transition: transform .4s;
+}
+.fondo-parallax img:hover{
+    box-shadow: none;
+    transform: scale(1);
+}
+.figcaption-parallax{
+    background-color: rgba(255, 255, 255, 0.699) !important;
+}
+.figure-parallax:hover{
+    opacity: 1;
+}
+.figcaption-parallax a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    color: var(--granate);
+    font-weight: 750;
+    font-family: var(--font-terciaria);
+}
+@media(min-width: 576px){
+    .fondo-parallax__texto{
+        font-size: 2rem;
+    }
+}
+@media(min-width:768px){
+    .parallax{
+        height: 30rem;
+    }
+    .parallax--mod{
+        margin-bottom: 5rem;
+    }
+    .fondo-parallax__texto{
+        font-size: 2.8rem;
+    }
+}
+@media(min-width:992px){
+    .parallax{
+        height: 40rem;
+    }
 }
 
 /*======================================== 
-           FORMULARIO - CONTÁCTENOS 
+        FORMULARIO - CONTÁCTENOS 
 ==========================================*/
+#contactenos{
+    color: white !important;
+}
 .section-contactenos{
     margin: 1rem;
     overflow: hidden;
+    background: linear-gradient(to right, #000000b6, #343838c9),url(../img/slider2.jpg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .contactenos-formulario{
-    border: 1px solid rgb(144, 144, 151);
     border-radius: 0.5rem;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -1338,7 +1409,11 @@ button svg:hover{
 }
 .campo__label{
     display: block;
-    padding-bottom: 0.5rem
+    padding-bottom: 0.5rem;
+    color:var(--white);
+    text-transform: uppercase;
+    font-family: var(--font-principal);
+    font-size: 1.2rem;
 }
 .campo__field{
     display: block;
@@ -1346,16 +1421,34 @@ button svg:hover{
     outline: none;
     padding: 0 !important;
     margin-bottom: 1rem;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #acb0b1, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3e3f3fc0, #61666bbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid rgba(119, 119, 119, 0.575) !important;
+}
+.campo__field:hover{
+    background: rgba(255, 255, 255, 0.877);
 }
 .campo__field:nth-child(1),
 .campo__field:nth-child(2),
 .campo__field:nth-child(3){
-    padding: 0.5rem 0 !important;
+    padding: 0.8rem 0 !important;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
 }
 .btn-form{
     padding: 0.8rem 0;
     width: 60%;
+    background: var(--granate);
+    outline: none;
+    border: none;
+    border-radius: 1rem;
     cursor: pointer;
+    padding: 1.6rem 0;
+    font-family: var(--font-secundario);
+    color: var(--white);
+    font-size: 2rem;
 }
 .mapa{
     width: 100%;
@@ -1366,7 +1459,7 @@ button svg:hover{
         padding: 1rem;
         border: 1px solid red;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 1.5fr 2fr;
         column-gap: 2rem;
     }
     .contactenos-formulario{
@@ -1375,14 +1468,20 @@ button svg:hover{
     .contactenos-ubicacion{
         grid-column: 2 / 3;
     }
+    .mapa{
+        height: 47rem;
+    }
+}
+@media(min-width:992px){
+    .section-contactenos{
+        grid-template-columns: 1fr 2fr;
+    }
 }
 @media(min-width:1200px){
     .mapa{
-        
-        height: 30vw;
+        height: 49rem; 
     }
 }
-
 
 
 /*======================================== 
