@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--SLIDEJS_CARRUSEL-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <!--IMAGENHOVER_CSS-->
+    <link  rel = " stylesheet " href = "css/imagehover.min.css"> 
 
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -60,12 +62,10 @@
             <div class="container-nav-responsive container-nav">
                 <div class="navegacion">
                     <nav class="navegacion-contenido" id="navbar">
-                        <ul class="navegacion__items">
-                            <li class="navegacion__item navegacion__item--activo"><a href="#"><i
-                                        class='bx bx-home'></i>Home</a></li>
-                            <li class="navegacion__item"><a href="#"><i class='bx bx-group'></i>Nosotros</a></li>
-                            <li class="navegacion__item item"><a class="btn-item" href="#"><i
-                                        class='bx bx-briefcase'></i>Áreas de Práctica</a>
+                        <ul class="navegacion__items menu__items">
+                            <li class="navegacion__item navegacion__item--activo activados menu__item" data-url="home"><a href="#"><i class='bx bx-home'></i>Home</a></li>
+                            <li class="navegacion__item menu__item" data-url="nosotros"><a href="#"><i class='bx bx-group'></i>Nosotros</a></li>
+                            <li class="navegacion__item item menu__item" data-url="areas de practica"><a class="btn-item" href="#"><i class='bx bx-briefcase'></i>Áreas de Práctica</a>
                                 <ul class="item-content">
                                     <li class="submenu__lista"><a href="#">Contrataciones con el Estado</a></li>
                                     <li class="submenu__lista"><a href="#">Contratos Civiles</a></li>
@@ -76,7 +76,7 @@
                                     <li class="submenu__lista"><a href="#">Procedimiento Administrativo</a></li>
                                 </ul>
                             </li>
-                            <li class="navegacion__item"><a href="#"><i class='bx bxs-contact'></i>Contáctenos</a></li>
+                            <li class="navegacion__item menu__item" data-url="contactenos"><a href="#"><i class='bx bxs-contact'></i>Contáctenos</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -104,8 +104,8 @@
             <ul class="splide__list">
                 <li class="splide__slide">
                     <div class="slider-items">
-                        <h2 class="slider-item animate__animated animate__backInDown">Derecho Penal</h2>
-                        <p class="slider-item no-margin animate__animated animate__fadeInLeft">Ordenamiento jurídico que
+                        <h2 class="slider-item">Derecho Penal</h2>
+                        <p class="slider-item slider-item--mod no-margin">Ordenamiento jurídico que
                             comprende las normas prohibitivas que señalan los delitos y establecen las penas</p>
                     </div>
                     <div class="slider-boton">
@@ -159,8 +159,8 @@
         </aside>
 
         <!--section-nosotros-->
-        <section class="section-nosotros container">
-            <h2 class="nosotros-titulo">Nuestro Estudio de Abogados</h2>
+        <section class="section-nosotros container seccion">
+            <h2 class="nosotros-titulo" id="nosotros">Nuestro Estudio de Abogados</h2>
             <div class="nosotros-texto">
                 <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores
                         Legales</strong>,
@@ -224,27 +224,32 @@
             </div>
 
             <div class="nosotros-imagen2 animate__animated animate__rotateIn">
-                <img loading="lazy" src="./img/balanza-justicia.png" alt="imagen__nosotros">
+                <img class="nosotros-img2" loading="lazy" src="./img/balanza-justicia.png" alt="imagen__nosotros">
             </div>
         </section>
 
         <!--PARALLAX-->
-        <div class="parallax"></div>
+        <div class="parallax">
+            <div class="fondo-parallax">
+                <p class="fondo-parallax__texto" id="idparallax-texto"></p>
+                <a href="#"><img src="img/Tarjeta.PNG" alt=""></a>
+            </div>
+        </div>
 
         <!--SECTION - PRÁCTICA: desarrollado en js con los elements(Article-Figure-img-p-figcaption)-->
-        <section class="section-practica container">
-            <h2>Áreas de Práctica</h2>
+        <section class="section-practica container seccion">
+            <h2 id="area de practicas">Áreas de Práctica</h2>
             <div class="cards container"></div>
         </section>
 
         <!--SECTION - CONTACTENOS-->
-        <section class="section-contactenos">
-            <h2>Contáctenos</h2>
+        <section class="section-contactenos seccion">
+            <h2 id="contactenos">Contáctenos</h2>
             <div class="contactenos-formulario">
                 <form class="form" name="contactos" netlify>
                     <div class="grupo">
                         <label class="campo__label" for="nombre">Su nombre (obligatorio)</label>
-                        <input class="campo__field" name="nombre" type="text" placeholder="Tu Nombre" id="nombre">
+                        <input class="campo__field" name="nombre" type="text" id="nombre">
                     </div>
         
                     <div class="grupo">
@@ -298,7 +303,14 @@
     </main>
 
     <!--PARALLAX-->
-    <div class="parallax" style="margin-bottom: 10rem;"></div>
+    <div class="parallax parallax--mod">
+        <div class="fondo-parallax">
+            <div class="fondo-parallax">
+                <p class="fondo-parallax__texto" id="idparallax-texto--mod"></p>
+                <a href="#"><img src="img/Tarjeta.PNG" alt=""></a>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="contenedores">
