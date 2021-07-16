@@ -189,14 +189,13 @@ h3{
     font-family: var(--font-principal);
     position: absolute;
     z-index: 999;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
+    background: linear-gradient(180deg, black 0%, rgba(26, 25, 25, 0.945) 100%);
+    width: 90%;
     height: 100vh;
     margin-top: 1rem;
     margin-left: -1rem;
     padding-left: 1rem;
     padding-top: 1rem;
-    border: 1px solid red;
 }
 .contanier-logo-menu{
     display: flex;
@@ -613,7 +612,7 @@ h3{
 .hamburger.is-active 
 .hamburger-inner:after,
 .hamburger.is-active .hamburger-inner:before{
-    background-color:#a5a5a5;
+    background-color:#747474;
 }
 .hamburger-inner,
 .hamburger-inner:after,
@@ -870,7 +869,7 @@ button svg:hover{
     animation-duration: 2s; 
 }
 .boton-slider:hover{
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.979);
     color: var(--blue-black);
     font-weight: 400;
 
