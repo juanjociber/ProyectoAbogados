@@ -1,5 +1,4 @@
 
-
 /*==========================================================
                         GLOBAL
 ============================================================*/
@@ -187,9 +186,10 @@ h3{
 .container-nav-responsive{
     display: none;
     font-family: var(--font-principal);
+    font-family: 300;
     position: absolute;
     z-index: 999;
-    background: linear-gradient(180deg, black 0%, rgba(26, 25, 25, 0.945) 100%);
+    background: linear-gradient(180deg, rgb(49, 49, 49) 0%, rgb(22, 22, 22) 100%);
     width: 90%;
     height: 100vh;
     margin-top: 1rem;
@@ -252,7 +252,7 @@ h3{
 .contacto__item a:hover,
 .redes__enlace a:hover{
     color:var(--white);
-    font-weight: bold;
+    font-weight: 600;
 }
 .submenu__lista{
     margin-left: 2.1rem;
