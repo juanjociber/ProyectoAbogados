@@ -190,12 +190,12 @@ h3{
     position: absolute;
     z-index: 999;
     background: linear-gradient(180deg, rgb(49, 49, 49) 0%, rgb(22, 22, 22) 100%);
-    width: 90%;
-    height: 100vh;
+    width: 100%;
     margin-top: 1rem;
     margin-left: -1rem;
     padding-left: 1rem;
     padding-top: 1rem;
+    text-transform: uppercase;
 }
 .contanier-logo-menu{
     display: flex;
@@ -252,7 +252,7 @@ h3{
 .contacto__item a:hover,
 .redes__enlace a:hover{
     color:var(--white);
-    font-weight: 600;
+    font-weight: 550;
 }
 .submenu__lista{
     margin-left: 2.1rem;
