@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded',function(){
         .bindTooltip('Un Tooltip')
         .openTooltip()
 });
-
 /**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
@@ -71,8 +70,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 /**=======================================================
  *                      CREANDO ELEMENTO FIGURE
  =========================================================*/
-// document.addEventListener('DOMContentLoaded',function(){
-    const especialidad = 
+const especialidad = 
     [{
         imagen: './img/portfolio-1.jpg',
         comentario:'Especialistas en Derecho Penal',
@@ -103,7 +101,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     let especialidadArray = Object.entries(especialidad);
     const $fragment = document.createDocumentFragment();
 
-    especialidadArray.forEach(function(e){
+especialidadArray.forEach(function(e){
     //VARIABLES HIJOS: 
     const $article = document.createElement("article")
     const $figure = document.createElement("figure")
@@ -135,40 +133,33 @@ document.addEventListener( 'DOMContentLoaded', function () {
     $figcaption.appendChild($figcaptionText);
     $fragment.appendChild($article);
     $cards.appendChild($fragment);
-    });
-// }); 
-
-
+});
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/
-// document.addEventListener('DOMContentLoaded',function(){
-    const img = document.querySelectorAll('img'); 
-
-    function intersection(entries,observer){
-        entries.forEach(entry =>{
-        // console.log('intersection',entry.target);
-            if(entry.isIntersecting){
-                if(entry.target.classList.contains('imagenes')){
-                    entry.target.src = entry.target.dataset.src; 
-                }
-                observer.unobserve(entry.target);
+const img = document.querySelectorAll('img'); 
+function intersection(entries,observer){
+    entries.forEach(entry =>{
+    // console.log('intersection',entry.target);
+        if(entry.isIntersecting){
+            if(entry.target.classList.contains('imagenes')){
+                entry.target.src = entry.target.dataset.src; 
             }
-        });
-    }
-    const options ={
-        root: null,
-        rootMargin: '0px',
-        threshold: 0
-    };
-    const observer = new IntersectionObserver(intersection,options);
-        img.forEach(i =>{
-            observer.observe(i);
-        })
-// });
-
+            observer.unobserve(entry.target);
+        }
+    });
+}
+const options ={
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+};
+const observer = new IntersectionObserver(intersection,options);
+img.forEach(i =>{
+    observer.observe(i);
+})
 /**=======================================================
- *                     NAVEGACIÓN FIJA 'nav'
+ *              NAVEGACIÓN ESTÁTICA
  =========================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     // scrollNav();
@@ -220,12 +211,11 @@ function navegacionSlider2(){
             slide1.classList.add('animate__animated','animate__fadeInLeft');
         }
         else{
-            slide1.classList.add('animate__animated','animate__fadeInLeft');
+            slide1.classList.remove('animate__animated','animate__fadeInLeft');
         }
     });
     observando2.observe(document.querySelector('.splide'));
 };
-
 
 /**=======================================================
  *                   ACORDEÓN MENU
@@ -294,47 +284,76 @@ function navegacionSlider2(){
 /**=======================================================
  *     TEXTO PARALLAX (ESCRIBE CARACTER POR CARACTER)
  =========================================================*/
-//  document.addEventListener('DOMContentLoaded',function(){
-    let escritura = str =>{
-    let arrayStr = str.split('');
-    let i = 0;
-    let printStr = setInterval(function () {
-        let texto = document.getElementById('idparallax-texto');
-            if(arrayStr[i] === ''){
-                texto.innerHTML += arrayStr[i];
-                texto.innerHTML += arrayStr[i + 1];
-                i +=2;                        
-            }else{
-                texto.innerHTML += arrayStr[i];
-                i++
+function viewOne(){
+    const comentario = document.querySelector('#idparallax-texto')
+    let printCadena
+    const observando= new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){
+            console.log('Ingreso de evento');
+            let escritura = str =>{
+                let arrayStr = str.split('');
+                let i = 0;
+                printCadena = setInterval(function () {
+                        if(arrayStr[i] === ''){
+                            comentario.innerHTML += arrayStr[i];
+                            comentario.innerHTML += arrayStr[i + 1];
+                            i +=2;                        
+                        }
+                        else{
+                            comentario.innerHTML += arrayStr[i];
+                            i++
+                        }
+                        if(i=== arrayStr.length){
+                            clearInterval(printCadena);
+                        }
+                    },100);
             }
-            if(i=== arrayStr.length){
-                clearInterval(printStr);
-            }
-        },200);
-    }
-escritura('Estamos disponibles para dar la asesoría a sus requerimientos.');
-// });
+            escritura('Estamos disponibles para dar la asesoría a sus requerimientos.');
+        }
+        else{
+            console.log('Salida de evento')
+            clearInterval(printCadena)
+            comentario.innerHTML= ""
+        }
+    });
+    observando.observe(document.querySelector('#parallaxOne'))
+};
+viewOne();
 
-let escritura2 = cadena =>{
-    let arrayCadena = cadena.split('');
-    let z = 0;
-    let printCadena = setInterval(function () {
-        let texto2 = document.getElementById('idparallax-texto--mod')
-            if(arrayCadena[z] === ''){
-                texto2.innerHTML += arrayCadena[z];
-                texto2.innerHTML += arrayCadena[z + 1];
-                z +=2;                        
-            }else{
-                texto2.innerHTML += arrayCadena[z];
-                z++
-            }
-            if(z=== arrayCadena.length){
-                clearInterval(printCadena);
-            }
-        },200);
-    }
-escritura2('El Derecho es un asunto complicado. Puede causarle un gran problema si lo ignora. ¡Déjanos ayudarte!');
-// });
 
-  
+function viewTwo(){
+    const comentario = document.querySelector('#idparallax-texto--mod');
+    let printCadena;
+    const observando = new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){
+            console.log('Ingreso de evento');
+            let escritura2 = cadena =>{
+                let arrayCadena = cadena.split('');
+                let z = 0;
+                printCadena = setInterval(function () {
+                    if(arrayCadena[z] === ''){
+                        comentario.innerHTML += arrayCadena[z];
+                        comentario.innerHTML += arrayCadena[z + 1];
+                        z +=2;                        
+                    }
+                    else{
+                        comentario.innerHTML += arrayCadena[z];
+                        z++
+                    }
+                    if(z=== arrayCadena.length){
+                        clearInterval(printCadena);
+                    }
+                },100);
+            }
+            escritura2('El Derecho es un asunto complicado. Puede causarle un gran problema si lo ignora. ¡Déjanos ayudarte!');
+        }
+        else{
+            console.log('Salida de evento')
+            clearInterval(printCadena)
+            comentario.innerHTML= ""
+        }
+    });
+    observando.observe(document.querySelector('#parallaxTwo'));
+};
+viewTwo();
+

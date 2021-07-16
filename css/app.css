@@ -13,7 +13,7 @@
     --granate:#CD3F3E;
     --gold:#B2AB8C;
     --white:#FFFFFF;
-    --font-principal:sans-serif;
+    --font-principal:'Roboto Condensed', sans-serif;
     --font-logo: 'Orelega One', cursive;
     --font-secundario: 'Oswald', sans-serif;
     --font-terciaria: 'Raleway', sans-serif;
@@ -31,9 +31,7 @@ html{
     padding: 0;
 }
 body{
-    font-size: 16px;
-    background: #ECE9E6;  
-    background: linear-gradient(to left, #FFFFFF, #eceae8); 
+    font-size: 16px; 
 }
 /*====== LOADING =======*/
 .centrado{
@@ -191,12 +189,14 @@ h3{
     font-family: var(--font-principal);
     position: absolute;
     z-index: 999;
-    background-color:var(--blue-black);
+    background-color: rgb(0, 0, 0);
     width: 100%;
+    height: 100vh;
     margin-top: 1rem;
     margin-left: -1rem;
     padding-left: 1rem;
     padding-top: 1rem;
+    border: 1px solid red;
 }
 .contanier-logo-menu{
     display: flex;
@@ -613,18 +613,20 @@ h3{
 .hamburger.is-active 
 .hamburger-inner:after,
 .hamburger.is-active .hamburger-inner:before{
-    background-color:var(--granate);
+    background-color:#a5a5a5;
 }
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before{
-    width:3rem;
-    height:0.5rem;
-    background-color:var(--granate);
+    width: 3rem;
+    height:0.35rem;
+    background-color:#969696;
 }
 .menu{
     position: absolute;
     right: 0;
+    display: grid;
+    place-self: center;
 }
 .nav-activado{
     display: block;
@@ -763,6 +765,11 @@ button svg {
 button svg:hover{
     opacity: 0.7;
 }
+.splide__pagination__page{
+    border: 1px solid #aab3b359;
+    width: 12px;
+    height: 12px;
+}
 .splide{
     position: relative;
     animation-name: bounce;
@@ -779,7 +786,7 @@ button svg:hover{
 .splide__slide:nth-child(1){
     width: 100%;
     background: #0e1014;
-    background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider1.jpg); 
+    background: linear-gradient(to left, rgba(36, 59, 85, 0.699), rgba(16, 18, 22, 0.767)),url(../img/slider1.jpg); 
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -788,7 +795,7 @@ button svg:hover{
 .splide__slide:nth-child(2){
     width: 100%;
     background: #0e1014;
-    background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider2.jpg);
+    background: linear-gradient(to left, rgba(36, 59, 85, 0.699), rgba(16, 18, 22, 0.767)),url(../img/slider2.jpg);
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -797,7 +804,7 @@ button svg:hover{
 .splide__slide:nth-child(3){
     width: 100%;
     background: #0e1014;
-    background: linear-gradient(to left, rgba(36, 59, 85, 0.760), rgba(20, 30, 48, 0.404)),url(../img/slider3.jpg);
+    background: linear-gradient(to left, rgba(36, 59, 85, 0.699), rgba(16, 18, 22, 0.767)),url(../img/slider3.jpg);
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -829,8 +836,8 @@ button svg:hover{
     margin-top: -3rem;
 }
 .slider-item{
-    font-family: var(--font-secundario);
-    color: white;
+    font-family: var(--font-principal);
+    color: rgb(255, 255, 255);
     text-shadow:0 2px 4px black;
 }
 .slider-item:nth-child(1){
@@ -845,13 +852,13 @@ button svg:hover{
 .boton-slider{
     position: absolute;
     color: white;
-    background-color: var(--granate);
-    border: 2px solid var(--white);
-    border-radius: 3rem;
-    width:80%;
-    font-weight: 750;
+    border: 1px solid var(--white);
+    border-radius: 0.5rem;
+    width:40%;
+    font-weight: 350;
     font-size: 4.2vw;
-    font-family: var(--font-terciaria);
+    font-family:var(--font-principal);
+    text-transform: uppercase;
     padding: 1.5rem .450rem;
     display: flex;
     justify-content: center;
@@ -863,10 +870,9 @@ button svg:hover{
     animation-duration: 2s; 
 }
 .boton-slider:hover{
-    background-color: rgba(255, 255, 255, 0.356);
-    color: var(--granate);
-    border: 2px solid var(--granate);
-    font-weight: 800;
+    background-color: var(--white);
+    color: var(--blue-black);
+    font-weight: 400;
 
 }
 @media(min-width:576px){
@@ -1376,16 +1382,8 @@ button svg:hover{
 /*======================================== 
         FORMULARIO - CONTÁCTENOS 
 ==========================================*/
-#contactenos{
-    color: white !important;
-}
 .section-contactenos{
     margin: 1rem;
-    overflow: hidden;
-    background: linear-gradient(to right, #000000b6, #343838c9),url(../img/slider2.jpg); 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .contactenos-formulario{
     border-radius: 0.5rem;
@@ -1410,7 +1408,7 @@ button svg:hover{
 .campo__label{
     display: block;
     padding-bottom: 0.5rem;
-    color:var(--white);
+    color:var(--blue-black);
     text-transform: uppercase;
     font-family: var(--font-principal);
     font-size: 1.2rem;
@@ -1421,13 +1419,13 @@ button svg:hover{
     outline: none;
     padding: 0 !important;
     margin-bottom: 1rem;
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #acb0b1, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3e3f3fc0, #61666bbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border: 1px solid rgba(119, 119, 119, 0.575) !important;
+    background: linear-gradient(to top, #9696960c, #d6d6d633); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid rgba(182, 189, 190, 0.575) !important;
 }
 .campo__field:hover{
-    background: rgba(255, 255, 255, 0.877);
+    background: rgba(255, 255, 255, 0.781);
+    box-shadow: 0 .4px 3px #082d4680;
+
 }
 .campo__field:nth-child(1),
 .campo__field:nth-child(2),
@@ -1496,13 +1494,14 @@ button svg:hover{
     margin: 0 auto;
 	width: 100%;
 	height: 90vw;
-    background: #121f33ec;
+    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	transition: transform 1s;
 	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    
 }
 .front, .back{
 	width: 100%;
@@ -1525,6 +1524,7 @@ button svg:hover{
 	align-items: center;
 	text-align: center;
 	color: #fff;
+    /* text-shadow: var(--shadow) var(--color_shadow); */
 	font-family: "open sans";
 }
 .card-flip:hover .card-flip__item{
