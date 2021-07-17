@@ -232,6 +232,7 @@ h3{
     display: flex;
     align-items: center;
     font-size: 1.4rem;
+    font-weight: 300;
     color: var(--blue-primario);
     padding: 15px 20px;
     border-bottom: 1px solid rgba(204, 204, 204, 0.534);
@@ -277,18 +278,6 @@ h3{
 }
 
 
-
-
-@media(min-width:442px){
-    .header__nombre{
-        width: 50%;
-    }
-}
-@media(min-width:576px){
-    .header__nombre{
-        width: 40%;
-    }
-}
 @media(min-width:768px){
     .container-header{
         padding: 0;
@@ -540,89 +529,6 @@ h3{
     }
 }
 /* ==================================== 
-        ESTILO ACORDEÓN - NOSOTROS 
-======================================= */
-.acordeon p{
-    border-radius: 0.5rem;
-}
-.acordeon-content{
-    overflow: hidden;
-    max-height: 0rem;
-    opacity: 0;
-    border: 1px solid #8d9da165;
-    background-color: var(--white);
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
-}
-.acordeon-content p{
-    text-align: justify;
-    line-height: 1.4;
-    font-size: 1.5rem;
-}
-.acordeon-content p:nth-child(odd){
-    padding-bottom: 0;
-}
-.acordeon-content p:nth-child(even){
-    padding-top: 0;
-}
-.activo + .acordeon-content{
-    max-height: 1000px;
-    padding: 0;
-    opacity: 1;
-}
-.btn-acordeon{
-    background: var(--blue-black);
-    color: var(--white);
-    font-weight: bold;
-    border: 1px solid var(--blue-black);
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-}
-.btn-acordeon.activo{
-    color: var(--white);
-    font-weight: bold;
-    background-color: var(--granate);
-    border: 1px solid var(--granate);
-    text-shadow: 0px 2px 4px var(--blackClaro);
-    box-shadow: none;
-}
-.btn-acordeon:after{
-    content:"\002b";
-    float: right;
-    margin-top: -0.7rem;
-    font-size: 3rem;
-}
-.btn-acordeon.activo:after{
-    content:"\02212";    
-    margin-top: -0.6rem;
-    font-weight: bold;
-}
-.nosotros-acordeon{
-    margin-top: 2rem;
-}
-.list-acordeon{
-    font-family: var(--font-terciaria);
-}
-.acordeon p{
-    padding: 1rem;
-}
-@media(min-width:768px){
-    .nosotros-acordeon{
-        margin-top: 0;
-    }
-}
-@media(min-width:992px){
-    .nosotros-acordeon{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media(min-width:768px){
-    .menu{
-        display: none;
-    }
-}
-/* ==================================== 
                 SCROLL ESTATICO 
 ======================================= */
 .fijo{
@@ -828,6 +734,7 @@ button svg:hover{
     text-shadow:0 2px 4px black;
 }
 .slider-item:nth-child(1){
+    font-family: var(--font-titulo);
     font-size: 3.5rem;
     text-align: center;
 }
@@ -858,7 +765,7 @@ button svg:hover{
 }
 .boton-slider:hover{
     background-color: rgba(255, 255, 255, 0.979);
-    color: var(--blue-black);
+    color: var(--blue-primario);
     font-weight: 400;
 
 }
@@ -954,39 +861,18 @@ button svg:hover{
             MAIN - SECTION 
 ======================================= */
 
-.section-nosotros,.section-practica{
-    padding-top: 2rem;
-}
 .section-nosotros__texto{
-    font-family: var(--font-terciaria);
-    font-weight: 400;
+    font-family: var(--font-principal);
     font-size: 1.5rem;
+    font-weight: 300;
     text-align: justify;
     line-height: 1.4;
-}
-.section-nosotros__texto:nth-child(odd){
-    margin-top: 2rem;
-}
-.section-nosotros__texto:nth-child(even){
-    margin-bottom: 2rem;
-}
-.nosotros-texto{
-    margin-bottom: 3rem !important;
-}
-.nosotros-imagen2{
-    margin: 0 auto;
-    width: 40%;
-    opacity: 0.5;
-    transition: opacity .7s;
-    animation: rotateIn;
-    animation-duration: 4s;
-}
-.nosotros-imagen2:hover{
-    opacity: 1;
+    color: var(--blue-primario);
 }
 .nosotros-imagen1{
     animation:backInLeft;
     animation-duration: 4s;
+    margin: 2rem auto;
 }
 .nosotros-imagen1 img{
     border: 0.4rem ridge rgba(168, 168, 168, 0.28);
@@ -997,6 +883,18 @@ button svg:hover{
 .nosotros-imagen1 img:hover{
     box-shadow: none;
 }
+.nosotros-imagen2{
+    margin: 2rem auto;
+    width: 40%;
+    opacity: 0.5;
+    transition: opacity .7s;
+    animation: rotateIn;
+    animation-duration: 4s;
+}
+.nosotros-imagen2:hover{
+    opacity: 1;
+}
+/*======== ÁREA DE PRÁCTICAS =======*/
 .cards{
     margin-top: 2rem !important;
 }
@@ -1109,9 +1007,7 @@ button svg:hover{
     .figcaption__titulo-btn{
         font-size: 1.5rem;
     }
-    .section-nosotros{
-        padding-top: 4rem;
-    }
+    
     .section-nosotros__texto{
         font-size: 1.5rem;
     }
@@ -1274,6 +1170,91 @@ button svg:hover{
         row-gap: 2rem;
     }
 }
+/* ==================================== 
+        ESTILO ACORDEÓN - NOSOTROS 
+======================================= */
+.acordeon p{
+    border-radius: 0.5rem;
+}
+.acordeon-content{
+    overflow: hidden;
+    max-height: 0rem;
+    opacity: 0;
+    border: 1px solid #8d9da165;
+    background-color: var(--white);
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+.acordeon-content p{
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 1.5rem;
+}
+.acordeon-content p:nth-child(odd){
+    padding-bottom: 0;
+}
+.acordeon-content p:nth-child(even){
+    padding-top: 0;
+}
+.activo + .acordeon-content{
+    max-height: 1000px;
+    padding: 0;
+    opacity: 1;
+}
+.btn-acordeon{
+    background: var(--blue-black);
+    color: var(--white);
+    font-weight: bold;
+    border: 1px solid var(--blue-black);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.btn-acordeon.activo{
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--granate);
+    border: 1px solid var(--granate);
+    text-shadow: 0px 2px 4px var(--blackClaro);
+    box-shadow: none;
+}
+.btn-acordeon:after{
+    content:"\002b";
+    float: right;
+    margin-top: -0.7rem;
+    font-size: 3rem;
+}
+.btn-acordeon.activo:after{
+    content:"\02212";    
+    margin-top: -0.6rem;
+    font-weight: bold;
+}
+.nosotros-acordeon{
+    margin-top: 2rem;
+}
+.list-acordeon{
+    font-family: var(--font-terciaria);
+}
+.acordeon p{
+    padding: 1rem;
+}
+@media(min-width:768px){
+    .nosotros-acordeon{
+        margin-top: 0;
+    }
+}
+@media(min-width:992px){
+    .nosotros-acordeon{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(min-width:768px){
+    .menu{
+        display: none;
+    }
+}
+
+
 /*======================================= 
             EFECTO PARALLAX 
 =========================================*/
