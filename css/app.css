@@ -4,7 +4,7 @@
 ============================================================*/
 :root{
     --font-principal:'Roboto', sans-serif;
-    --font-titulo: 'Roboto Slab', serif;
+    --font-titulo: 'DM Serif Text', serif;
     --blue-primario: #415563;
     --grey-primario:#536572;
     --grey-secundario:#9ca6ad;
@@ -37,7 +37,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.hidden{
+.hidden{/*Para efecto del loader -> ubicarlo en el body*/
     overflow: hidden;
 }
 .lds-roller {
@@ -145,10 +145,9 @@ h1{
 }
 h2{
     font-family: var(--font-titulo);
-    font-size: 4.5vw;
+    font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 800;
     color: var(--blue-primario);
     padding: 2rem 0;
 }
@@ -157,9 +156,7 @@ h3{
     font-family: var(--font-titulo);
     padding: 1.5rem 0;
     text-transform: uppercase;
-    font-weight: 800;
     letter-spacing: 0.1rem;
-
 }
 /* ==================================== 
                 HEADER 
@@ -168,7 +165,6 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
 }
 .header__nombre{
     width: 35%;
@@ -176,9 +172,7 @@ h3{
 .header__nombre:hover{
     filter: opacity(0.9);
 }
-/* ==================================== 
-            BOTON MENÚ 
-======================================= */
+/* ======= BOTON MENÚ ======== */
 .hamburger-box{
     display: flex;
     justify-content: center;
@@ -205,44 +199,51 @@ h3{
     right: 0;
     display: grid;
     place-self: center;
+    z-index: 2;
 }
 .container-nav-responsive{
     display: none;
     position: fixed;
-    width: 35rem;
+    width: 100%;
     height: 100%;
     top:0;
     left: 1.5rem;
-    background-color: white;
-    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%);
+    background: rgba(0, 0, 0, 0.322);
     font-family: var(--font-principal);
-    font-size: 1.4rem;
     margin-left: -1.5rem;
     text-transform: uppercase;
     z-index: 1;
 }
+/* ======= ACTIVAR EL MENU RESPONSIVE ======== */
 .nav-activado{
     display: block;
 }
-.navegacion__items{
-    padding-bottom: 1.5rem;
-    width: 70%;
-    border-bottom: 2px double rgba(207, 207, 209, 0.281);
+.navegacion{
+    width: 35rem;
+    height: 100%;
+    background-color: white;
+    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%);
+}
+.navegacion__item:first-child{
+    display: block;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.534);
 }
 .navegacion__item a{
     display: flex;
     align-items: center;
+    font-size: 1.4rem;
     color: var(--blue-primario);
-    
     padding: 15px 20px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.534);
 }
 .contacto{
     margin-top: 2rem;
     margin-bottom: 2rem;
+    text-transform: lowercase;
 }
 .contacto__item{
     display: flex;
-    padding: 0.8rem 0;
+    padding: 10px 15px;
 }
 .contacto__item a{
     display: flex;
@@ -250,32 +251,29 @@ h3{
     color: var(--blue-primario);
     text-shadow: 0 3px 4px var(--blackfirst);
 }
-
+.contacto__item i{
+    margin-right: 1rem;
+    font-size: 18px;
+}
 .redes{
     display: flex;
-    margin-bottom: 1rem;
-}
-.redes__enlace{
-    margin-right: 0.2rem;
-    margin-top: 0.2rem;
+    align-items: center;
+    padding-left: 1.5rem;
 }
 .redes__enlace i{
     font-size: 2rem;
-    padding: 1.2rem;
+    padding: 10px;
+    margin-right: 0.5rem;
     border: 1px solid var(--blue-primario);
     color: var(--blue-primario);
 }
-
-.submenu__lista{
-    margin-left: 2.1rem;
-}
 .submenu__lista a{
-    font-size: 1.6rem;
+    padding: 12px 17px;
 }
 .submenu__lista a:before{
-    content: "\27AD";
+    content: url(../img/viñeta.png);
     margin-right: 0.8rem;
-    font-size: 2rem;
+    object-fit: cover;
 }
 
 
@@ -525,15 +523,16 @@ h3{
     opacity: 1;
 }
 .btn-item:after{
-    content:"\27AD";
+    content: url(../img/angulo-abajo.png);
+    object-fit: cover;
     float: right;
     font-size: 2.2rem;
     margin-left: 1rem;
     margin-top: 0.4rem;
 }
 .btn-item.active:after{
-    content:"\261F";    
-    margin-top: 0.2rem;
+    content:url(../img/angulo-arriba.png);    
+    margin-top: 0.1rem;
 }
 @media(min-width:768px){
     .btn-item:after{
