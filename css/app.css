@@ -759,6 +759,7 @@ button svg:hover{
     text-align: justify;
     line-height: 1.4;
     font-size: 1.5rem;
+    color: var(--blue-primario);
 }
 .acordeon-content p:nth-child(odd){
     padding-bottom: 0;
