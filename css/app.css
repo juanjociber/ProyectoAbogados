@@ -444,6 +444,7 @@ h3{
     .fijo .header{
         display: grid;
         grid-template-columns: 1fr 4fr;
+        opacity: 0.9;
     }
     .fijo .navegacion__item a{
         color: var(--blue-primario);
