@@ -202,6 +202,9 @@ h3{
     place-self: center;
     z-index: 2;
 }
+.hamburger.is-active{
+    border: none;
+}
 .container-nav-responsive{
     display: none;
     position: fixed;
@@ -504,14 +507,19 @@ button svg:hover{
     opacity: 0.7;
 }
 .splide__pagination__page{
-    border: 1px solid #aab3b359;
-    width: 12px;
-    height: 12px;
+    border: 1px solid rgba(141, 141, 141, 0.842);
+    background-color: white;
+    width: 15px;
+    height: 15px;
+}
+.is-active{
+    border: 1px solid var(--naranja);
 }
 .splide{
     position: relative;
     animation-name: bounce;
     animation-duration: 3s;
+    border: none;
 }
 .splide__slide{
     width: 100%;
@@ -520,6 +528,7 @@ button svg:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 .splide__slide:nth-child(1){
     width: 100%;
@@ -564,69 +573,79 @@ button svg:hover{
     top: 0;
 }
 /*===============================*/
-.slider-boton{
+.slider-items{
+    width: 60%;
+    height: 40%;
+    opacity: 0.6;
+    transition: opacity .7s;
+}
+.slider-items:hover{
+    opacity: 1;
+}
+.slider-items h2{
+    height: 30%;
+    background-color: var(--white);
+    font-weight: 800;
+    font-family: var(--font-principal); 
+}
+.slider-items p{
+    height: 70%;
+    background-color: var(--blue-primario);
+    color: white;
+    font-family: var(--font-principal);
+    text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
-.slider-items{
-    position: absolute;
-    top: 28%;
-    margin-top: -3rem;
-}
-.slider-item{
-    font-family: var(--font-principal);
-    color: rgb(255, 255, 255);
-    text-shadow:0 2px 4px black;
-}
-.slider-item:nth-child(1){
-    font-family: var(--font-titulo);
-    font-size: 3.5rem;
-    text-align: center;
-}
-.slider-item:nth-child(2){
-    font-size: 2rem;
-    margin: 1rem 2rem 0 2rem;
-    text-align: center;
+.slider-boton{
+    width: 60%;
+    height: 5rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .boton-slider{
     position: absolute;
     color: white;
-    border: 1px solid var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.582);
     border-radius: 0.5rem;
     width:45%;
     font-weight: 350;
-    font-size: 4.2vw;
+    font-size: 1.3rem;
     font-family:var(--font-principal);
     text-transform: uppercase;
     padding: 1.7rem .250rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color .9s;
-    margin-top: 1rem;
+    background-color: var(--naranja);
+    transition: background-color .4s;
     bottom: 30%;
     animation: backInUp; 
-    animation-duration: 2s; 
+    animation-duration: 2s;
+    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%); 
 }
 .boton-slider:hover{
-    background-color: rgba(255, 255, 255, 0.979);
-    color: var(--blue-primario);
-    font-weight: 400;
+    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 50%);
+    transform: scale(0.99);
 }
 @media(min-width:576px){
     .splide__slide{
-        height: 75rem;
-    }
-    .slider-item:nth-child(1){
-        font-size: 3.5rem;
-    }
-    .slider-item:nth-child(2){
-        margin: 1rem 4rem 0 4rem;
+        height: 70rem;
     }
     .boton-slider{
-        width: 50%;
-        padding: 1.5rem 0;
-        font-size: 2rem;
+        width: 28%;
+        padding: 2rem 0;
+        font-size: 1.5rem;
+    }
+    .slider-items{
+        width: 40%;
     }
 }
 @media(min-width:768px){
@@ -638,22 +657,40 @@ button svg:hover{
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .slider-item:nth-child(2){
-        margin: 1rem 8rem 0 8rem;
-   }
-    .boton-slider{
-        width: 35%;
+    .slider-items{
+        width: 70%;
+        height: 40%;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+    .slider-items h2{
+        grid-column: 1 / 2;
+        height: 100%;
+        font-size: 3.2rem;
+        padding: 0 3rem !important;
+        text-align: center;
+    }
+    .slider-items p{
+        height: 100%;
+        background: var(--blue-primario);
+        font-size: 1.4rem;
+    }
+    .slider-items h2,
+    .slider-items p{
+        width: auto;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider-boton{
+        height: 6rem;
     }
 }
 @media(min-width:992px){
     .splide__slide{
-        height: 65rem;
-    }
-    .slider-item:nth-child(1){
-        font-size: 4.5rem;
-    }
-    .slider-item:nth-child(2){
-        font-size: 2.5rem;
+        height: 70rem;
     }
     .boton-slider{
         width: 25%;
@@ -674,31 +711,27 @@ button svg:hover{
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .slider-items{
+        width: 55%;
+    }
+    .slider-items h2{
+        padding: 0 6rem;
+    }
 }
 @media(min-width:1200px){
+    .slider-items{
+        width: 45%;
+        height: 47%;
+    }
+    .splide__slide{
+        height: 60rem;
+    }
     .boton-slider{
         width: 20%;
     }
-}
-/*===================================
-         SELECTOR DE IMAGEN 
-=====================================*/
-.numerador{
-    text-align: center;
-    padding: 0.5rem;
-}
-.circulo{
-    font-size: 0em;
-    border: 1px solid #888888;
-    border-radius: 50%;
-    padding: 0.5rem;
-    background-color: rgb(255, 250, 250);
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    transition: background-color .5s;
-}
-.circulo:hover{
-    background: #1a59a1f1;
-    border: 1px solid var(--white);
+    .slider-boton{
+        height: 10rem;
+    }
 }
 /* ==================================== 
             MAIN - SECTION 
@@ -780,7 +813,7 @@ button svg:hover{
     font-size: 1.3rem;
     text-transform: uppercase;
     border: 1px solid var(--blue-black);
-    box-shadow: 0px 6px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 6px 10px -7px #00000085, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .btn-acordeon.activo{
     color: var(--white);

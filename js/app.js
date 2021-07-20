@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded',function(){
 /**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
-// document.addEventListener('DOMContentLoaded',function(){
     let menu = document.querySelector('.menu');
     let navegacion = document.querySelector('.container-nav-responsive');
     let contador = 1;
@@ -41,7 +40,9 @@ document.addEventListener('DOMContentLoaded',function(){
             menu.classList.remove('is-active');
         }
     });
-// })
+
+
+
 /**=======================================================
  *          MENÚ HORIZONTAL CON INDICADOR DE SCROLL
  =========================================================*/
@@ -68,7 +69,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 });
 
 /**=======================================================
- *                      CREANDO ELEMENTO FIGURE
+ *               CREANDO ELEMENTO FIGURE
  =========================================================*/
 const especialidad = 
     [{
@@ -134,6 +135,7 @@ especialidadArray.forEach(function(e){
     $fragment.appendChild($article);
     $cards.appendChild($fragment);
 });
+console.log($fragment)
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/
@@ -185,11 +187,8 @@ function navegacionFija() {
 /**=======================================================
  *           EVENTO TITULO - DESCRIPCIÓN SLIDER
  =========================================================*/
-document.addEventListener('DOMContentLoaded',function(){
-    navegacionSlider1();
-})
 function navegacionSlider1(){
-    const slide = document.querySelector('.slider-item');
+    const slide = document.querySelector('.slider-items h2');
     const observando1 = new IntersectionObserver(function(entries){
         if(entries[0].isIntersecting){
             slide.classList.add('animate__animated','animate__backInDown');
@@ -200,12 +199,10 @@ function navegacionSlider1(){
     });
     observando1.observe(document.querySelector('.splide'));
 };
+navegacionSlider1();
 
-document.addEventListener('DOMContentLoaded',function(){
-    navegacionSlider2();
-})
 function navegacionSlider2(){
-    const slide1 = document.querySelector('.slider-item--mod')
+    const slide1 = document.querySelector('.slider-items p')
     const observando2 = new IntersectionObserver(function(e){
         if(e[0].isIntersecting){
             slide1.classList.add('animate__animated','animate__fadeInLeft');
@@ -216,6 +213,7 @@ function navegacionSlider2(){
     });
     observando2.observe(document.querySelector('.splide'));
 };
+navegacionSlider2();
 
 /**=======================================================
  *                   ACORDEÓN MENU
