@@ -252,33 +252,41 @@
         <section class="section-contactenos seccion">
             <h2 id="contactenos">Contáctenos</h2>
             <div class="contactenos-formulario">
-                <form class="form" name="contactos" netlify>
-                    <div class="grupo">
-                        <label class="campo__label" for="nombre">Su nombre (obligatorio)</label>
-                        <input class="campo__field" name="nombre" type="text" id="nombre">
-                    </div>
-        
-                    <div class="grupo">
-                        <label class="campo__label" for="correo">Su correo electrónico (obligatorio)</label>
-                        <input class="campo__field" name="correo" type="email" id="correo">
-                    </div>
-                    
-                    <div class="grupo">
-                        <label class="campo__label" for="phone">Su teléfono (obligatorio)</label>
-                        <input class="campo__field" name="phone" type="tel" id="phone">
+                <form class="formulario" name="contacto" netlify>
+                    <div class="contenedor-campos container">
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" name="name" type="text" placeholder="Nombre"
+                                    required aria-hidden="true">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" type="email" name="email" placeholder="Email"
+                                    required aria-hidden="true">
+                                <i class='bx bx-mail-send'></i>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <div class="input-icon input-icon--mod">
+                                <textarea class="input-text input-textArea" name="comentarios" rows="8"
+                                    placeholder="Consulta" required></textarea>
+                                <i class='bx bxs-edit'></i>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="grupo">
-                        <label class="campo__label" for="mensaje">Mensaje</label>
-                        <textarea class="campo__field" name="mensaje" id="mensaje" rows="8"></textarea>
-                    </div>
-                    <div class="grupo">
-                        <input type="submit" value="Enviar" class="btn-form">
+                    <div class="boton-footer boton-footer--mod">
+                        <input class="boton-footer__dos" type="submit" name="message" value="Enviar"
+                            title="Click para Enviar Consulta">
                     </div>
                 </form>
             </div>
 
-            <div class="contactenos-ubicacion mapa" id="mapa">
+            <!-- <div class="contactenos-ubicacion mapa" id="mapa"> -->
                 
             </div>
         </section>
@@ -320,7 +328,7 @@
             <div class="contenedor-fondo grid-2-col grid-3-col">
                 <div class="contenedor">
                     <section class="footer-nosotros">
-                        <h3 class="footer-nosotros__titulo"><span>l&h</span> Consultores y Asesores Legales</h3>
+                        <h3 class="footer-nosotros__titulo">l<span>&</span>h Consultores y Asesores Legales</h3>
                         <p class="footer-nosotros__texto">Somos un Estudio jurídico, que trabajamos con ética y
                             responsabilidad en favor de nuestros
                             clientes. Cualquier consulta no dude en comunicarse con
@@ -328,7 +336,7 @@
                     </section>
                     <div class="boton-footer">
                         <form action="">
-                            <input class="boton-footer__uno" type="submit" value="+Información"
+                            <input class="btn-footer__input" type="submit" value="+Información"
                                 title="Click para mayor información"></input>
                         </form>
                     </div>
@@ -351,58 +359,12 @@
                     </section>
                 </div>
                 <div class="contenedor">
-                    <div class="fondo-formulario">
-                        <section class="footer-consulta">
-                            <h3>Consultas</h3>
-                            <form class="formulario" name="contacto" netlify>
-                                <div class="contenedor-campos container">
-                                    <div class="campo">
-                                        <div class="input-icon">
-                                            <input class="input-text" name="name" type="text" placeholder="Nombre"
-                                                required aria-hidden="true">
-                                            <i class='bx bxs-user'></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="campo">
-                                        <div class="input-icon">
-                                            <input class="input-text" type="email" name="email" placeholder="Email"
-                                                required aria-hidden="true">
-                                            <i class='bx bx-mail-send'></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="campo">
-                                        <div class="input-icon input-icon--mod">
-                                            <textarea class="input-text input-textArea" name="comentarios" rows="8"
-                                                placeholder="Consulta" required></textarea>
-                                            <i class='bx bxs-edit'></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="boton-footer boton-footer--mod">
-                                    <input class="boton-footer__dos" type="submit" name="message" value="Enviar"
-                                        title="Click para Enviar Consulta">
-                                </div>
-                            </form>
-
-                        </section>
-                    </div>
-                </div>
-                <div class="contenedor">
                     <section class="footer-copyrigth footer-copyrigth--mod container">
                         <span class="footer-copyrigth__texto">Copyrigth &copy; 2021 L&H Consultores y Asesores Legales |
                             Diseñado y Desarrollado por: <a class="autor" href="tel:+953659803">Juan J. Huiza</a></span>
                     </section>
                 </div>
             </div>
-        </div>
-        <div class="wave2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
-                preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M-11.09,-2.79 C186.98,31.74 266.55,-31.41 601.20,30.75 L500.00,0.00 L-16.74,-42.26 Z"
-                    style="stroke: none; fill: #ffffff;"></path>
-            </svg>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
