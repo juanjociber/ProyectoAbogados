@@ -974,6 +974,7 @@ figure img{
     width: 100%;
     padding-top: 21rem;
     font-size: 1.8rem;
+    font-weight: 300;
     font-family: var(--font-principal);
 }
 .article:hover  .figure__texto{
@@ -985,9 +986,9 @@ figure img{
     text-align: center;
     background: none;
     padding: 2rem 0;
-    font-size: 1.6rem;
-    font-weight: 300;
-    font-family: var(--font-titulo);
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: var(--font-principal);
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
