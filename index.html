@@ -248,49 +248,6 @@
             <div class="cards container"></div>
         </section>
 
-        <!--SECTION - CONTACTENOS-->
-        <section class="section-contactenos seccion">
-            <h2 id="contactenos">Contáctenos</h2>
-            <div class="contactenos-formulario">
-                <form class="formulario" name="contacto" netlify>
-                    <div class="contenedor-campos container">
-                        <div class="campo">
-                            <div class="input-icon">
-                                <input class="input-text" name="name" type="text" placeholder="Nombre"
-                                    required aria-hidden="true">
-                                <i class='bx bxs-user'></i>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <div class="input-icon">
-                                <input class="input-text" type="email" name="email" placeholder="Email"
-                                    required aria-hidden="true">
-                                <i class='bx bx-mail-send'></i>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <div class="input-icon input-icon--mod">
-                                <textarea class="input-text input-textArea" name="comentarios" rows="8"
-                                    placeholder="Consulta" required></textarea>
-                                <i class='bx bxs-edit'></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="boton-footer boton-footer--mod">
-                        <input class="boton-footer__dos" type="submit" name="message" value="Enviar"
-                            title="Click para Enviar Consulta">
-                    </div>
-                </form>
-            </div>
-
-            <!-- <div class="contactenos-ubicacion mapa" id="mapa"> -->
-                
-            </div>
-        </section>
-
         <!-- TARJETAS 3D - EFECTO FLIP-->
         <section class="flip-container">
             <article class="card-flip">
@@ -315,17 +272,57 @@
     </main>
 
     <!--PARALLAX-->
-    <div class="parallax parallax--mod" id="parallaxTwo">
-        <div class="fondo-parallax">
-            <div class="fondo-parallax">
-                <p class="fondo-parallax__texto" id="idparallax-texto--mod"></p>
+    <div class="parallax-formulario">
+        <div class="fondo-parallax__formulario">
+            <!--SECTION - CONTACTENOS-->
+        <!-- <section class="section-contactenos seccion"> -->
+            <h2 id="contactenos">Contáctenos</h2>
+            <div class="contactenos-formulario">
+                <form class="formulario" name="contacto" netlify>
+                    <div class="contenedor-campos container">
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" name="name" type="text" placeholder="Nombre" required aria-hidden="true">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" type="email" name="email" placeholder="Email" required aria-hidden="true">
+                                <i class='bx bx-mail-send'></i>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <input class="input-text" type="tel" name="phone" placeholder="Teléfono" required aria-hidden="true">
+                                <i class='bx bx-mail-send'></i>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <div class="input-icon">
+                                <textarea class="input-textArea" name="comentarios" rows="8" placeholder="Consulta" required></textarea>
+                                <i class='bx bxs-edit'></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boton-footer boton-footer--mod">
+                        <input class="boton-footer__dos" type="submit" name="message" value="Enviar"
+                            title="Click para Enviar Consulta">
+                    </div>
+                </form>
             </div>
+        <!-- </section> -->
         </div>
     </div>
 
     <footer class="footer">
         <div class="contenedores">
-            <div class="contenedor-fondo grid-2-col grid-3-col">
+            <div class="contenedor-fondo grid-2-col">
                 <div class="contenedor">
                     <section class="footer-nosotros">
                         <h3 class="footer-nosotros__titulo">l<span>&</span>h Consultores y Asesores Legales</h3>
