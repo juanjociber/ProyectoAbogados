@@ -43,9 +43,6 @@ window.onload = function(){
 
 
 
-/**=======================================================
- *          MENÚ HORIZONTAL CON INDICADOR DE SCROLL
- =========================================================*/
 
 /**=======================================================
  *                 REDES SOCIALES
@@ -135,7 +132,7 @@ especialidadArray.forEach(function(e){
     $fragment.appendChild($article);
     $cards.appendChild($fragment);
 });
-console.log($fragment)
+
 /**===================================================================
  *  API:'Intersection Observer'CARGA IMG CUANDO ES VISIBLE POR SCROLL
  =====================================================================*/
@@ -178,7 +175,7 @@ function navegacionFija() {
         }
     });
     // Elemento a observar
-    observer.observe(document.querySelector('.splide'));
+    observer.observe(document.querySelector('#image-slider'));
 };
 // function scrollNav() {
     
@@ -372,3 +369,41 @@ function viewContactenos(){
     observando.observe(document.querySelector('#section-contactenos'))
 };
 viewContactenos();
+/**=======================================================
+ *                BOTON DESPLAZA ARRIBA
+ =========================================================*/
+$(document).ready(function(){
+    $('.ir-arriba').click(function(){
+        $('body,html').animate({
+            scrollTop: '0px'
+        },300);
+    })
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 0 ){
+            $('.ir-arriba').slideDown(300);
+        }
+        else{
+            $('.ir-arriba').slideUp(500);
+        }
+    })
+});
+
+/**=======================================================
+ *               SELECCIÓN DE MENÚ
+ =========================================================*/
+document.addEventListener('DOMContentLoaded',function(){
+    scrollNav();
+})
+function scrollNav(){
+    const enlaces = document.querySelectorAll('.navegacion__items')
+    enlaces.forEach(function(enlace){
+        enlace.addEventListener('click',function(e){
+            e.preventDefault();
+            // console.log(e.target.attributes.href.value)
+            const seccion = document.querySelector(e.target.attributes.href.value)
+            seccion.scrollIntoView({
+                behavior: 'smooth',
+            });
+        })
+    }) 
+}

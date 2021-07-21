@@ -2,7 +2,7 @@
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:55px;
+	bottom:130px;
 	right:20px;
 	border-radius:50px;
 	text-align:center;
@@ -10,7 +10,7 @@
 	z-index: 500;
 }
 .float:hover {
-	transform: scale(1.07);
+	transform: scale(0.95);
 	text-decoration: none;
 	box-shadow: 2px 2px 6px #7a7979;
 }
