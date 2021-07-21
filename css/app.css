@@ -856,7 +856,7 @@ button svg:hover{
 .parallax{
     width: 100%;
     height:25rem; 
-    background-image: url(../img/lh_consultores_fondo_formulario.jpg);
+    background-image: url(../img/fondo-formulario.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -933,6 +933,13 @@ button svg:hover{
 =================================*/
 .section-practica{
     margin-top: 2rem;
+}
+.section-practica__parrafo{
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--blue-primario);
+    text-align: justify;
 }
 .cards{
     margin-top: 2rem;
@@ -1153,12 +1160,16 @@ figure img{
 /*======================================== 
         FORMULARIO - CONTÁCTENOS 
 ==========================================*/
-.section-contactenos{
-    margin: 1rem;
-}
 #contactenos{
-    color: white;
-    font-weight: 800;
+    padding-top: 1rem;
+}
+.section-contactenos__parrafo{
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--blue-primario);
+    text-align: center;
+    margin-top: 2rem;
 }
 .formulario{
     width: 40rem;
@@ -1166,14 +1177,26 @@ figure img{
     padding: 2rem 1rem;
     background: #0e111360;
     font-family: var(--font-principal);
-    margin-bottom: 2rem;
+}
+@media(min-width:576px){
+    .formulario{
+        width: 50rem;
+    }
+}
+@media(min-width:992px){
+    .formulario{
+        width: 60rem;
+    }
+    .campo:nth-child(2){
+        grid-column: 1 / 2;
+    }   
 }
 .contenedor-campos{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
+    column-gap: 1rem;
+    row-gap: 1.2rem;
 }
 .campo:nth-child(1),
 .campo:nth-child(2),
@@ -1183,7 +1206,15 @@ figure img{
 .campo:nth-child(4){
     grid-column: 1 / 3;
 }
-.input-icon:hover, .input-icon i:hover,
+@media(min-width:992px){
+    .campo:nth-child(2){
+        grid-column: 1 / 2;
+    }
+    .campo:nth-child(3){
+        grid-column: 2 / 3;
+    }   
+}
+.input-icon:hover, 
 .formulario input[type="text"]:hover,
 .formulario input[type="email"]:hover,
 .formulario input[type="tel"]:hover,
@@ -1193,21 +1224,21 @@ figure img{
     font-weight: 300;
     border-radius: 0.3rem;
 }
-.formulario input[type="text"],input[type="email"],input[type="tel"],textarea{
+.formulario input[type="text"],.input-text__email,input[type="tel"],textarea{
     width: 100%;
     background: rgba(229, 230, 231, 0.658);
-    padding: 1rem 1.5rem 1.5rem 4rem;
     outline: none;
     border: none;
-    border-radius: 0 0.3rem 0.3rem 0;
     color: rgba(23, 25, 27, 0.877);
     font-weight: 300;
     font-size: 1.4;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
 }
 .input-icon{
     position: relative;
     color: rgba(43, 49, 54, 0.397);
-    border-radius: 0.3rem;
 }
 .input-icon i{
     position: absolute;
@@ -1215,7 +1246,19 @@ figure img{
     left: 0;
     top: 0;
     padding: 2.5%;
-    
+}
+@media(min-width:576px){
+    .input-icon i{
+        padding: 2%;
+    }
+}
+@media(min-width:992px){
+    .input-icon i{
+        padding: 1.5%;
+    }
+    .bx--mod{
+        padding: 3.1% !important;
+    }
 }
 .caja-iconTextArea{
     padding-top: 1rem;
@@ -1236,23 +1279,8 @@ figure img{
     opacity: 0.7;
 }
 @media(min-width:768px){
-    .section-contactenos{
-        padding: 1rem;
-        border: 1px solid red;
-        display: grid;
-        grid-template-columns: 1.5fr 2fr;
-        column-gap: 2rem;
-    }
-    .contactenos-formulario{
-        grid-column: 1 / 2;
-    }
-    .contactenos-ubicacion{
-        grid-column: 2 / 3;
-    }
-}
-@media(min-width:992px){
-    .section-contactenos{
-        grid-template-columns: 1fr 2fr;
+    .btn-footer__input--mod{
+        width: 40%;
     }
 }
 /*======================================== 
@@ -1463,7 +1491,7 @@ figure img{
     font-family: var(--font-principal);
     font-size: 1.4rem;
     color: var(--white);
-    border-bottom: 0.5px solid #828e9734;
+    border-bottom: 0.5px solid #b1bcc44f;
     margin-right: 3rem;
     margin-left: 3rem;
     padding-bottom: 2rem;
@@ -1505,11 +1533,6 @@ figure img{
         border-top: 0.5px solid #828e9734;
         margin-left: 2rem;
         margin-right: 2rem;
-    }
-}
-@media(min-width:790px){
-    .footer-contacto__enlace--mod{
-        font-size: 1.2rem;
     }
 }
 @media(min-width:1200px){

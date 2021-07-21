@@ -38,6 +38,7 @@
 
     <link rel="preload" href="css/app.css" as="style">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/whatsApp.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
 </head>
@@ -55,6 +56,15 @@
             <div></div>
         </div>
     </div>
+    <!--Logo de whatsApp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=51956749164&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
+        rel="noopener" class="float" target="_blank">
+        <picture>
+            <source srcset="./img/whatsapp.webp" type="image/webp">
+            <img loading="lazy" src="./img/whatsapp.svg" alt="" title="WhatsApp">
+        </picture>
+    </a>
     <!-- =============== HEADER ============== -->
     <div class="container-header">
         <header class="header">
@@ -245,6 +255,8 @@
         <!--SECTION - PRÁCTICA: desarrollado en js con los elements(Article-Figure-img-p-figcaption)-->
         <section class="section-practica container seccion">
             <h2 id="area de practicas">Áreas de Práctica</h2>
+            <p class="section-practica__parrafo container">Con nosotros usted contará con la mejor asesoría legal para cualquier acción que pretenda emprender. Somos un Estudio de Abogados en Lima 
+                que contamos con las siguientes especialidades:</p>
             <div class="cards container"></div>
         </section>
 
@@ -269,56 +281,62 @@
                 </div>
             </article>
         </section>
+
+        <!--SECTION - CONTACTENOS-->
+        <section class="section-contactenos" id="section-contactenos">
+            <p class="section-contactenos__parrafo container">Cualquier consulta no dude en comunicarnos, la atención es de inmediata</p>
+            <h2 id="contactenos"></h2>
+            <!--PARALLAX-->
+            <div class="parallax-formulario">
+                <div class="fondo-parallax__formulario">
+                    <div class="contactenos-formulario">
+                        <form class="formulario" name="contacto" netlify>
+                            <div class="contenedor-campos container">
+                                
+                                <div class="campo">
+                                    <div class="input-icon">
+                                        <input class="input-text" name="name" type="text" placeholder="Nombre" required aria-hidden="true">
+                                        <i class='bx bxs-user'></i>
+                                    </div>
+                                </div>
+    
+                                <div class="campo">
+                                    <div class="input-icon">
+                                        <input class="input-text input-text__email" type="email" name="email" placeholder="Email" required aria-hidden="true">
+                                        <i class='bx bx-envelope bx--mod'></i>
+                                    </div>
+                                </div>
+    
+                                <div class="campo">
+                                    <div class="input-icon">
+                                        <input class="input-text" type="tel" name="phone" placeholder="Teléfono" required aria-hidden="true">
+                                        <i class='bx bx-phone bx--mod'></i>
+                                    </div>
+                                </div>
+    
+                                <div class="campo">
+                                    <div class="input-icon">
+                                        <textarea class="input-textArea" name="comentarios" rows="8" placeholder="Consulta" required></textarea>
+                                        <i class='bx bxs-edit'></i>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="boton-footer boton-footer--mod">
+                                <input class="btn-footer__input btn-footer__input--mod" type="submit" name="message" value="Enviar" title="Click para Enviar Consulta">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
     </main>
 
-    <!--PARALLAX-->
-    <div class="parallax-formulario">
-        <div class="fondo-parallax__formulario">
-            <!--SECTION - CONTACTENOS-->
-        <!-- <section class="section-contactenos seccion"> -->
-            <h2 id="contactenos">Contáctenos</h2>
-            <div class="contactenos-formulario">
-                <form class="formulario" name="contacto" netlify>
-                    <div class="contenedor-campos container">
-
-                        <div class="campo">
-                            <div class="input-icon">
-                                <input class="input-text" name="name" type="text" placeholder="Nombre" required aria-hidden="true">
-                                <i class='bx bxs-user'></i>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <div class="input-icon">
-                                <input class="input-text" type="email" name="email" placeholder="Email" required aria-hidden="true">
-                                <i class='bx bx-mail-send'></i>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <div class="input-icon">
-                                <input class="input-text" type="tel" name="phone" placeholder="Teléfono" required aria-hidden="true">
-                                <i class='bx bx-mail-send'></i>
-                            </div>
-                        </div>
-
-                        <div class="campo">
-                            <div class="input-icon">
-                                <textarea class="input-textArea" name="comentarios" rows="8" placeholder="Consulta" required></textarea>
-                                <i class='bx bxs-edit'></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="boton-footer boton-footer--mod">
-                        <input class="btn-footer__input btn-footer__input--mod" type="submit" name="message" value="Enviar"
-                            title="Click para Enviar Consulta">
-                    </div>
-                </form>
-            </div>
-        <!-- </section> -->
-        </div>
-    </div>
+    
+    
+    
 
     <footer class="footer">
         <div class="contenedores">

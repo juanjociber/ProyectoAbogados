@@ -334,3 +334,41 @@ function viewOne(){
     observando.observe(document.querySelector('#parallaxOne'))
 };
 viewOne();
+/**=======================================================
+ *     TEXTO 'CONTÁCTENOS' (ESCRIBE CARACTER POR CARACTER)
+ =========================================================*/
+function viewContactenos(){
+    const comentario = document.querySelector('#contactenos')
+    let printCadena;
+    const observando= new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){
+            console.log('Ingreso de evento');
+            let escritura = str =>{
+                let arrayStr = str.split('');
+                let i = 0;
+                printCadena = setInterval(function () {
+                        if(arrayStr[i] === ''){
+                            comentario.innerHTML += arrayStr[i];
+                            comentario.innerHTML += arrayStr[i + 1];
+                            i +=2;                        
+                        }
+                        else{
+                            comentario.innerHTML += arrayStr[i];
+                            i++
+                        }
+                        if(i=== arrayStr.length){
+                            clearInterval(printCadena);
+                        }
+                    },100);
+            }
+            escritura('Contáctenos..!!');
+        }
+        else{
+            console.log('Salida de evento')
+            clearInterval(printCadena)
+            comentario.innerHTML= ""
+        }
+    });
+    observando.observe(document.querySelector('#section-contactenos'))
+};
+viewContactenos();
