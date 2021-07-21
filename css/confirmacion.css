@@ -1,25 +1,24 @@
 :root{
-    --oscuro:#414040;
-    --grisformulario: #d3d3d3;
-    --grisclaro: #99A0A3;
-    --grisoscuro: #37373f;
-    --blanco:#FFFFFF;
-    --blancohumo: #ebe8e8;
-    --azul:#004F9F;
-    --rojo: #EA0B2E;
-    --amarilloClaro: #FCE31B;
-    --amarilloOscuro: #D1B413;
+    --font-principal: 'Roboto', sans-serif;
+    --font-titulo: 'DM Serif Text', serif;
+    --blue-primario: #415563;
+    --grey-primario: #536572;
+    --grey-secundario: #9ca6ad;
+    --black: #000000;
+    --white: #FFFFFF;
+    --naranja: #f08600;
 }
 html{
     font-size: 62.5%;
 }
 *, *::before, *::after{
     box-sizing: inherit;
+    text-decoration: none;
 }
 body{
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--grisformulario);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 .confirmacion{
     text-align: center;
@@ -27,18 +26,19 @@ body{
 }
 h1{
     font-size: 1.9rem;
+    font-weight: 300;
     text-align: center;
-    color: var(--grisoscuro);
-    
+    color: var(--blue-primario);
 }
-span{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-family: 'Londrina Solid', cursive;
+img{
+    width: 50%;
+    opacity: 0.8;
 }
 p{
     font-size: 1.5rem;
     text-align: center;
+    color: var(--blue-primario);
+    font-weight: 300;
 }
 .boton{
     width: 80%;
@@ -47,28 +47,30 @@ p{
 }
 .boton button{
     border: none;
-    padding: 1.5rem;
+    padding: 1.3rem;
     border-radius: 5px;
-    background-color: #1072f1;
-    box-shadow: #888888 0 2px 9px;
-}
-.boton button:hover{
-    transform: scale(1.01);
-    transition: all cubic-bezier(0.215, 0.610, 0.355, 1);
-    background-color: #0f60ca;
-    text-shadow: #414040 1px 1px 3px;
+    border: 1px solid #e7ac5eb4;
+    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%);
+
 }
 .boton button a{
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: var(--blanco);
-    font-weight: 500;
+    color: var(--naranja);
+    font-weight: 300;
 }
-@media (min-width:767px){
-    body{
-        background-image: url(../img/slider01.png);
-        background-size: cover;
+.boton button:hover{
+    transform: scale(0.99);
+}
+@media(min-width:768px){
+    img{
+        width: 40%;
     }
+}
+@media(min-width:992px){
+    img{
+        width: 30%;
+    }
+}
+/* @media (min-width:768px){
     .confirmacion{
         margin-top: auto;
         width: 50%;
@@ -92,35 +94,4 @@ p{
     .boton button a{
         font-size: 1.3rem;
     }
-}
-@media (min-width: 480px) and (max-width:767px){
-    body{
-        background-image:url(../img/slider02.jpg);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-    }
-    .confirmacion{
-        margin-top: auto;
-    }
-    h1{
-        font-size: 1.6rem;
-    }
-    span{
-        font-size: 2.5rem;
-    }
-    p{
-        font-size: 1.4rem;
-    }
-    .boton button{
-        padding: 0.9rem;
-        background-color: #f56f57;
-    }
-    .boton button:hover{
-        background-color: #df604a;
-    }
-    .boton button a{
-        font-size: 1.2rem;
-    }
-
-}
+} */
