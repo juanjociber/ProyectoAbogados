@@ -9,18 +9,18 @@ window.onload = function(){
 /**=======================================================
  *                     MAPA
  =========================================================*/
-document.addEventListener('DOMContentLoaded',function(){
-    var map = L.map('mapa').setView([-11.990477, -77.082744], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+// document.addEventListener('DOMContentLoaded',function(){
+//     var map = L.map('mapa').setView([-11.990477, -77.082744], 15);
+//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//     }).addTo(map);
 
-    L.marker([-11.990477, -77.082744]).addTo(map)
-        .bindPopup('Mi dirección.')
-        .openPopup()
-        .bindTooltip('Un Tooltip')
-        .openTooltip()
-});
+//     L.marker([-11.990477, -77.082744]).addTo(map)
+//         .bindPopup('Mi dirección.')
+//         .openPopup()
+//         .bindTooltip('Un Tooltip')
+//         .openTooltip()
+// });
 /**=======================================================
  *                  MENÚ-RESPONSIVE
  =========================================================*/
@@ -334,41 +334,3 @@ function viewOne(){
     observando.observe(document.querySelector('#parallaxOne'))
 };
 viewOne();
-
-
-function viewTwo(){
-    const comentario = document.querySelector('#idparallax-texto--mod');
-    let printCadena;
-    const observando = new IntersectionObserver(function(e){
-        if(e[0].isIntersecting){
-            console.log('Ingreso de evento');
-            let escritura2 = cadena =>{
-                let arrayCadena = cadena.split('');
-                let z = 0;
-                printCadena = setInterval(function () {
-                    if(arrayCadena[z] === ''){
-                        comentario.innerHTML += arrayCadena[z];
-                        comentario.innerHTML += arrayCadena[z + 1];
-                        z +=2;                        
-                    }
-                    else{
-                        comentario.innerHTML += arrayCadena[z];
-                        z++
-                    }
-                    if(z=== arrayCadena.length){
-                        clearInterval(printCadena);
-                    }
-                },100);
-            }
-            escritura2('El Derecho es un asunto complicado. Puede causarle un gran problema si lo ignora. ¡Déjanos ayudarte!');
-        }
-        else{
-            console.log('Salida de evento')
-            clearInterval(printCadena)
-            comentario.innerHTML= ""
-        }
-    });
-    observando.observe(document.querySelector('#parallaxTwo'));
-};
-viewTwo();
-
