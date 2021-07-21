@@ -33,10 +33,9 @@
     <link rel="preload" href="css/app.css" as="style">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/whatsApp.css">
+    <link rel="stylesheet" href="css/inicio.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-
 </head>
-
 <body class="hidden">
     <div class="centrado" id="onload">
         <div class="lds-roller">
@@ -59,6 +58,10 @@
             <img loading="lazy" src="./img/whatsapp.svg" alt="" title="WhatsApp">
         </picture>
     </a>
+
+    <!--Botón Arriba-->
+    <span class="ir-arriba bx bxs-chevron-up"></span>
+
     <!-- =============== HEADER ============== -->
     <div class="container-header">
         <header class="header">
@@ -75,10 +78,10 @@
                 <div class="navegacion">
                     <nav class="navegacion-contenido" id="navbar">
                         <ul class="navegacion__items menu__items">
-                            <a class="navegacion__item navega" href="#"><img class="navegacion__items--img" src="./img/logoLH2021.png" width="140" alt="Logo" style="margin-top: 1rem; margin-left: 1.5rem;"></a>
-                            <li class="navegacion__item navegacion__item--activo activados" data-url="home"><a href="#"></i>Home</a></li>
-                            <li class="navegacion__item" data-url="nosotros"><a href="#">Nosotros</a></li>
-                            <li class="navegacion__item item" data-url="areas de practica"><a class="btn-item" href="#">Áreas de Práctica</a>
+                            <a class="navegacion__item navega" href="index.html"><img class="navegacion__items--img" src="./img/logoLH2021.png" width="140" alt="Logo" style="margin-top: 1rem; margin-left: 1.5rem;"></a>
+                            <li class="navegacion__item navegacion__item--activo activados"><a href="#nosotros"></i>Home</a></li>
+                            <li class="navegacion__item"><a href="#nosotros">Nosotros</a></li>
+                            <li class="navegacion__item item"><a class="btn-item" href="#practicas">Áreas de Práctica</a>
                                 <ul class="item-content navegacion__item--submenu">
                                     <li class="submenu__lista"><a href="#">Contrataciones con el Estado</a></li>
                                     <li class="submenu__lista"><a href="#">Contratos Civiles</a></li>
@@ -89,7 +92,7 @@
                                     <li class="submenu__lista"><a href="#">Procedimiento Administrativo</a></li>
                                 </ul>
                             </li>
-                            <li class="navegacion__item" data-url="contactenos"><a href="#">Contáctenos</a></li>
+                            <li class="navegacion__item"><a href="#section-contactenos">Contáctenos</a></li>
                         </ul>
                     </nav>
                     <div class="contacto">
@@ -170,7 +173,7 @@
         </aside>
 
         <!--section-nosotros-->
-        <section class="section-nosotros container seccion">
+        <section class="section-nosotros container seccion" id="nosotros">
             <h2 class="nosotros-titulo" id="nosotros">Nuestro Estudio de Abogados</h2>
             <div class="nosotros-texto">
                 <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores
@@ -247,7 +250,7 @@
         </div>
 
         <!--SECTION - PRÁCTICA: desarrollado en js con los elements(Article-Figure-img-p-figcaption)-->
-        <section class="section-practica container seccion">
+        <section class="section-practica container seccion" id="practicas">
             <h2 id="area de practicas">Áreas de Práctica</h2>
             <p class="section-practica__parrafo container">Con nosotros usted contará con la mejor asesoría legal para cualquier acción que pretenda emprender. Somos un Estudio de Abogados en Lima 
                 que contamos con las siguientes especialidades:</p>
