@@ -1160,13 +1160,13 @@ figure img{
     color: white;
     font-weight: 800;
 }
-
 .formulario{
     width: 40rem;
     border-radius: 0.5rem;
     padding: 2rem 1rem;
-    background: #212c3560;
+    background: #0e111360;
     font-family: var(--font-principal);
+    margin-bottom: 2rem;
 }
 .contenedor-campos{
     width: 100%;
@@ -1196,7 +1196,7 @@ figure img{
 .formulario input[type="text"],input[type="email"],input[type="tel"],textarea{
     width: 100%;
     background: rgba(229, 230, 231, 0.658);
-    padding: 1rem 1rem 1rem 4rem;
+    padding: 1rem 1.5rem 1.5rem 4rem;
     outline: none;
     border: none;
     border-radius: 0 0.3rem 0.3rem 0;
@@ -1220,7 +1220,21 @@ figure img{
 .caja-iconTextArea{
     padding-top: 1rem;
 }
-
+.btn-footer__input--mod{
+    width: 70%;
+    background-color: var(--naranja) !important;
+    color:var(--white)!important;
+    border:1px solid var(--white) !important;
+    opacity: 0.6;
+    transition: opacity .9s;
+    box-shadow: inset -8px -5px 11px -5px rgb(0 0 0 / 61%);
+    padding: 1.8rem 0 !important;
+}
+.btn-footer__input--mod:hover{
+    transform: scale(0.99);
+    font-weight: 500 !important;
+    opacity: 0.7;
+}
 @media(min-width:768px){
     .section-contactenos{
         padding: 1rem;
