@@ -32,7 +32,7 @@ window.onload = function(){
         if(contador == 1){
             navegacion.classList.add('nav-activado')
             menu.classList.add('is-active');
-            contador = 0;    
+            contador = 0;
         }
         else{
             contador = 1;
@@ -40,10 +40,7 @@ window.onload = function(){
             menu.classList.remove('is-active');
         }
     });
-
-
-
-
+    
 /**=======================================================
  *                 REDES SOCIALES
  =========================================================*/
@@ -161,7 +158,6 @@ img.forEach(i =>{
  *              NAVEGACIÓN ESTÁTICA
  =========================================================*/
 document.addEventListener('DOMContentLoaded', function() {
-    // scrollNav();
     navegacionFija();
 });
 function navegacionFija() {
@@ -175,12 +171,8 @@ function navegacionFija() {
         }
     });
     // Elemento a observar
-    observer.observe(document.querySelector('#image-slider'));
+    observer.observe(document.querySelector('.splide'));
 };
-// function scrollNav() {
-    
-// }
-
 /**=======================================================
  *           EVENTO TITULO - DESCRIPCIÓN SLIDER
  =========================================================*/
