@@ -12,12 +12,10 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/logoLH.ico" type="image/x-icon">
 
-    <title>L&H | Consultores y Asesores Legales</title>
+    <title>L&H | Derecho Penal</title>
     
     <!--ANIMATE_CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!--SLIDEJS_CARRUSEL-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <!--IMAGENHOVER_CSS-->
     <link  rel = " stylesheet " href = "css/imagehover.min.css"> 
 
@@ -29,26 +27,18 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
     <!--font-texto-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;500;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    
+    <!--font-logo-->    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+
+
     <link rel="preload" href="css/app.css" as="style">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/whatsApp.css">
     <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> -->
 </head>
-<body class="hidden">
-    <div class="centrado" id="onload">
-        <div class="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+<body>
     <!--Logo de whatsApp-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
@@ -58,12 +48,12 @@
             <img loading="lazy" src="./img/whatsapp.svg" alt="" title="WhatsApp">
         </picture>
     </a>
-
     <!--Botón Arriba-->
     <span class="ir-arriba bx bxs-chevron-up"></span>
 
     <!-- =============== HEADER ============== -->
     <div class="container-header">
+    <!-- <div class="container-header" style="position: fixed; z-index: 1; background: white; width: 100%;"> -->
         <header class="header">
             <div class="contanier-logo-menu">
                 <div class="header__nombre">
@@ -112,183 +102,49 @@
     </div> <!-- container-header  -->
 
     <div class="inicioFijo"></div>
-    <!-- ESTILOS DEL MAIN-->
-
-    <div id="image-slider" class="splide animate__animated animate__bounce">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="slider-items">
-                        <h2 class="slider-item" id="slider-itemH2">Derecho Penal</h2>
-                        <p class="slider-item no-margin" id="slider-itemP">Ordenamiento jurídico que
-                            comprende las normas prohibitivas que señalan los delitos y establecen las penas</p>
-                    </div>
-                    <div class="slider-boton">
-                        <a class="boton-slider animate__animated animate__backInUp"
-                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
-                            title="Click para contáctarnos">
-                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
-                        </a>
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="slider-items">
-                        <h2 class="slider-item" id="slider-itemH2_One">Derecho Civil</h2>
-                        <p class="slider-item no-margin">Es la rama del derecho privado que regula las principales
-                            relaciones civiles de las personas</p>
-                    </div>
-                    <div class="slider-boton">
-                        <a class="boton-slider"
-                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
-                            title="Click para contáctarnos">
-                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
-                        </a>
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="slider-items">
-                        <h2 class="slider-item">Derecho laboral</h2>
-                        <p class="slider-item no-margin">Es un conjunto de reglas que se encarga de regular las
-                            relaciones entre trabajadores y empleador</p>
-                    </div>
-                    <div class="slider-boton">
-                        <a class="boton-slider"
-                            href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
-                            title="Click para contáctarnos">
-                            <i class='bx bxs-right-arrow-square'></i>Contáctenos
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="wave" style="height: 150px; overflow: hidden;">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M-8.84,96.88 C186.42,155.09 370.39,59.38 513.73,117.59 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #ffffff;"></path>
-            </svg>
+    <!--PARALLAX-->
+    <div class="parallax parallax-page" style="height: 450px;">
+        <div class="fondo-parallax" id="parallaxOne">
+            <section class="page-parallax">
+                <h2 class="page-parallax__nomLogo animate__animated animate__rubberBand">l<span class="page-parallax__nomLogo--mod">&</span>h</h2>
+                <h3 class="page-parallax__titulo animate__animated animate__fadeInTopRight">Consultores y Asesores Legales</h3>
+            </section>
+            <a class="boton-slider animate__animated animate__backInUp"
+                href="https://api.whatsapp.com/send?phone=51956295944&text=Hola!%20Díganos%20en%20que%20podemos%20ayudarlo(a)."
+                title="Click para contáctarnos">
+                <i class='bx bxs-right-arrow-square'></i>Contáctenos
+            </a>
         </div>
     </div>
+    <!-- ESTILOS DEL MAIN-->
 
     <main>
         <aside>
         </aside>
-
-        <!--section-nosotros-->
-        <section class="section-nosotros container seccion" id="home">
-            <h2 class="nosotros-titulo" id="nosotros">Nuestro Estudio de Abogados</h2>
-            <div class="nosotros-texto">
-                <p class="section-nosotros__texto">El estudio jurídico <strong>L&H Consultores y Asesores
-                        Legales</strong>,
-                    es un grupo de
-                    profesionales del derecho, con distintas especialidades, poniendo particular atención en el nivel de
-                    conocimiento de sus miembros, alentando la capacitación continua para asegurarle al cliente el
-                    acceso a
-                    la mejor asistencia posible y brindarle soluciones a la altura de sus necesidades.
-                </p>
-                <p class="section-nosotros__texto">Para demostrar nuestro liderazgo priorizamos la calidad de nuestros
-                    servicios, la
-                    observación permanente del grado y nivel de satisfacción del cliente, la capacidad de
-                    llevar al mercado las soluciones para reducir la conflictividad laboral y bajar o acotar
-                    los costos.</p>
-            </div>
-            <div class="nosotros-imagen1">
-                <img class="nosotros-imagen1__img animate__animated animate__backInLeft" loading="lazy"
-                    src="./img/l&h_consultores_asesores_nosotros.jpg" alt="imagen__nosotros">
-            </div>
-
-            <div class="nosotros-acordeon" id="nosotros">
-                <div class="list-acordeon">
-                    <div class="acordeon">
-                        <p class="btn-acordeon activo">Visión</p>
-                        <div class="acordeon-content">
-                            <p>Nuestra visión se basa en el liderazgo respaldado por la profesionalidad, el más estricto
-                                y cuidadoso análisis del marco regulatorio, y la más calificada doctrina a la que
-                                contribuimos con nuestra opinión legal. Nuestro asesoramiento es y debe tomar como
-                                objetivo central prevenir conflictos, minimizar contingencias, y resolver problemas
-                                complejos.</p>
-                            <p>Pensamos que la competitividad y eficiencia de las empresas debe compatibilizarse con la
-                                protección
-                                de la dignidad del trabajador, y el respeto por el derecho de las partes.</p>
-                        </div>
-                    </div>
-                    <div class="acordeon">
-                        <p class="btn-acordeon">Misión</p>
-                        <div class="acordeon-content">
-                            <p>Diagnosticar correctamente los problemas, conflictos y consultas de
-                                nuestros clientes, alineando las alternativas de solución con la defensa de sus
-                                intereses. Nuestro foco está orientado a encontrar y lograr la solución más eficiente a
-                                cada uno de los desafíos planteados. Todo ello se logra con especialización, alta
-                                responsabilidad profesional, trabajo en equipo y máxima laboriosidad, dentro de la ley y
-                                cumpliendo con las reglas impuestas por la moral, las buenas costumbres y las mejores
-                                prácticas.</p>
-                        </div>
-                    </div>
-                    <div class="acordeon">
-                        <p class="btn-acordeon">Valores</p>
-                        <div class="acordeon-content">
-                            <p>Los valores son esenciales en cualquier organización. Es por ello que ratificamos nuestro
-                                compromiso con el cumplimiento de la legislación vigente, y con el mandato de las reglas
-                                éticas y morales. Todo ello aplicando las mejores prácticas locales e internacionales.
-                            </p>
-                            <p>Nuestro compromiso está contenido en nuestro propio código de conducta y reglas éticas,
-                                y en la adhesión que el Estudio renueva en forma permanente de las normas establecidas
-                                en el mismo plano por nuestros Clientes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nosotros-imagen2 animate__animated animate__rotateIn">
-                <img class="nosotros-img2" loading="lazy" src="./img/balanza-justicia.png" alt="imagen__nosotros">
-            </div>
-        </section>
-
-        <!--PARALLAX-->
-        <div class="parallax">
-            <div class="fondo-parallax" id="parallaxOne">
-                <p class="fondo-parallax__texto" id="idparallax-texto"></p>
+        <div class="pages container">
+            <section class="page">
+                <h2 class="page__titulo">Abogados Penalistas</h2>
+                <p class="page__parrafo">Somos un Estudio de Abogados Penalistas en <strong>Lima-Peru</strong> que brinda asesoría legal personalizada en:</p>
+                <p class="page__item page__item--mod"><i class='bx bx-check bx-check--mod'></i>Asesoría en los diferentes aspectos del derecho penal.</p>
+                <p class="page__item page__item--mod"><i class='bx bx-check bx-check--mod'></i>Gestiones ante los diferentes organismos vinculantes con esta especialidad.</p>
+                <p class="page__item"><i class='bx bx-check bx-check--mod'></i>Denuncias penales.</p>
+                <p class="page__item page__item--mod"><i class='bx bx-check bx-check--mod'></i>Asesoría, patrocinio y representación en procesos penales.</p>
+                <p class="page__item"><i class='bx bx-check bx-check--mod'></i>Temas penales actuales en consulta.</p> 
+            </section>
+            <div class="nosotros-imagen2 animate__animated animate__rotateIn page">
+                <img class="nosotros-img2 page__imagen" loading="lazy" src="./img/balanza-justicia.png" alt="imagen__nosotros">
             </div>
         </div>
 
-        <!--SECTION - PRÁCTICA: desarrollado en js con los elements(Article-Figure-img-p-figcaption)-->
-        <section class="section-practica container seccion" id="practicas">
-            <h2 id="area de practicas">Áreas de Práctica</h2>
-            <p class="section-practica__parrafo container">Con nosotros usted contará con la mejor asesoría legal para cualquier acción que pretenda emprender. Somos un Estudio de Abogados en Lima 
-                que contamos con las siguientes especialidades:</p>
-            <div class="cards container"></div>
-        </section>
-
-        <!-- TARJETAS 3D - EFECTO FLIP-->
-        <!-- <section class="flip-container">
-            <article class="card-flip">
-                <div class="card-flip__item">
-                    <div class="front card1"></div>
-                    <div class="back">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum,
-                            suscipit, aspernatur!</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card-flip">
-                <div class="card-flip__item">
-                    <div class="front card2"></div>
-                    <div class="back">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum,
-                            suscipit, aspernatur!</p>
-                    </div>
-                </div>
-            </article>
-        </section> -->
-
         <!--SECTION - CONTACTENOS-->
-        <section class="section-contactenos" id="section-contactenos">
+        <section class="section-contactenos page__contactenos" id="section-contactenos">
             <p class="section-contactenos__parrafo container">Cualquier consulta no dude en comunicarnos, la atención es de inmediata</p>
-            <h2 id="contactenos"></h2>
+            <h2 class="page__contactenos--mensaje"></h2>
             <!--PARALLAX-->
             <div class="parallax-formulario">
                 <div class="fondo-parallax__formulario">
                     <div class="contactenos-formulario">
-                        <form class="formulario" name="contacto" method="POST" data-netlify="true" action="/pag">
+                        <form class="formulario" id="animando" name="contacto" method="POST" data-netlify="true" action="/pag">
                             <div class="contenedor-campos container">
                                 
                                 <div class="campo">
@@ -328,13 +184,7 @@
                 </div>
             </div>
         </section>
-        
-
     </main>
-
-    
-    
-    
 
     <footer class="footer">
         <div class="contenedores">
@@ -380,11 +230,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="js/app.js"></script>
-    <!-- <script src="js/appExternos.js"></script> -->
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+    <script src="js/appExternos.js"></script>
     <script src="js/modernizr.js"></script>
 </body>
 
