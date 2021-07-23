@@ -1560,7 +1560,7 @@ figure img{
     color: white; 
     font-size: 6rem;
     font-family: var(--font-log);
-    font-weight: bold;
+    font-weight: 300;
     /* opacity: 0.9; */
     text-transform: uppercase;
     font-style: italic;
