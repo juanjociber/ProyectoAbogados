@@ -34,7 +34,7 @@
 // });
 
 /**=======================================================
- *                BOTON DESPLAZA ARRIBA
+ *              BOTON DESPLAZA ARRIBA
  =========================================================*/
  $(document).ready(function(){
     $('.ir-arriba').click(function(){
@@ -52,7 +52,9 @@
     })
 });
 
-
+/**=======================================================
+ *             ESCRITURA TEXTO 'CONTÁCTENOS'
+ =========================================================*/
 const mensaje = document.querySelector('.page__contactenos--mensaje')
 let escritura = str =>{
     let arrayStr = str.split('');
@@ -85,5 +87,6 @@ window.addEventListener('scroll',function(ev){
     let tamañoPantalla = window.innerHeight/3;
     if(posicionObjeto < tamañoPantalla){
         animando.style.opacity = 1;
-    }    
+    }
+
 })

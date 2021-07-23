@@ -5,7 +5,7 @@
 :root{
     --font-principal: 'Roboto', sans-serif;
     --font-titulo: 'DM Serif Text', serif;
-    --font-log: 'Dancing Script', cursive;
+    --font-log: 'Zhi Mang Xing', cursive;
     --blue-primario: #415563;
     --grey-primario: #536572;
     --grey-fill:#93b0b4;
@@ -439,7 +439,7 @@ h3{
     position: fixed;
     top: 0;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    z-index: 999;
+    z-index: 1500;
 }
 .fijo .header{
     width: 100%;
@@ -1558,17 +1558,19 @@ figure img{
 .page-parallax__nomLogo{
     margin-top: -5rem; 
     color: white; 
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: var(--font-log);
     font-weight: bold;
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    text-transform: uppercase;
+    font-style: italic;
 }
 .page-parallax__nomLogo:hover{
     opacity: 1;
 }
 .page-parallax__nomLogo--mod{
     font-size: 2rem;
-    font-family: var(--font-principal);
+    font-family: var(--font-log);
 }
 .page-parallax__titulo{
     margin-top: -3rem; 
