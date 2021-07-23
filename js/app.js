@@ -195,28 +195,31 @@ viewContactenos();
      imagen: './img/portfolio-1.jpg',
      comentario:'Especialistas en Derecho Penal',
      nombre: 'Derecho Penal',
-     url : 'derechoPenal.html' 
+     url : 'derecho-penal.html' 
  },
  {
      imagen: './img/portfolio-2.jpg',
      comentario:'Especialistas en Contratos Civiles',
      nombre: 'Contratos Civiles',
-     url: 'derechoCivil.html' 
+     url: 'derecho-civil.html' 
  },
  {
      imagen: './img/portfolio-3.jpg',
      comentario:'Especialistas en Recursos Humanos',
-     nombre: 'Recursos Humanos', 
+     nombre: 'Recursos Humanos',
+     url : 'recursos-humanos.html' 
  },  
  {
      imagen: './img/portfolio-4.jpg',
      comentario:'Asesores en Contrataciones con el Estado',
-     nombre: 'Contratos con el Estado', 
+     nombre: 'Contratos con el Estado',
+     url: 'contratos-estado.html' 
  },
  {
      imagen: './img/portfolio-5.jpg',
      comentario:'Especialistas en Procedimiento Administrativo Sancionador y Procedimiento Administrativo Disciplinario',
-     nombre: 'Procedimiento Administrativo', 
+     nombre: 'Procedimiento Administrativo',
+     url: 'procedimiento-administrativo.html' 
  }
  ];
  
@@ -265,12 +268,24 @@ especialidadArray.forEach(function(e){
 window.addEventListener('click',function(event){
     console.log(event.target.innerHTML)
     if(especialidad[0].nombre == event.target.innerHTML){
-        console.log('Muestra págna')
+        console.log('Muestra página')
         this.location.href = especialidad[0].url
     }
     if(especialidad[1].nombre == event.target.innerHTML){
-        console.log('Muestra págna')
+        console.log('Muestra página')
         this.location.href = especialidad[1].url
+    }
+    if(especialidad[2].nombre == event.target.innerHTML){
+        console.log('Muestra página')
+        this.location.href = especialidad[2].url
+    }
+    if(especialidad[3].nombre == event.target.innerHTML){
+        console.log('Muestra página')
+        this.location.href = especialidad[3].url
+    }
+    if(especialidad[4].nombre == event.target.innerHTML){
+        console.log('Muestra página')
+        this.location.href = especialidad[4].url
     }
 });
 

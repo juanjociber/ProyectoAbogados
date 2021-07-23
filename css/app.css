@@ -1541,7 +1541,6 @@ figure img{
         font-size: 1.3rem;
     }
 }
-
 /*======================================== 
             PÁGINAS EXTERNAS  
 ==========================================*/
@@ -1555,6 +1554,9 @@ figure img{
 .animate__animated.animate__fadeInTopRight{
     --animate-duration: 3s;
 }
+.animate__animated.animate__zoomInDown{
+    --animate-duration: 3s;
+}
 .page-parallax__nomLogo{
     margin-top: -5rem; 
     color: white; 
@@ -1563,6 +1565,9 @@ figure img{
     font-weight: 300;
     text-transform: uppercase;
     font-style: italic;
+}
+.page__titulo{
+    margin-bottom: 2rem;
 }
 .page-parallax__nomLogo:hover{
     opacity: 1;
@@ -1577,6 +1582,7 @@ figure img{
     font-weight: 300; 
     font-size: 1.8rem;
     opacity: 0.8;
+
 }
 .page-parallax__titulo:hover{
     opacity: 1;
