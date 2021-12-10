@@ -365,7 +365,7 @@ function scrollNav(){
             // console.log(e.target.attributes.href.value)
             const seccion = document.querySelector(e.target.attributes.href.value)
             seccion.scrollIntoView({
-                behavior: 'smooth',
+                behavior: 'smooth'
             });
         })
     }) 
