@@ -29,7 +29,7 @@ body{
     font-size: 16px;
 }
 /*====== LOADING =======*/
-.centrado{
+/* .centrado{
     height: 100vh;
     background: #536976;  
     background: linear-gradient(to right, rgba(41, 46, 73, 0.63), rgba(83, 105, 118, 0.712)),url(../img/l&h_consultores_asesores.jpg);
@@ -40,7 +40,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.hidden{/*Para efecto del loader -> ubicarlo en el body*/
+.hidden{
     overflow: hidden;
 }
 .lds-roller {
@@ -126,7 +126,9 @@ body{
     100% {
       transform: rotate(360deg);
     }
-  }
+  } */
+
+
 .container{
     width: min(95%, 120rem);
     margin: 0 auto;
